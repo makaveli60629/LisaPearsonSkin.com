@@ -1,0 +1,16 @@
+.founder-portrait {
+  width: 110px;
+  height: 110px;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.92);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.founder-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
