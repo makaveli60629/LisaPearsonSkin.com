@@ -1,0 +1,203 @@
+export default function AdStoreWebsiteStarter() {
+  const services = [
+    {
+      title: 'Custom Ad Design',
+      text: 'High-converting ad creatives for social media, web, and print campaigns.',
+    },
+    {
+      title: 'Brand Promotion',
+      text: 'Promo banners, launches, and campaign visuals tailored to your audience.',
+    },
+    {
+      title: 'Digital Store Setup',
+      text: 'A clean storefront to showcase products, services, and featured offers.',
+    },
+  ];
+
+  const products = [
+    {
+      name: 'Starter Ad Pack',
+      price: '$99',
+      desc: '3 ad designs for a basic campaign launch.',
+    },
+    {
+      name: 'Business Promo Kit',
+      price: '$249',
+      desc: 'Ads, banners, and social media promo graphics.',
+    },
+    {
+      name: 'Premium Store Bundle',
+      price: '$499',
+      desc: 'Full ad package plus storefront branding assets.',
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <div>
+            <h1 className="text-2xl font-bold tracking-wide">AdStore Pro</h1>
+            <p className="text-sm text-white/60">Ads that sell. A store that converts.</p>
+          </div>
+          <nav className="hidden gap-6 text-sm text-white/80 md:flex">
+            <a href="#services" className="hover:text-white">Services</a>
+            <a href="#store" className="hover:text-white">Store</a>
+            <a href="#about" className="hover:text-white">About</a>
+            <a href="#contact" className="hover:text-white">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/20 via-transparent to-cyan-400/10" />
+          <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
+            <div className="relative z-10">
+              <p className="mb-3 inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.25em] text-white/70">
+                Creative Ad Store Website
+              </p>
+              <h2 className="max-w-xl text-4xl font-extrabold leading-tight md:text-6xl">
+                Build ads, sell offers, and grow your brand in one place.
+              </h2>
+              <p className="mt-5 max-w-xl text-lg text-white/70">
+                A modern website for businesses that want to showcase ad services, featured packages, and products with a clean professional look.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="#store"
+                  className="rounded-2xl bg-white px-6 py-3 font-semibold text-black shadow-lg transition hover:scale-[1.02]"
+                >
+                  View Store
+                </a>
+                <a
+                  href="#contact"
+                  className="rounded-2xl border border-white/20 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
+                >
+                  Get a Quote
+                </a>
+              </div>
+            </div>
+
+            <div className="relative z-10">
+              <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur">
+                <div className="grid gap-4">
+                  <div className="rounded-2xl border border-white/10 bg-black/40 p-5">
+                    <p className="text-sm text-white/50">This Month</p>
+                    <h3 className="mt-2 text-3xl font-bold">+142% Campaign Reach</h3>
+                    <p className="mt-2 text-white/65">Designed for ad sellers, creative studios, and service-based brands.</p>
+                  </div>
+                  <div className="grid gap-4 md:grid-cols-2">
+                    <div className="rounded-2xl border border-white/10 bg-black/40 p-5">
+                      <p className="text-sm text-white/50">Featured Offer</p>
+                      <h4 className="mt-2 text-xl font-semibold">Promo Bundle</h4>
+                      <p className="mt-2 text-white/65">Designs, banners, and launch graphics.</p>
+                    </div>
+                    <div className="rounded-2xl border border-white/10 bg-black/40 p-5">
+                      <p className="text-sm text-white/50">Best For</p>
+                      <h4 className="mt-2 text-xl font-semibold">Online Sellers</h4>
+                      <p className="mt-2 text-white/65">Store owners who need ads and product visibility.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" className="mx-auto max-w-7xl px-6 py-20">
+          <div className="mb-10 max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.25em] text-white/50">Services</p>
+            <h3 className="mt-3 text-3xl font-bold md:text-4xl">Everything needed to promote and sell.</h3>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {services.map((service) => (
+              <div key={service.title} className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-xl">
+                <h4 className="text-xl font-semibold">{service.title}</h4>
+                <p className="mt-3 text-white/65">{service.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="store" className="mx-auto max-w-7xl px-6 py-20">
+          <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.25em] text-white/50">Store</p>
+              <h3 className="mt-3 text-3xl font-bold md:text-4xl">Popular packages</h3>
+            </div>
+            <p className="max-w-xl text-white/65">
+              Start with a simple creative package or scale into a full premium storefront and brand campaign.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {products.map((product) => (
+              <div key={product.name} className="rounded-[2rem] border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-6 shadow-2xl">
+                <p className="text-sm text-white/50">Package</p>
+                <h4 className="mt-2 text-2xl font-bold">{product.name}</h4>
+                <p className="mt-3 text-4xl font-extrabold">{product.price}</p>
+                <p className="mt-4 text-white/65">{product.desc}</p>
+                <button className="mt-6 w-full rounded-2xl bg-white px-5 py-3 font-semibold text-black transition hover:scale-[1.01]">
+                  Buy Now
+                </button>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="about" className="mx-auto max-w-7xl px-6 py-20">
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
+              <p className="text-sm uppercase tracking-[0.25em] text-white/50">About</p>
+              <h3 className="mt-3 text-3xl font-bold">A website made to sell attention.</h3>
+              <p className="mt-5 text-white/65">
+                This layout is ideal for someone offering ad design, promotional services, digital products, or branded campaign packages. It blends service presentation with a store-style sales section.
+              </p>
+            </div>
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
+              <p className="text-sm uppercase tracking-[0.25em] text-white/50">Why it works</p>
+              <ul className="mt-5 space-y-3 text-white/70">
+                <li>• Clear offer and professional first impression</li>
+                <li>• Service sections plus product/package pricing</li>
+                <li>• Ready for future checkout, booking, or contact form integration</li>
+                <li>• Easy to customize for any brand or client</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="mx-auto max-w-4xl px-6 py-20">
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl">
+            <p className="text-sm uppercase tracking-[0.25em] text-white/50">Contact</p>
+            <h3 className="mt-3 text-3xl font-bold">Let’s build the brand.</h3>
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
+              <input
+                className="rounded-2xl border border-white/10 bg-black/40 px-4 py-3 outline-none placeholder:text-white/30"
+                placeholder="Your name"
+              />
+              <input
+                className="rounded-2xl border border-white/10 bg-black/40 px-4 py-3 outline-none placeholder:text-white/30"
+                placeholder="Email address"
+              />
+              <input
+                className="rounded-2xl border border-white/10 bg-black/40 px-4 py-3 outline-none placeholder:text-white/30 md:col-span-2"
+                placeholder="Business or brand name"
+              />
+              <textarea
+                className="min-h-[140px] rounded-2xl border border-white/10 bg-black/40 px-4 py-3 outline-none placeholder:text-white/30 md:col-span-2"
+                placeholder="Tell us what kind of ads or store you need"
+              />
+            </div>
+            <button className="mt-6 rounded-2xl bg-white px-6 py-3 font-semibold text-black transition hover:scale-[1.02]">
+              Send Request
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-white/10 px-6 py-8 text-center text-sm text-white/45">
+        © 2026 AdStore Pro. Built for ad services, digital offers, and online selling.
+      </footer>
+    </div>
+  );
+}
