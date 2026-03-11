@@ -68,46 +68,34 @@
     .logo-mark {
       width: 62px;
       height: 62px;
-      border-radius: 999px;
+      border-radius: 18px;
       position: relative;
       display: grid;
       place-items: center;
-      background:
-        radial-gradient(circle at 30% 30%, rgba(255,255,255,0.95), rgba(255,255,255,0.55) 55%, rgba(255,255,255,0.2) 100%),
-        linear-gradient(135deg, rgba(232,197,188,0.85), rgba(244,231,225,0.95));
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(200, 147, 119, 0.24);
-      overflow: hidden;
+      background: transparent;
+      box-shadow: none;
+      border: none;
+      overflow: visible;
+    }
+
+    .site-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 10px 20px rgba(112, 82, 70, 0.12));
     }
 
     .logo-mark::before {
-      content: "";
-      position: absolute;
-      inset: 8px;
-      border-radius: 999px;
-      border: 2px solid rgba(200, 147, 119, 0.48);
+      display: none;
     }
 
     .logo-mark::after {
-      content: "";
-      position: absolute;
-      width: 90px;
-      height: 90px;
-      border: 2px solid rgba(200, 147, 119, 0.34);
-      border-left-color: transparent;
-      border-bottom-color: transparent;
-      border-radius: 999px;
-      transform: rotate(24deg);
+      display: none;
     }
 
     .logo-letters {
-      position: relative;
-      z-index: 1;
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 1.7rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      color: var(--rose-gold-dark);
+      display: none;
     }
 
     .brand-text h1 {
@@ -484,7 +472,7 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="#top">
-        <div class="logo-mark"><span class="logo-letters">LP</span></div>
+        <div class="logo-mark"><img class="site-logo" src="logo2.png" alt="Lisa Pearson Skin Studio logo" /></div>
         <div class="brand-text">
           <h1>LISA PEARSON</h1>
           <p>Skin Studio</p>
@@ -506,7 +494,7 @@
         <div>
           <span class="eyebrow">In-Person Skin Care Consultation</span>
           <div class="logo-display">
-            <div class="logo-mark"><span class="logo-letters">LP</span></div>
+            <div class="logo-mark"><img class="site-logo" src="logo2.png" alt="Lisa Pearson Skin Studio logo" /></div>
             <div>
               <h3>LISA PEARSON</h3>
               <p>Skin Studio</p>
@@ -577,14 +565,14 @@
         <article class="card">
           <span class="eyebrow">Logo Example</span>
           <div class="logo-display" style="margin-top:18px; margin-bottom:0;">
-            <div class="logo-mark"><span class="logo-letters">LP</span></div>
+            <div class="logo-mark"><img class="site-logo" src="logo2.png" alt="Lisa Pearson Skin Studio logo" /></div>
             <div>
               <h3 style="margin:0; font-family:Georgia, 'Times New Roman', serif; letter-spacing:0.12em;">LISA PEARSON</h3>
               <p style="margin:6px 0 0; color:var(--muted); letter-spacing:0.28em; text-transform:uppercase; font-size:0.78rem;">Skin Studio</p>
             </div>
           </div>
           <p style="margin-top:18px;">
-            This keeps the page branded even before the final exported logo file is dropped into the site.
+            This section now uses the embedded site logo reference. Keep the image file named <strong>logo2.png</strong> in the same folder as <strong>index.html</strong> when you publish.
           </p>
         </article>
       </div>
