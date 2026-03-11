@@ -68,14 +68,15 @@
     .logo-mark {
       width: 62px;
       height: 62px;
-      border-radius: 18px;
+      border-radius: 22px;
       position: relative;
       display: grid;
       place-items: center;
-      background: transparent;
-      box-shadow: none;
-      border: none;
-      overflow: visible;
+      background: rgba(255,255,255,0.96);
+      box-shadow: 0 16px 34px rgba(112, 82, 70, 0.14);
+      border: 1px solid rgba(231, 216, 209, 0.95);
+      overflow: hidden;
+      padding: 8px;
     }
 
     .site-logo {
@@ -83,7 +84,8 @@
       height: 100%;
       object-fit: contain;
       display: block;
-      filter: drop-shadow(0 10px 20px rgba(112, 82, 70, 0.12));
+      transform: scale(1.14);
+      filter: contrast(1.08) saturate(1.12) drop-shadow(0 12px 24px rgba(112, 82, 70, 0.16));
     }
 
     .logo-mark::before {
@@ -279,353 +281,11 @@
     }
 
     .hero .logo-display .logo-mark {
-      width: 160px;
-      height: 160px;
-      flex: 0 0 160px;
-    }
-
-    .hero .logo-display h3 {
-      font-size: 0.96rem;
-      letter-spacing: 0.14em;
-      line-height: 1.15;
-    }
-
-    .hero .logo-display p {
-      font-size: 0.6rem;
-      letter-spacing: 0.2em;
-    }
-
-    .hero .brand-detail {
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-    }
-
-    .hero-feature-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .hero-feature-list span {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.82);
-      border: 1px solid var(--line);
-      color: var(--text);
-      font-size: 0.84rem;
-      font-weight: 600;
-      box-shadow: 0 10px 24px rgba(112, 82, 70, 0.06);
-    }
-
-    .studio-visual {
-      position: relative;
-      min-height: 430px;
-      border-radius: 24px;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at top left, rgba(232,197,188,0.88), transparent 34%),
-        radial-gradient(circle at bottom right, rgba(154,167,156,0.46), transparent 32%),
-        linear-gradient(180deg, rgba(255,255,255,0.92), rgba(244,231,225,0.88));
-      border: 1px solid rgba(231, 216, 209, 0.92);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.55);
-      padding: 26px;
-      display: flex;
-      align-items: flex-end;
-    }
-
-    .studio-visual::before {
-      content: "";
-      position: absolute;
-      right: -26px;
-      top: 26px;
-      width: 240px;
-      height: 240px;
-      border-radius: 999px;
-      border: 2px solid rgba(200, 147, 119, 0.38);
-    }
-
-    .studio-visual::after {
-      content: "";
-      position: absolute;
-      left: 34px;
-      top: 58px;
-      width: 190px;
-      height: 250px;
-      border-radius: 120px 120px 38px 38px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.82), rgba(255,255,255,0.45)),
-        linear-gradient(135deg, rgba(232,197,188,0.72), rgba(255,255,255,0.2));
-      box-shadow: 0 20px 40px rgba(112, 82, 70, 0.12);
-      opacity: 0.98;
-    }
-
-    .studio-badge {
-      position: absolute;
-      top: 18px;
-      left: 18px;
-      z-index: 2;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.84);
-      border: 1px solid rgba(231, 216, 209, 0.95);
-      color: var(--rose-gold-dark);
-      font-size: 0.76rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      box-shadow: 0 12px 24px rgba(112, 82, 70, 0.08);
-    }
-
-    .visual-card {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      margin-left: auto;
-      max-width: 372px;
-      padding: 24px;
-      border-radius: 26px;
-      background: rgba(255,255,255,0.9);
-      border: 1px solid rgba(231, 216, 209, 0.92);
-      box-shadow: 0 24px 48px rgba(112, 82, 70, 0.13);
-    }
-
-    .visual-card h3 {
-      margin: 10px 0 10px;
-      font-size: 1.9rem;
-      line-height: 1.05;
-      font-family: Georgia, 'Times New Roman', serif;
-    }
-
-    .visual-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.75;
-    }
-
-    .quote-card {
-      margin-top: 16px;
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, rgba(244,231,225,0.86), rgba(255,255,255,0.92));
-      border: 1px solid rgba(231, 216, 209, 0.92);
-      color: var(--text);
-      font-size: 0.92rem;
-      line-height: 1.7;
-    }
-
-    .quote-card strong {
-      color: var(--rose-gold-dark);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.72rem;
-    }
-
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .stat {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 16px;
-    }
-
-    .stat small {
-      display: block;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    .stat strong { font-size: 1.08rem; }
-
-    section { padding: 34px 0; }
-
-    .section-title {
-      max-width: 760px;
-      margin-bottom: 22px;
-    }
-
-    .section-title h3 {
-      font-size: clamp(2rem, 3vw, 3rem);
-      margin: 10px 0 0;
-    }
-
-    .section-title p {
-      color: var(--muted);
-      line-height: 1.8;
-      margin-top: 10px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      padding: 28px;
-    }
-
-    .card h4 {
-      margin: 0 0 10px;
-      font-size: 1.18rem;
-    }
-
-    .card p,
-    .card li {
-      color: var(--muted);
-      line-height: 1.75;
-    }
-
-    .packages .card { padding-bottom: 28px; }
-
-    .price {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 2.2rem;
-      margin: 14px 0 10px;
-      color: var(--rose-gold-dark);
-    }
-
-    .about-grid,
-    .booking-grid,
-    .brand-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .list-clean {
-      margin: 14px 0 0;
-      padding-left: 18px;
-    }
-
-    .booking-box { padding: 28px; }
-
-    .founder-card {
-      display: grid;
-      grid-template-columns: 110px 1fr;
-      gap: 18px;
-      align-items: start;
-    }
-
-    .founder-portrait {
-      width: 110px;
-      height: 110px;
-      border-radius: 28px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.45)),
-        linear-gradient(135deg, rgba(232,197,188,0.75), rgba(154,167,156,0.38));
-      border: 1px solid var(--line);
-      display: grid;
-      place-items: center;
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 2rem;
-      color: var(--rose-gold-dark);
-      box-shadow: var(--shadow);
-    }
-
-    .founder-label {
-      display: inline-block;
-      margin-top: 4px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: var(--soft);
-      color: var(--rose-gold-dark);
-      font-size: 0.76rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .color-swatches {
-      display: flex;
-      gap: 12px;
-      margin-top: 18px;
-      flex-wrap: wrap;
-    }
-
-    .swatch {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 8px 12px 8px 8px;
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
-
-    .swatch-dot {
-      width: 24px;
-      height: 24px;
-      border-radius: 999px;
-      border: 1px solid rgba(0,0,0,0.06);
-    }
-
-    form {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-top: 20px;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(255,255,255,0.92);
-      padding: 14px 16px;
-      font: inherit;
-      color: var(--text);
-      outline: none;
-    }
-
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-      grid-column: 1 / -1;
-    }
-
-    input:focus,
-    textarea:focus {
-      border-color: var(--rose-gold);
-      box-shadow: 0 0 0 4px rgba(200, 147, 119, 0.12);
-    }
-
-    .full { grid-column: 1 / -1; }
-
-    .contact-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    footer {
-      padding: 32px 0 54px;
-      color: var(--muted);
-      text-align: center;
-      font-size: 0.94rem;
-      border-top: 1px solid rgba(231, 216, 209, 0.9);
-      background: rgba(255,255,255,0.5);
-    }
-
-    .footer-main {
-      font-weight: 600;
-      color: var(--text);
-      letter-spacing: 0.04em;
-    }
-
-    .footer-credit {
+        width: 138px;
+        height: 138px;
+        flex: 0 0 138px;
+        padding: 10px;
+      }redit {
       margin-top: 10px;
       font-size: 0.9rem;
       color: var(--rose-gold-dark);
@@ -641,9 +301,10 @@
       }
 
       .hero .logo-display .logo-mark {
-        width: 120px;
-        height: 120px;
-        flex: 0 0 120px;
+        width: 138px;
+        height: 138px;
+        flex: 0 0 138px;
+        padding: 10px;
       }
 
       .hero .logo-display h3 {
