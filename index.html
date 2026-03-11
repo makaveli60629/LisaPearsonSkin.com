@@ -7,10 +7,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <title>Lisa Pearson Skin Studio | In-Person Skin Care Consultation</title>
-  <meta
-    name="description"
-    content="Professional in-person skin care consultations with Lisa Pearson Skin Studio. Personalized guidance, treatment planning, and a refined booking experience."
-  />
+  <meta name="description" content="Professional in-person skin care consultations with Lisa Pearson Skin Studio. Personalized guidance, treatment planning, and a refined booking experience." />
   <style>
     :root {
       --bg: #ddd0ca;
@@ -468,9 +465,9 @@
         radial-gradient(circle at top left, rgba(221,184,174,0.78), transparent 34%),
         radial-gradient(circle at bottom right, rgba(143,154,146,0.26), transparent 30%),
         linear-gradient(180deg, rgba(255,255,255,0.94), rgba(241,229,223,0.82));
-      padding: 26px;
+      padding: 92px 26px 26px;
       display: flex;
-      align-items: flex-end;
+      align-items: flex-start;
       justify-content: flex-end;
     }
 
@@ -504,15 +501,15 @@
 
     .studio-badge {
       position: absolute;
-      top: 18px;
-      left: 18px;
-      z-index: 2;
+      top: 20px;
+      left: 20px;
+      z-index: 3;
       display: inline-flex;
       align-items: center;
       min-height: 38px;
       padding: 9px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.94);
+      background: rgba(255,255,255,0.96);
       border: 1px solid rgba(212, 194, 186, 0.95);
       color: var(--rose-gold-dark);
       font-size: 0.74rem;
@@ -520,6 +517,7 @@
       letter-spacing: 0.16em;
       text-transform: uppercase;
       box-shadow: var(--shadow-soft);
+      max-width: calc(100% - 40px);
     }
 
     .visual-card {
@@ -527,6 +525,7 @@
       z-index: 2;
       width: 100%;
       max-width: 370px;
+      margin-top: 6px;
       padding: 24px;
       border-radius: 28px;
       background: rgba(255,255,255,0.90);
@@ -861,6 +860,7 @@
       .hero-grid,
       .brand-grid,
       .about-grid,
+      .newsletter-grid,
       .booking-grid {
         grid-template-columns: 1fr;
       }
@@ -871,6 +871,7 @@
 
       .studio-visual {
         min-height: 420px;
+        padding: 84px 18px 18px;
       }
     }
 
@@ -890,6 +891,13 @@
       .hero h2 {
         font-size: clamp(2.1rem, 9vw, 3.2rem);
         max-width: 100%;
+      }
+
+      .studio-badge {
+        top: 16px;
+        left: 16px;
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
       }
 
       .hero-lockup {
@@ -986,15 +994,12 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="#top" aria-label="Lisa Pearson Skin Studio home">
-        <div class="logo-mark">
-          <img class="site-logo" src="logo2.png" alt="Lisa Pearson Skin Studio logo" />
-        </div>
+        <div class="logo-mark"><img class="site-logo" src="logo2.png" alt="Lisa Pearson Skin Studio logo" /></div>
         <div class="brand-text">
           <h1>LISA PEARSON</h1>
           <p>Skin Studio</p>
         </div>
       </a>
-
       <nav>
         <a href="#services">Services</a>
         <a href="#packages">Price List</a>
@@ -1012,9 +1017,7 @@
           <span class="eyebrow">In-Person Skin Care Consultation</span>
 
           <div class="hero-lockup">
-            <div class="logo-mark">
-              <img class="site-logo" src="logo2.png" alt="Lisa Pearson Skin Studio logo" />
-            </div>
+            <div class="logo-mark"><img class="site-logo" src="logo2.png" alt="Lisa Pearson Skin Studio logo" /></div>
             <div class="hero-lockup-copy">
               <h3>LISA PEARSON</h3>
               <p>Skin Studio</p>
@@ -1024,9 +1027,7 @@
 
           <h2>Healthy skin starts with thoughtful, personalized care.</h2>
           <p class="hero-lead">
-            A refined booking experience for clients seeking in-person skin care guidance,
-            personalized treatment planning, and a studio presence that feels elevated,
-            calm, and memorable from the first glance.
+            A refined booking experience for clients seeking in-person skin care guidance, personalized treatment planning, and a studio presence that feels elevated, calm, and memorable from the first glance.
           </p>
 
           <div class="hero-feature-list">
@@ -1057,10 +1058,8 @@
                 <small class="eyebrow" style="background: var(--soft); border-color: transparent;">Featured Service</small>
                 <h3>Luxury Skin Consultation</h3>
                 <p>
-                  A refined in-studio experience focused on healthy skin, confident care decisions,
-                  and a treatment plan tailored to the client.
+                  A refined in-studio experience focused on healthy skin, confident care decisions, and a treatment plan tailored to the client.
                 </p>
-
                 <div class="stat-grid">
                   <div class="stat">
                     <small>Session</small>
@@ -1079,7 +1078,6 @@
                     <strong>Glow + Clarity</strong>
                   </div>
                 </div>
-
                 <div class="quote-card">
                   <strong>Brand feel</strong>
                   Soft, refined, and memorable — designed to make the studio look elevated before a visitor even books.
@@ -1098,12 +1096,9 @@
           <div class="section-title" style="margin-bottom: 0;">
             <h3>Luxury beauty branding with stronger contrast and a polished mobile feel.</h3>
             <p>
-              The refreshed visual direction uses deeper warm neutrals, cleaner card surfaces,
-              and visible glowing ambient highlights so the site feels more premium on desktop
-              and more appealing on Android screens.
+              The refreshed visual direction uses deeper warm neutrals, cleaner card surfaces, and visible glowing ambient highlights so the site feels more premium on desktop and more appealing on Android screens.
             </p>
           </div>
-
           <div class="swatch-row">
             <div class="swatch"><span class="swatch-dot" style="background:#ddb8ae;"></span>Blush</div>
             <div class="swatch"><span class="swatch-dot" style="background:#b98468;"></span>Rose Gold</div>
@@ -1115,9 +1110,7 @@
         <article class="card">
           <span class="eyebrow">Signature Identity</span>
           <div class="mini-logo-row">
-            <div class="logo-mark">
-              <img class="site-logo" src="logo2.png" alt="Lisa Pearson Skin Studio logo" />
-            </div>
+            <div class="logo-mark"><img class="site-logo" src="logo2.png" alt="Lisa Pearson Skin Studio logo" /></div>
             <div>
               <h3 class="about-title" style="margin:0; font-size:1.7rem; letter-spacing:0.1em;">Lisa Pearson</h3>
               <p style="margin:6px 0 0; color:var(--muted); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.22em;">Skin Studio</p>
@@ -1136,11 +1129,9 @@
           <span class="eyebrow">Services</span>
           <h3>Professional support in a real studio setting.</h3>
           <p>
-            Present the studio with clarity and confidence so visitors immediately understand the experience,
-            the service focus, and the next step to book.
+            Present the studio with clarity and confidence so visitors immediately understand the experience, the service focus, and the next step to book.
           </p>
         </div>
-
         <div class="grid-3">
           <article class="card">
             <h4>In-Person Consultation</h4>
@@ -1164,11 +1155,9 @@
           <span class="eyebrow">Price List</span>
           <h3>Lisa Pearson Skincare Consulting – Price List</h3>
           <p>
-            A clear professional service menu for client review, featuring consultation options,
-            personalized planning, and premium skincare guidance.
+            A clear professional service menu for client review, featuring consultation options, personalized planning, and premium skincare guidance.
           </p>
         </div>
-
         <div class="grid-3">
           <article class="card">
             <h4>Initial Skincare Consultation</h4>
@@ -1220,8 +1209,7 @@
               <h3 class="founder-name">Lisa Pearson</h3>
               <div class="founder-label">Founder</div>
               <p style="margin-top:14px;">
-                Lisa Pearson is the founder of Lisa Pearson Skin Studio, created to offer thoughtful,
-                in-person skin care guidance in a calm and professional environment.
+                Lisa Pearson is the founder of Lisa Pearson Skin Studio, created to offer thoughtful, in-person skin care guidance in a calm and professional environment.
               </p>
               <p>
                 This section is ready for the final founder bio and credentials once the client approves the design direction and layout.
@@ -1234,8 +1222,7 @@
           <span class="eyebrow">Studio Vision</span>
           <h3 class="about-title" style="margin:14px 0 10px; font-size:2rem;">Simple, elegant, and client-focused.</h3>
           <p>
-            Lisa Pearson Skin Studio is designed to feel warm, polished, and personal. The brand voice centers on confidence,
-            healthy skin, trust, and clear professional guidance.
+            Lisa Pearson Skin Studio is designed to feel warm, polished, and personal. The brand voice centers on confidence, healthy skin, trust, and clear professional guidance.
           </p>
           <ul class="list-clean">
             <li>In-person skin care consultations</li>
@@ -1253,8 +1240,7 @@
           <span class="eyebrow">Newsletter</span>
           <h3 class="about-title" style="margin:14px 0 10px; font-size:2rem;">Glow with Lisa Pearson ✨</h3>
           <p class="booking-note">
-            Join the Lisa Pearson Skincare newsletter and stay updated with expert skincare tips,
-            product recommendations, and simple routines to help you achieve healthy, radiant skin.
+            Join the Lisa Pearson Skincare newsletter and stay updated with expert skincare tips, product recommendations, and simple routines to help you achieve healthy, radiant skin.
           </p>
           <ul class="list-clean">
             <li>Exclusive skincare tips</li>
@@ -1343,12 +1329,19 @@
         const data = new FormData(e.target);
         const subject = encodeURIComponent('New Skin Care Booking Request');
         const body = encodeURIComponent(
-          'Name: ' + (data.get('name') || '') + '\n' +
-          'Email: ' + (data.get('email') || '') + '\n' +
-          'Phone: ' + (data.get('phone') || '') + '\n' +
-          'Preferred Date: ' + (data.get('date') || '') + '\n' +
-          'Concern: ' + (data.get('concern') || '') + '\n\n' +
-          'Message:\n' + (data.get('message') || '')
+          'Name: ' + (data.get('name') || '') + '
+' +
+          'Email: ' + (data.get('email') || '') + '
+' +
+          'Phone: ' + (data.get('phone') || '') + '
+' +
+          'Preferred Date: ' + (data.get('date') || '') + '
+' +
+          'Concern: ' + (data.get('concern') || '') + '
+
+' +
+          'Message:
+' + (data.get('message') || '')
         );
         window.location.href = 'mailto:' + bookingEmail + '?subject=' + subject + '&body=' + body;
       });
@@ -1361,8 +1354,10 @@
         const data = new FormData(e.target);
         const subject = encodeURIComponent('Newsletter Signup');
         const body = encodeURIComponent(
-          'Name: ' + (data.get('name') || '') + '\n' +
-          'Email: ' + (data.get('email') || '') + '\n' +
+          'Name: ' + (data.get('name') || '') + '
+' +
+          'Email: ' + (data.get('email') || '') + '
+' +
           'Interests: ' + (data.get('interest') || '')
         );
         window.location.href = 'mailto:' + bookingEmail + '?subject=' + subject + '&body=' + body;
