@@ -4,19 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lisa Pearson Skin Studio | In-Person Skin Care Consultation</title>
-  <meta name="description" content="Book an in-person skin care consultation for personalized treatment planning and healthy glowing skin." />
+  <meta name="description" content="Book an in-person skin care consultation with Lisa Pearson Skin Studio for personalized treatment planning and healthy glowing skin." />
   <style>
     :root {
-      --bg: #f7f2ee;
+      --bg: #f8f4f1;
       --surface: #ffffff;
-      --text: #2f2725;
-      --muted: #7b6d68;
-      --line: #eadfd8;
-      --accent: #b57c7d;
-      --accent-dark: #8f6061;
-      --soft: #f3e5df;
-      --shadow: 0 18px 40px rgba(72, 48, 42, 0.08);
-      --radius: 22px;
+      --text: #2d2523;
+      --muted: #736865;
+      --line: #e7d8d1;
+      --blush: #e8c5bc;
+      --rose-gold: #c89377;
+      --rose-gold-dark: #a86f55;
+      --sage: #9aa79c;
+      --soft: #f4e7e1;
+      --shadow: 0 18px 42px rgba(112, 82, 70, 0.10);
+      --radius: 24px;
       --max: 1180px;
     }
 
@@ -25,7 +27,10 @@
     body {
       margin: 0;
       font-family: Inter, Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #fcf8f5 0%, var(--bg) 100%);
+      background:
+        radial-gradient(circle at top left, rgba(232, 197, 188, 0.30), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(154, 167, 156, 0.18), transparent 28%),
+        linear-gradient(180deg, #fcf9f7 0%, var(--bg) 100%);
       color: var(--text);
     }
 
@@ -41,9 +46,9 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(252, 248, 245, 0.9);
+      background: rgba(252, 249, 247, 0.90);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid rgba(231, 216, 209, 0.85);
     }
 
     .topbar-inner {
@@ -61,40 +66,61 @@
     }
 
     .logo-mark {
-      width: 54px;
-      height: 54px;
+      width: 62px;
+      height: 62px;
       border-radius: 999px;
-      background: radial-gradient(circle at 30% 30%, #f7d9d3 0%, #ecd1c7 48%, #fff 100%);
-      border: 1px solid #ebd6ce;
+      position: relative;
       display: grid;
       place-items: center;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,0.95), rgba(255,255,255,0.55) 55%, rgba(255,255,255,0.2) 100%),
+        linear-gradient(135deg, rgba(232,197,188,0.85), rgba(244,231,225,0.95));
       box-shadow: var(--shadow);
-      position: relative;
-      font-family: Georgia, 'Times New Roman', serif;
-      font-weight: 700;
-      color: var(--accent-dark);
-      letter-spacing: 0.06em;
+      border: 1px solid rgba(200, 147, 119, 0.24);
+      overflow: hidden;
     }
 
     .logo-mark::before {
       content: "";
       position: absolute;
-      inset: 10px;
+      inset: 8px;
       border-radius: 999px;
-      border: 2px solid rgba(181, 124, 125, 0.55);
+      border: 2px solid rgba(200, 147, 119, 0.48);
+    }
+
+    .logo-mark::after {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      border: 2px solid rgba(200, 147, 119, 0.34);
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      border-radius: 999px;
+      transform: rotate(24deg);
+    }
+
+    .logo-letters {
+      position: relative;
+      z-index: 1;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: var(--rose-gold-dark);
     }
 
     .brand-text h1 {
       margin: 0;
-      font-size: 1rem;
-      letter-spacing: 0.22em;
+      font-size: 1.02rem;
+      letter-spacing: 0.2em;
       font-weight: 700;
     }
 
     .brand-text p {
       margin: 2px 0 0;
       font-size: 0.72rem;
-      letter-spacing: 0.24em;
+      letter-spacing: 0.28em;
       color: var(--muted);
       text-transform: uppercase;
     }
@@ -120,26 +146,24 @@
     }
 
     .btn-primary {
-      background: var(--accent);
+      background: linear-gradient(135deg, var(--rose-gold), var(--rose-gold-dark));
       color: #fff;
       box-shadow: var(--shadow);
     }
 
-    .btn-primary:hover { background: var(--accent-dark); }
+    .btn-primary:hover { filter: brightness(0.98); transform: translateY(-1px); }
 
     .btn-secondary {
-      background: #fff;
+      background: rgba(255,255,255,0.75);
       border-color: var(--line);
       color: var(--text);
     }
 
-    .hero {
-      padding: 72px 0 44px;
-    }
+    .hero { padding: 72px 0 44px; }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.08fr 0.92fr;
       gap: 36px;
       align-items: center;
     }
@@ -148,7 +172,7 @@
       display: inline-block;
       padding: 9px 14px;
       border-radius: 999px;
-      background: #fff;
+      background: rgba(255,255,255,0.8);
       border: 1px solid var(--line);
       color: var(--muted);
       font-size: 0.76rem;
@@ -156,8 +180,14 @@
       text-transform: uppercase;
     }
 
-    .hero h2 {
+    .hero h2,
+    .section-title h3,
+    .feature-title,
+    .about-title {
       font-family: Georgia, 'Times New Roman', serif;
+    }
+
+    .hero h2 {
       font-size: clamp(2.5rem, 5vw, 4.8rem);
       line-height: 1.05;
       margin: 18px 0 16px;
@@ -180,21 +210,21 @@
 
     .hero-card,
     .card {
-      background: rgba(255,255,255,0.9);
-      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.86);
+      border: 1px solid rgba(231, 216, 209, 0.95);
       border-radius: calc(var(--radius) + 6px);
       box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
     }
 
-    .hero-card {
-      padding: 24px;
-    }
+    .hero-card { padding: 24px; }
 
     .hero-photo {
-      min-height: 500px;
+      min-height: 520px;
       background:
-        linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0.45)),
-        radial-gradient(circle at top, #f8dfd9 0%, #f0dfd8 35%, #eadfd8 100%);
+        radial-gradient(circle at top left, rgba(232,197,188,0.65), transparent 38%),
+        radial-gradient(circle at bottom right, rgba(154,167,156,0.38), transparent 34%),
+        linear-gradient(180deg, rgba(255,255,255,0.8), rgba(244,231,225,0.72));
       border-radius: 28px;
       padding: 24px;
       display: flex;
@@ -203,10 +233,40 @@
 
     .hero-photo-inner {
       width: 100%;
-      background: rgba(255,255,255,0.76);
+      background: rgba(255,255,255,0.82);
       border: 1px solid rgba(255,255,255,0.7);
       border-radius: 24px;
       padding: 22px;
+    }
+
+    .logo-display {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .logo-display .logo-mark {
+      width: 92px;
+      height: 92px;
+    }
+
+    .logo-display .logo-letters {
+      font-size: 2.4rem;
+    }
+
+    .logo-display h3 {
+      margin: 0;
+      font-size: 1.85rem;
+      letter-spacing: 0.12em;
+    }
+
+    .logo-display p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
     }
 
     .stat-grid {
@@ -229,9 +289,7 @@
       margin-bottom: 8px;
     }
 
-    .stat strong {
-      font-size: 1.1rem;
-    }
+    .stat strong { font-size: 1.08rem; }
 
     section { padding: 34px 0; }
 
@@ -241,7 +299,6 @@
     }
 
     .section-title h3 {
-      font-family: Georgia, 'Times New Roman', serif;
       font-size: clamp(2rem, 3vw, 3rem);
       margin: 10px 0 0;
     }
@@ -258,9 +315,7 @@
       gap: 20px;
     }
 
-    .card {
-      padding: 24px;
-    }
+    .card { padding: 24px; }
 
     .card h4 {
       margin: 0 0 10px;
@@ -273,18 +328,18 @@
       line-height: 1.75;
     }
 
-    .packages .card {
-      padding-bottom: 28px;
-    }
+    .packages .card { padding-bottom: 28px; }
 
     .price {
       font-family: Georgia, 'Times New Roman', serif;
       font-size: 2.2rem;
       margin: 14px 0 10px;
+      color: var(--rose-gold-dark);
     }
 
     .about-grid,
-    .booking-grid {
+    .booking-grid,
+    .brand-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
@@ -295,8 +350,68 @@
       padding-left: 18px;
     }
 
-    .booking-box {
-      padding: 28px;
+    .booking-box { padding: 28px; }
+
+    .founder-card {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .founder-portrait {
+      width: 110px;
+      height: 110px;
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.45)),
+        linear-gradient(135deg, rgba(232,197,188,0.75), rgba(154,167,156,0.38));
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 2rem;
+      color: var(--rose-gold-dark);
+      box-shadow: var(--shadow);
+    }
+
+    .founder-label {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--rose-gold-dark);
+      font-size: 0.76rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .color-swatches {
+      display: flex;
+      gap: 12px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+
+    .swatch {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px 8px 8px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .swatch-dot {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.06);
     }
 
     form {
@@ -311,7 +426,7 @@
       width: 100%;
       border: 1px solid var(--line);
       border-radius: 16px;
-      background: #fff;
+      background: rgba(255,255,255,0.92);
       padding: 14px 16px;
       font: inherit;
       color: var(--text);
@@ -326,8 +441,8 @@
 
     input:focus,
     textarea:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 4px rgba(181, 124, 125, 0.12);
+      border-color: var(--rose-gold);
+      box-shadow: 0 0 0 4px rgba(200, 147, 119, 0.12);
     }
 
     .full { grid-column: 1 / -1; }
@@ -353,17 +468,15 @@
       .grid-3,
       .about-grid,
       .booking-grid,
-      form {
+      .brand-grid,
+      form,
+      .founder-card {
         grid-template-columns: 1fr;
       }
 
-      nav {
-        display: none;
-      }
-
-      .hero-photo {
-        min-height: 360px;
-      }
+      nav { display: none; }
+      .hero-photo { min-height: 360px; }
+      .logo-display { align-items: flex-start; }
     }
   </style>
 </head>
@@ -371,7 +484,7 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="#top">
-        <div class="logo-mark">LS</div>
+        <div class="logo-mark"><span class="logo-letters">LP</span></div>
         <div class="brand-text">
           <h1>LISA PEARSON</h1>
           <p>Skin Studio</p>
@@ -392,10 +505,16 @@
       <div class="container hero-grid">
         <div>
           <span class="eyebrow">In-Person Skin Care Consultation</span>
+          <div class="logo-display">
+            <div class="logo-mark"><span class="logo-letters">LP</span></div>
+            <div>
+              <h3>LISA PEARSON</h3>
+              <p>Skin Studio</p>
+            </div>
+          </div>
           <h2>Healthy skin starts with the right care plan.</h2>
           <p>
-            A clean one-page booking site for a real-life skin care studio. Use it to present services,
-            pricing, studio details, and appointment requests while your DNS and domain are ready.
+            A polished one-page booking site for a real-life skin care studio. The new design now matches the logo direction with blush, rose-gold, cream, and sage tones for a softer luxury beauty feel.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#booking">Book Appointment</a>
@@ -413,7 +532,7 @@
         <div class="hero-card hero-photo">
           <div class="hero-photo-inner">
             <small class="eyebrow" style="background: var(--soft); border-color: transparent;">Featured Service</small>
-            <h3 style="margin:14px 0 10px; font-size:1.9rem;">Signature Skin Consultation</h3>
+            <h3 class="feature-title" style="margin:14px 0 10px; font-size:1.9rem;">Signature Skin Consultation</h3>
             <p style="margin:0; color: var(--muted); line-height:1.75;">
               Review your skin concerns, product routine, treatment goals, and next steps in a calm in-studio setting.
             </p>
@@ -440,12 +559,43 @@
       </div>
     </section>
 
+    <section id="brand">
+      <div class="container brand-grid">
+        <article class="card">
+          <span class="eyebrow">Brand Theme</span>
+          <h3 class="about-title" style="margin:14px 0 10px; font-size:2rem;">Logo-inspired color direction</h3>
+          <p>
+            The site now follows the same visual direction as the logo concept: soft blush, rose-gold warmth, clean cream backgrounds, and a touch of muted sage for balance.
+          </p>
+          <div class="color-swatches">
+            <div class="swatch"><span class="swatch-dot" style="background:#e8c5bc;"></span>Blush</div>
+            <div class="swatch"><span class="swatch-dot" style="background:#c89377;"></span>Rose Gold</div>
+            <div class="swatch"><span class="swatch-dot" style="background:#f8f4f1;"></span>Cream</div>
+            <div class="swatch"><span class="swatch-dot" style="background:#9aa79c;"></span>Sage</div>
+          </div>
+        </article>
+        <article class="card">
+          <span class="eyebrow">Logo Example</span>
+          <div class="logo-display" style="margin-top:18px; margin-bottom:0;">
+            <div class="logo-mark"><span class="logo-letters">LP</span></div>
+            <div>
+              <h3 style="margin:0; font-family:Georgia, 'Times New Roman', serif; letter-spacing:0.12em;">LISA PEARSON</h3>
+              <p style="margin:6px 0 0; color:var(--muted); letter-spacing:0.28em; text-transform:uppercase; font-size:0.78rem;">Skin Studio</p>
+            </div>
+          </div>
+          <p style="margin-top:18px;">
+            This keeps the page branded even before the final exported logo file is dropped into the site.
+          </p>
+        </article>
+      </div>
+    </section>
+
     <section id="services">
       <div class="container">
         <div class="section-title">
           <span class="eyebrow">Services</span>
           <h3>Professional support in a real studio setting.</h3>
-          <p>Keep this simple and appointment-focused so visitors immediately understand what is offered.</p>
+          <p>Keep the structure clean and appointment-focused so visitors immediately understand what is offered.</p>
         </div>
         <div class="grid-3">
           <article class="card">
@@ -469,7 +619,7 @@
         <div class="section-title">
           <span class="eyebrow">Packages</span>
           <h3>Quick pricing for a fast launch.</h3>
-          <p>You can change these prices later once the final services are confirmed.</p>
+          <p>You can revise these packages later once the final services are confirmed.</p>
         </div>
         <div class="grid-3">
           <article class="card">
@@ -497,17 +647,32 @@
     <section id="about">
       <div class="container about-grid">
         <article class="card">
-          <span class="eyebrow">About</span>
-          <h3 style="margin:14px 0 10px; font-size:2rem; font-family: Georgia, 'Times New Roman', serif;">Simple, elegant, and ready to publish.</h3>
-          <p>This quick index page is built to get the site online fast while keeping the look clean and premium.</p>
+          <span class="eyebrow">About the Founder</span>
+          <div class="founder-card" style="margin-top:18px;">
+            <div class="founder-portrait">LP</div>
+            <div>
+              <h3 class="about-title" style="margin:0 0 6px; font-size:2rem;">Lisa Pearson</h3>
+              <div class="founder-label">Founder</div>
+              <p style="margin-top:14px;">
+                Lisa Pearson is the founder of Lisa Pearson Skin Studio, created to offer thoughtful, in-person skin care guidance in a calm and professional environment.
+              </p>
+              <p>
+                This section can later be replaced with Lisa's real bio, credentials, studio philosophy, and client care approach.
+              </p>
+            </div>
+          </div>
         </article>
         <article class="card">
-          <span class="eyebrow">Good fit for</span>
+          <span class="eyebrow">Studio Vision</span>
+          <h3 class="about-title" style="margin:14px 0 10px; font-size:2rem;">Simple, elegant, and client-focused.</h3>
+          <p>
+            Lisa Pearson Skin Studio is designed to feel warm, polished, and personal. The brand voice centers on confidence, healthy skin, trust, and clear guidance.
+          </p>
           <ul class="list-clean">
-            <li>Local skin care studios</li>
-            <li>Facial consultation booking</li>
-            <li>Treatment and maintenance visits</li>
-            <li>Beauty and wellness service launches</li>
+            <li>In-person skin care consultations</li>
+            <li>Customized care plans</li>
+            <li>Local beauty and wellness positioning</li>
+            <li>Premium but approachable presentation</li>
           </ul>
         </article>
       </div>
@@ -517,9 +682,9 @@
       <div class="container booking-grid">
         <article class="card booking-box">
           <span class="eyebrow">Book Now</span>
-          <h3 style="margin:14px 0 10px; font-size:2rem; font-family: Georgia, 'Times New Roman', serif;">Request an appointment.</h3>
+          <h3 class="about-title" style="margin:14px 0 10px; font-size:2rem;">Request an appointment.</h3>
           <p style="color:var(--muted); line-height:1.8;">
-            Replace the placeholders below with the real studio info. The form currently opens the user's email app so you can launch quickly without a full backend.
+            Replace the placeholders below with the real studio info. The form currently opens the user's email app so the site can launch quickly without a full backend.
           </p>
           <div class="contact-strip" style="margin-top:24px; display:block;">
             <div style="margin-bottom:10px;">Studio Address: <strong>Add address here</strong></div>
@@ -545,7 +710,7 @@
 
   <footer>
     <div class="container">
-      © 2026 Lisa Pearson Skin Studio • In-Person Skin Care Consultation                       • Powered by TeamNova
+      © 2026 Lisa Pearson Skin Studio • In-Person Skin Care Consultation
     </div>
   </footer>
 
@@ -558,12 +723,19 @@
       const data = new FormData(e.target);
       const subject = encodeURIComponent('New Skin Care Booking Request');
       const body = encodeURIComponent(
-        'Name: ' + (data.get('name') || '') + '\n' +
-        'Email: ' + (data.get('email') || '') + '\n' +
-        'Phone: ' + (data.get('phone') || '') + '\n' +
-        'Preferred Date: ' + (data.get('date') || '') + '\n' +
-        'Concern: ' + (data.get('concern') || '') + '\n\n' +
-        'Message:\n' + (data.get('message') || '')
+        'Name: ' + (data.get('name') || '') + '
+' +
+        'Email: ' + (data.get('email') || '') + '
+' +
+        'Phone: ' + (data.get('phone') || '') + '
+' +
+        'Preferred Date: ' + (data.get('date') || '') + '
+' +
+        'Concern: ' + (data.get('concern') || '') + '
+
+' +
+        'Message:
+' + (data.get('message') || '')
       );
       window.location.href = 'mailto:' + bookingEmail + '?subject=' + subject + '&body=' + body;
     });
