@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#d9cbc3" />
+  <meta name="theme-color" content="#d0bfb7" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <title>Lisa Pearson Skin Studio | In-Person Skin Care Consultation</title>
   <meta name="description" content="Professional in-person skin care consultations with Lisa Pearson Skin Studio. Personalized guidance, treatment planning, and a refined booking experience." />
   <style>
     :root {
-      --bg: #e7ddd7;
-      --bg-soft: #efe7e2;
+      --bg: #ddd0ca;
+      --bg-deep: #d2c1ba;
       --surface: rgba(255, 250, 247, 0.9);
       --surface-strong: #fffaf7;
-      --text: #241d1a;
-      --muted: #5d5652;
-      --line: #d7c6bd;
-      --blush: #d7b4ab;
-      --rose-gold: #b98368;
+      --text: #241c19;
+      --muted: #5f5652;
+      --line: #d4c2ba;
+      --blush: #ddb8ae;
+      --rose-gold: #b98468;
       --rose-gold-dark: #8f5f4b;
       --sage: #8f9a92;
-      --soft: #ead8d0;
-      --shadow: 0 18px 42px rgba(86, 61, 52, 0.14);
-      --shadow-soft: 0 10px 24px rgba(86, 61, 52, 0.08);
+      --soft: #ebd9d2;
+      --shadow: 0 18px 46px rgba(79, 56, 47, 0.14);
+      --shadow-soft: 0 10px 24px rgba(79, 56, 47, 0.08);
       --radius: 26px;
       --max: 1180px;
     }
@@ -34,14 +34,15 @@
       margin: 0;
       font-family: Inter, Arial, Helvetica, sans-serif;
       color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(185,131,104,0.14), transparent 34%),
-        radial-gradient(circle at bottom right, rgba(143,154,146,0.11), transparent 28%),
-        linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 100%);
+      background: linear-gradient(180deg, #eee4df 0%, var(--bg) 100%);
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
       overflow-x: hidden;
     }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button, input, textarea { font: inherit; }
 
     .ambient-bg {
       position: fixed;
@@ -50,38 +51,108 @@
       pointer-events: none;
       overflow: hidden;
       background:
-        radial-gradient(circle at 18% 16%, rgba(215,180,171,0.18), transparent 24%),
-        radial-gradient(circle at 84% 20%, rgba(185,131,104,0.12), transparent 20%),
-        radial-gradient(circle at 74% 76%, rgba(143,154,146,0.10), transparent 22%),
-        linear-gradient(180deg, rgba(244,237,233,0.96) 0%, rgba(231,221,215,0.99) 100%);
+        radial-gradient(circle at 14% 16%, rgba(221,184,174,0.20), transparent 24%),
+        radial-gradient(circle at 84% 22%, rgba(185,132,104,0.12), transparent 20%),
+        radial-gradient(circle at 74% 80%, rgba(143,154,146,0.12), transparent 22%),
+        linear-gradient(180deg, rgba(238,228,223,0.98) 0%, rgba(221,208,202,1) 100%);
     }
 
     .ambient-bg::before {
       content: "";
       position: absolute;
-      inset: -8%;
+      inset: -10%;
       background:
-        linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.12) 36%, transparent 54%),
-        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0));
+        linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.11) 36%, transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
       animation: shimmerDrift 22s linear infinite;
-      opacity: 0.7;
+      opacity: 0.9;
     }
 
     .ambient-bg::after {
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.10), transparent 55%),
-        repeating-linear-gradient(
-          90deg,
-          rgba(255,255,255,0.04) 0,
-          rgba(255,255,255,0.04) 1px,
-          transparent 1px,
-          transparent 140px
-        );
-      opacity: 0.18;
-      mix-blend-mode: soft-light;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 58%);
+      opacity: 0.7;
+    }
+
+    .ambient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(12px);
+      opacity: 0.78;
+      will-change: transform, opacity;
+    }
+
+    .ambient-orb.one {
+      width: 420px;
+      height: 420px;
+      top: -80px;
+      left: -60px;
+      background: radial-gradient(circle, rgba(221,184,174,0.42) 0%, rgba(221,184,174,0.18) 42%, transparent 72%);
+      animation: floatOne 18s ease-in-out infinite;
+    }
+
+    .ambient-orb.two {
+      width: 320px;
+      height: 320px;
+      top: 18%;
+      right: -90px;
+      background: radial-gradient(circle, rgba(185,132,104,0.28) 0%, rgba(185,132,104,0.10) 44%, transparent 72%);
+      animation: floatTwo 22s ease-in-out infinite;
+    }
+
+    .ambient-orb.three {
+      width: 360px;
+      height: 360px;
+      bottom: -120px;
+      left: 52%;
+      background: radial-gradient(circle, rgba(143,154,146,0.22) 0%, rgba(143,154,146,0.08) 46%, transparent 72%);
+      animation: floatThree 26s ease-in-out infinite;
+    }
+
+    .ambient-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(185,132,104,0.16);
+      opacity: 0.56;
+      will-change: transform, opacity;
+    }
+
+    .ambient-ring.one {
+      width: 320px;
+      height: 320px;
+      right: 10%;
+      top: 90px;
+      animation: ringPulse 16s ease-in-out infinite;
+    }
+
+    .ambient-ring.two {
+      width: 210px;
+      height: 210px;
+      left: 7%;
+      bottom: 120px;
+      animation: ringPulse 18s ease-in-out infinite reverse;
+    }
+
+    @keyframes floatOne {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.74; }
+      50% { transform: translate3d(42px, 24px, 0) scale(1.06); opacity: 0.92; }
+    }
+
+    @keyframes floatTwo {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.7; }
+      50% { transform: translate3d(-34px, 40px, 0) scale(1.08); opacity: 0.9; }
+    }
+
+    @keyframes floatThree {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.68; }
+      50% { transform: translate3d(-34px, -24px, 0) scale(1.05); opacity: 0.86; }
+    }
+
+    @keyframes ringPulse {
+      0%, 100% { transform: scale(1); opacity: 0.40; }
+      50% { transform: scale(1.08); opacity: 0.14; }
     }
 
     @keyframes shimmerDrift {
@@ -89,10 +160,6 @@
       50% { transform: translateX(6%) translateY(1.5%); }
       100% { transform: translateX(-6%) translateY(0); }
     }
-
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    button, input, textarea { font: inherit; }
 
     .container {
       width: min(var(--max), calc(100% - 32px));
@@ -103,9 +170,9 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(248, 242, 238, 0.92);
+      background: rgba(248, 241, 237, 0.9);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(215, 198, 189, 0.9);
+      border-bottom: 1px solid rgba(212, 194, 186, 0.92);
     }
 
     .topbar-inner {
@@ -129,8 +196,8 @@
       flex: 0 0 68px;
       border-radius: 20px;
       background: rgba(255,255,255,0.98);
-      border: 1px solid rgba(215, 198, 189, 0.95);
-      box-shadow: 0 16px 34px rgba(86, 61, 52, 0.14);
+      border: 1px solid rgba(212, 194, 186, 0.96);
+      box-shadow: 0 18px 36px rgba(79, 56, 47, 0.14);
       overflow: hidden;
       padding: 8px;
       display: grid;
@@ -142,11 +209,7 @@
       height: 100%;
       object-fit: contain;
       transform: scale(1.12);
-      filter: contrast(1.08) saturate(1.1) drop-shadow(0 10px 18px rgba(86, 61, 52, 0.12));
-    }
-
-    .brand-text {
-      min-width: 0;
+      filter: contrast(1.08) saturate(1.1) drop-shadow(0 10px 18px rgba(79, 56, 47, 0.12));
     }
 
     .brand-text h1 {
@@ -199,7 +262,7 @@
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.74);
+      background: rgba(255,255,255,0.76);
       border-color: var(--line);
       color: var(--text);
     }
@@ -221,7 +284,7 @@
       min-height: 38px;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(255,250,247,0.88);
+      background: rgba(255,250,247,0.9);
       border: 1px solid var(--line);
       color: var(--rose-gold-dark);
       font-size: 0.74rem;
@@ -246,9 +309,9 @@
       margin: 18px 0 22px;
       padding: 18px 20px;
       max-width: 540px;
-      border-radius: 28px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(234,216,208,0.68));
-      border: 1px solid rgba(215, 198, 189, 0.96);
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(235,217,210,0.72));
+      border: 1px solid rgba(212, 194, 186, 0.96);
       box-shadow: var(--shadow);
     }
 
@@ -262,7 +325,7 @@
 
     .hero-lockup-copy h3 {
       margin: 0;
-      font-size: 0.92rem;
+      font-size: 0.94rem;
       line-height: 1.1;
       letter-spacing: 0.16em;
       font-weight: 800;
@@ -294,7 +357,7 @@
       line-height: 0.98;
       letter-spacing: -0.03em;
       color: #271f1c;
-      text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+      text-shadow: 0 1px 0 rgba(255,255,255,0.22);
     }
 
     .hero-lead {
@@ -318,7 +381,7 @@
       min-height: 42px;
       padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.84);
+      background: rgba(255,255,255,0.86);
       border: 1px solid var(--line);
       color: var(--text);
       font-size: 0.83rem;
@@ -345,7 +408,7 @@
     .hero-card,
     .card {
       background: var(--surface);
-      border: 1px solid rgba(215, 198, 189, 0.96);
+      border: 1px solid rgba(212, 194, 186, 0.96);
       border-radius: calc(var(--radius) + 6px);
       box-shadow: var(--shadow);
       backdrop-filter: blur(8px);
@@ -356,10 +419,10 @@
     .hero-photo {
       min-height: 540px;
       background:
-        radial-gradient(circle at top left, rgba(215,180,171,0.56), transparent 38%),
-        radial-gradient(circle at bottom right, rgba(143,154,146,0.2), transparent 34%),
-        linear-gradient(180deg, rgba(255,250,247,0.96), rgba(234,216,208,0.82));
-      border-radius: 28px;
+        radial-gradient(circle at top left, rgba(221,184,174,0.56), transparent 38%),
+        radial-gradient(circle at bottom right, rgba(143,154,146,0.22), transparent 34%),
+        linear-gradient(180deg, rgba(255,250,247,0.96), rgba(235,217,210,0.84));
+      border-radius: 30px;
       padding: 22px;
       display: flex;
       align-items: stretch;
@@ -368,9 +431,8 @@
     .hero-photo-inner {
       width: 100%;
       border-radius: 24px;
-      border: 1px solid rgba(255,255,255,0.7);
-      background: rgba(255,255,255,0.6);
-      padding: 0;
+      border: 1px solid rgba(255,255,255,0.74);
+      background: rgba(255,255,255,0.64);
       overflow: hidden;
     }
 
@@ -381,9 +443,9 @@
       border-radius: 24px;
       overflow: hidden;
       background:
-        radial-gradient(circle at top left, rgba(215,180,171,0.92), transparent 34%),
+        radial-gradient(circle at top left, rgba(221,184,174,0.96), transparent 34%),
         radial-gradient(circle at bottom right, rgba(143,154,146,0.34), transparent 30%),
-        linear-gradient(180deg, rgba(255,255,255,0.98), rgba(240,229,223,0.92));
+        linear-gradient(180deg, rgba(255,255,255,0.98), rgba(241,229,223,0.94));
       padding: 26px;
       display: flex;
       align-items: flex-end;
@@ -397,7 +459,7 @@
       top: 24px;
       width: 240px;
       height: 240px;
-      border: 2px solid rgba(185,131,104,0.34);
+      border: 2px solid rgba(185,132,104,0.34);
       border-left-color: transparent;
       border-bottom-color: transparent;
       border-radius: 50%;
@@ -413,9 +475,9 @@
       height: 250px;
       border-radius: 110px 110px 38px 38px;
       background:
-        linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,255,255,0.5)),
-        linear-gradient(135deg, rgba(215,180,171,0.72), rgba(255,255,255,0.2));
-      box-shadow: 0 20px 38px rgba(86, 61, 52, 0.12);
+        linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,255,255,0.5)),
+        linear-gradient(135deg, rgba(221,184,174,0.72), rgba(255,255,255,0.2));
+      box-shadow: 0 20px 38px rgba(79, 56, 47, 0.12);
     }
 
     .studio-badge {
@@ -428,8 +490,8 @@
       min-height: 38px;
       padding: 9px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.92);
-      border: 1px solid rgba(215, 198, 189, 0.95);
+      background: rgba(255,255,255,0.94);
+      border: 1px solid rgba(212, 194, 186, 0.95);
       color: var(--rose-gold-dark);
       font-size: 0.74rem;
       font-weight: 800;
@@ -444,10 +506,10 @@
       width: 100%;
       max-width: 370px;
       padding: 24px;
-      border-radius: 26px;
-      background: rgba(255,255,255,0.92);
-      border: 1px solid rgba(215, 198, 189, 0.96);
-      box-shadow: 0 24px 48px rgba(86, 61, 52, 0.13);
+      border-radius: 28px;
+      background: rgba(255,255,255,0.93);
+      border: 1px solid rgba(212, 194, 186, 0.96);
+      box-shadow: 0 24px 48px rgba(79, 56, 47, 0.13);
     }
 
     .visual-card h3 {
@@ -494,7 +556,7 @@
       margin-top: 16px;
       padding: 14px 16px;
       border-radius: 18px;
-      background: linear-gradient(135deg, rgba(234,216,208,0.7), rgba(255,255,255,0.94));
+      background: linear-gradient(135deg, rgba(235,217,210,0.74), rgba(255,255,255,0.95));
       border: 1px solid var(--line);
       color: var(--text);
       line-height: 1.75;
@@ -535,8 +597,11 @@
     .about-grid,
     .booking-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 20px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .brand-grid,
@@ -545,9 +610,7 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .card {
-      padding: 28px;
-    }
+    .card { padding: 28px; }
 
     .card h4 {
       margin: 0 0 10px;
@@ -627,8 +690,8 @@
       border-radius: 28px;
       border: 1px solid var(--line);
       background:
-        linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.5)),
-        linear-gradient(135deg, rgba(215,180,171,0.76), rgba(143,154,146,0.28));
+        linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.56)),
+        linear-gradient(135deg, rgba(221,184,174,0.76), rgba(143,154,146,0.28));
       box-shadow: var(--shadow-soft);
       display: grid;
       place-items: center;
@@ -649,7 +712,7 @@
       min-height: 34px;
       padding: 7px 12px;
       border-radius: 999px;
-      background: rgba(234,216,208,0.78);
+      background: rgba(235,217,210,0.8);
       color: var(--rose-gold-dark);
       font-size: 0.74rem;
       letter-spacing: 0.14em;
@@ -715,7 +778,7 @@
     input:focus,
     textarea:focus {
       border-color: var(--rose-gold);
-      box-shadow: 0 0 0 4px rgba(185,131,104,0.12);
+      box-shadow: 0 0 0 4px rgba(185,132,104,0.12);
     }
 
     .full { grid-column: 1 / -1; }
@@ -724,8 +787,8 @@
       padding: 34px 0 100px;
       text-align: center;
       color: var(--muted);
-      border-top: 1px solid rgba(215, 198, 189, 0.92);
-      background: rgba(248, 242, 238, 0.74);
+      border-top: 1px solid rgba(212, 194, 186, 0.92);
+      background: rgba(248, 241, 237, 0.74);
     }
 
     .footer-main {
@@ -753,14 +816,22 @@
       padding: 10px;
       border-radius: 22px;
       background: rgba(255, 250, 247, 0.94);
-      border: 1px solid rgba(215, 198, 189, 0.96);
-      box-shadow: 0 20px 42px rgba(86, 61, 52, 0.18);
+      border: 1px solid rgba(212, 194, 186, 0.96);
+      box-shadow: 0 20px 42px rgba(79, 56, 47, 0.18);
       backdrop-filter: blur(12px);
     }
 
     .mobile-bookbar .btn {
       flex: 1 1 auto;
       min-height: 50px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ambient-bg::before,
+      .ambient-orb,
+      .ambient-ring {
+        animation: none !important;
+      }
     }
 
     @media (max-width: 1080px) {
@@ -780,18 +851,7 @@
       }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      .ambient-bg::before {
-        animation: none !important;
-      }
-    }
-
     @media (max-width: 820px) {
-      .mobile-bookbar {
-        backdrop-filter: blur(14px);
-      }
-
-      @media (max-width: 820px) {
       .topbar-inner {
         min-height: 74px;
       }
@@ -815,9 +875,9 @@
       }
 
       .hero-lockup .logo-mark {
-        width: 120px;
-        height: 120px;
-        flex: 0 0 120px;
+        width: 118px;
+        height: 118px;
+        flex: 0 0 118px;
         padding: 10px;
       }
 
@@ -855,6 +915,35 @@
         flex: 0 0 74px;
       }
 
+      .ambient-orb.one {
+        width: 260px;
+        height: 260px;
+      }
+
+      .ambient-orb.two {
+        width: 190px;
+        height: 190px;
+        right: -60px;
+      }
+
+      .ambient-orb.three {
+        width: 220px;
+        height: 220px;
+        left: 42%;
+      }
+
+      .ambient-ring.one {
+        width: 190px;
+        height: 190px;
+        right: -30px;
+      }
+
+      .ambient-ring.two {
+        width: 140px;
+        height: 140px;
+        left: -12px;
+      }
+
       .mobile-bookbar {
         display: flex;
       }
@@ -862,7 +951,14 @@
   </style>
 </head>
 <body>
-  <div class="ambient-bg" aria-hidden="true"></div>
+  <div class="ambient-bg" aria-hidden="true">
+    <span class="ambient-orb one"></span>
+    <span class="ambient-orb two"></span>
+    <span class="ambient-orb three"></span>
+    <span class="ambient-ring one"></span>
+    <span class="ambient-ring two"></span>
+  </div>
+
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="#top" aria-label="Lisa Pearson Skin Studio home">
@@ -899,7 +995,7 @@
 
           <h2>Healthy skin starts with thoughtful, personalized care.</h2>
           <p class="hero-lead">
-            A polished booking experience for clients seeking in-person skin care guidance, personalized treatment planning, and a studio presence that feels elevated, calm, and memorable from the first glance.
+            A refined booking experience for clients seeking in-person skin care guidance, personalized treatment planning, and a studio presence that feels elevated, calm, and memorable from the first glance.
           </p>
 
           <div class="hero-feature-list">
@@ -966,15 +1062,15 @@
         <article class="card">
           <span class="eyebrow">Brand Direction</span>
           <div class="section-title" style="margin-bottom: 0;">
-            <h3>Luxury beauty branding with softer contrast and cleaner structure.</h3>
+            <h3>Luxury beauty branding with stronger contrast and a polished mobile feel.</h3>
             <p>
-              The refreshed visual direction uses deeper neutral tones, stronger text contrast, and calmer card surfaces so the site looks more professional on desktop and more appealing on Android screens.
+              The refreshed visual direction uses deeper warm neutrals, cleaner card surfaces, and visible glowing ambient highlights so the site feels more premium on desktop and more appealing on Android screens.
             </p>
           </div>
           <div class="swatch-row">
-            <div class="swatch"><span class="swatch-dot" style="background:#d7b4ab;"></span>Blush</div>
-            <div class="swatch"><span class="swatch-dot" style="background:#b98368;"></span>Rose Gold</div>
-            <div class="swatch"><span class="swatch-dot" style="background:#efe7e2;"></span>Warm Nude</div>
+            <div class="swatch"><span class="swatch-dot" style="background:#ddb8ae;"></span>Blush</div>
+            <div class="swatch"><span class="swatch-dot" style="background:#b98468;"></span>Rose Gold</div>
+            <div class="swatch"><span class="swatch-dot" style="background:#eee4df;"></span>Warm Nude</div>
             <div class="swatch"><span class="swatch-dot" style="background:#8f9a92;"></span>Sage</div>
           </div>
         </article>
@@ -989,7 +1085,7 @@
             </div>
           </div>
           <p style="margin-top:18px;">
-            The hero, cards, buttons, and footer now follow the embedded logo more closely so the overall presentation feels consistent and client-ready.
+            The hero, cards, buttons, and footer now follow the embedded logo more closely so the full presentation feels cohesive, refined, and client-ready.
           </p>
         </article>
       </div>
@@ -1066,7 +1162,7 @@
                 Lisa Pearson is the founder of Lisa Pearson Skin Studio, created to offer thoughtful, in-person skin care guidance in a calm and professional environment.
               </p>
               <p>
-                This section can be updated later with Lisa’s full biography, credentials, studio philosophy, and client care approach once the client approves the design direction.
+                This section is ready for the final founder bio and credentials once the client approves the design direction and layout.
               </p>
             </div>
           </div>
@@ -1094,16 +1190,16 @@
           <span class="eyebrow">Book Now</span>
           <h3 class="about-title" style="margin:14px 0 10px; font-size:2rem;">Request an appointment.</h3>
           <p class="booking-note">
-            This booking section is intentionally simple for launch. It looks finished for client review now and can be connected to a full booking workflow later.
+            This booking section is intentionally simple for launch. It looks polished for client review now and can be connected to a full booking workflow later.
           </p>
           <div class="studio-details">
             <div class="studio-detail">
-              <strong>Studio Address</strong>
-              Private studio details can be added after approval.
+              <strong>Studio Access</strong>
+              Private appointment details can be shared at confirmation.
             </div>
             <div class="studio-detail">
-              <strong>Phone</strong>
-              Business contact number can be added after approval.
+              <strong>Business Contact</strong>
+              Dedicated studio phone line can be added after approval.
             </div>
             <div class="studio-detail">
               <strong>Email</strong>
