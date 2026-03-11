@@ -2,23 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#d9cbc3" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <title>Lisa Pearson Skin Studio | In-Person Skin Care Consultation</title>
-  <meta name="description" content="Book an in-person skin care consultation with Lisa Pearson Skin Studio for personalized treatment planning and healthy glowing skin." />
+  <meta name="description" content="Professional in-person skin care consultations with Lisa Pearson Skin Studio. Personalized guidance, treatment planning, and a refined booking experience." />
   <style>
     :root {
-      --bg: #f8f4f1;
-      --surface: #ffffff;
-      --text: #2d2523;
-      --muted: #736865;
-      --line: #e7d8d1;
-      --blush: #e8c5bc;
-      --rose-gold: #c89377;
-      --rose-gold-dark: #a86f55;
-      --sage: #9aa79c;
-      --soft: #f4e7e1;
-      --shadow: 0 18px 42px rgba(112, 82, 70, 0.10);
-      --radius: 24px;
+      --bg: #e7ddd7;
+      --bg-soft: #efe7e2;
+      --surface: rgba(255, 250, 247, 0.9);
+      --surface-strong: #fffaf7;
+      --text: #241d1a;
+      --muted: #5d5652;
+      --line: #d7c6bd;
+      --blush: #d7b4ab;
+      --rose-gold: #b98368;
+      --rose-gold-dark: #8f5f4b;
+      --sage: #8f9a92;
+      --soft: #ead8d0;
+      --shadow: 0 18px 42px rgba(86, 61, 52, 0.14);
+      --shadow-soft: 0 10px 24px rgba(86, 61, 52, 0.08);
+      --radius: 26px;
       --max: 1180px;
     }
 
@@ -27,15 +33,144 @@
     body {
       margin: 0;
       font-family: Inter, Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(232, 197, 188, 0.30), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(154, 167, 156, 0.18), transparent 28%),
-        linear-gradient(180deg, #fcf9f7 0%, var(--bg) 100%);
       color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(185,131,104,0.14), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(143,154,146,0.11), transparent 28%),
+        linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 100%);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    .ambient-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 15% 18%, rgba(215,180,171,0.26), transparent 22%),
+        radial-gradient(circle at 82% 22%, rgba(185,131,104,0.18), transparent 20%),
+        radial-gradient(circle at 72% 78%, rgba(143,154,146,0.16), transparent 24%),
+        linear-gradient(180deg, rgba(244,237,233,0.94) 0%, rgba(231,221,215,0.98) 100%);
+    }
+
+    .ambient-bg::before {
+      content: "";
+      position: absolute;
+      inset: -10%;
+      background:
+        linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.14) 36%, transparent 54%),
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0));
+      animation: shimmerDrift 18s linear infinite;
+      opacity: 0.9;
+    }
+
+    .ambient-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          rgba(255,255,255,0.06) 0,
+          rgba(255,255,255,0.06) 1px,
+          transparent 1px,
+          transparent 120px
+        );
+      opacity: 0.2;
+      mix-blend-mode: soft-light;
+    }
+
+    .ambient-orb {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(10px);
+      opacity: 0.8;
+      will-change: transform;
+    }
+
+    .ambient-orb.one {
+      width: 440px;
+      height: 440px;
+      top: -90px;
+      left: -70px;
+      background: radial-gradient(circle, rgba(215,180,171,0.48) 0%, rgba(215,180,171,0.16) 46%, transparent 72%);
+      animation: floatOne 20s ease-in-out infinite;
+    }
+
+    .ambient-orb.two {
+      width: 360px;
+      height: 360px;
+      top: 26%;
+      right: -90px;
+      background: radial-gradient(circle, rgba(185,131,104,0.28) 0%, rgba(185,131,104,0.12) 48%, transparent 72%);
+      animation: floatTwo 24s ease-in-out infinite;
+    }
+
+    .ambient-orb.three {
+      width: 420px;
+      height: 420px;
+      bottom: -120px;
+      left: 54%;
+      background: radial-gradient(circle, rgba(143,154,146,0.24) 0%, rgba(143,154,146,0.1) 48%, transparent 70%);
+      animation: floatThree 26s ease-in-out infinite;
+    }
+
+    .ambient-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(185,131,104,0.18);
+      opacity: 0.7;
+      will-change: transform;
+    }
+
+    .ambient-ring.one {
+      width: 380px;
+      height: 380px;
+      top: 90px;
+      right: 12%;
+      animation: ringPulse 16s ease-in-out infinite;
+    }
+
+    .ambient-ring.two {
+      width: 260px;
+      height: 260px;
+      bottom: 120px;
+      left: 8%;
+      animation: ringPulse 18s ease-in-out infinite reverse;
+    }
+
+    @keyframes floatOne {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+      50% { transform: translate3d(42px, 26px, 0) scale(1.05); }
+    }
+
+    @keyframes floatTwo {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+      50% { transform: translate3d(-34px, 36px, 0) scale(1.08); }
+    }
+
+    @keyframes floatThree {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+      50% { transform: translate3d(-38px, -28px, 0) scale(1.06); }
+    }
+
+    @keyframes ringPulse {
+      0%, 100% { transform: scale(1); opacity: 0.42; }
+      50% { transform: scale(1.08); opacity: 0.18; }
+    }
+
+    @keyframes shimmerDrift {
+      0% { transform: translateX(-8%) translateY(0); }
+      50% { transform: translateX(8%) translateY(2%); }
+      100% { transform: translateX(-8%) translateY(0); }
     }
 
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
+    button, input, textarea { font: inherit; }
 
     .container {
       width: min(var(--max), calc(100% - 32px));
@@ -45,72 +180,66 @@
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 50;
-      background: rgba(252, 249, 247, 0.90);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(231, 216, 209, 0.85);
+      z-index: 100;
+      background: rgba(248, 242, 238, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(215, 198, 189, 0.9);
     }
 
     .topbar-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
-      padding: 16px 0;
+      gap: 18px;
+      min-height: 84px;
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 14px;
+      min-width: 0;
     }
 
     .logo-mark {
-      width: 62px;
-      height: 62px;
-      border-radius: 22px;
-      position: relative;
-      display: grid;
-      place-items: center;
-      background: rgba(255,255,255,0.96);
-      box-shadow: 0 16px 34px rgba(112, 82, 70, 0.14);
-      border: 1px solid rgba(231, 216, 209, 0.95);
+      width: 68px;
+      height: 68px;
+      flex: 0 0 68px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.98);
+      border: 1px solid rgba(215, 198, 189, 0.95);
+      box-shadow: 0 16px 34px rgba(86, 61, 52, 0.14);
       overflow: hidden;
       padding: 8px;
+      display: grid;
+      place-items: center;
     }
 
     .site-logo {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      display: block;
-      transform: scale(1.14);
-      filter: contrast(1.08) saturate(1.12) drop-shadow(0 12px 24px rgba(112, 82, 70, 0.16));
+      transform: scale(1.12);
+      filter: contrast(1.08) saturate(1.1) drop-shadow(0 10px 18px rgba(86, 61, 52, 0.12));
     }
 
-    .logo-mark::before {
-      display: none;
-    }
-
-    .logo-mark::after {
-      display: none;
-    }
-
-    .logo-letters {
-      display: none;
+    .brand-text {
+      min-width: 0;
     }
 
     .brand-text h1 {
       margin: 0;
-      font-size: 1.02rem;
-      letter-spacing: 0.2em;
-      font-weight: 700;
+      font-size: 0.96rem;
+      line-height: 1.1;
+      letter-spacing: 0.18em;
+      font-weight: 800;
+      white-space: nowrap;
     }
 
     .brand-text p {
-      margin: 2px 0 0;
-      font-size: 0.72rem;
-      letter-spacing: 0.28em;
+      margin: 4px 0 0;
+      font-size: 0.66rem;
+      letter-spacing: 0.26em;
       color: var(--muted);
       text-transform: uppercase;
     }
@@ -123,205 +252,735 @@
       color: var(--muted);
     }
 
+    nav a:hover { color: var(--text); }
+
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      min-height: 48px;
       padding: 14px 22px;
       border-radius: 999px;
       font-weight: 700;
       transition: 0.2s ease;
       border: 1px solid transparent;
       cursor: pointer;
+      text-align: center;
     }
+
+    .btn:hover { transform: translateY(-1px); }
 
     .btn-primary {
       background: linear-gradient(135deg, var(--rose-gold), var(--rose-gold-dark));
       color: #fff;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow-soft);
     }
 
-    .btn-primary:hover { filter: brightness(0.98); transform: translateY(-1px); }
-
     .btn-secondary {
-      background: rgba(255,255,255,0.75);
+      background: rgba(255,255,255,0.74);
       border-color: var(--line);
       color: var(--text);
     }
 
-    .hero { padding: 72px 0 44px; }
+    .hero {
+      padding: 56px 0 42px;
+    }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: 36px;
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      gap: 34px;
       align-items: center;
     }
 
     .eyebrow {
-      display: inline-block;
-      padding: 9px 14px;
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.8);
+      background: rgba(255,250,247,0.88);
       border: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.76rem;
+      color: var(--rose-gold-dark);
+      font-size: 0.74rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
+      font-weight: 700;
     }
 
     .hero h2,
     .section-title h3,
     .feature-title,
-    .about-title {
+    .about-title,
+    .visual-card h3,
+    .founder-name {
       font-family: Georgia, 'Times New Roman', serif;
     }
 
-    .hero h2 {
-      font-size: clamp(2.9rem, 5vw, 4.6rem);
-      line-height: 0.98;
-      margin: 18px 0 18px;
-      font-weight: 700;
-      max-width: 760px;
-      letter-spacing: -0.03em;
+    .hero-lockup {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 18px 0 22px;
+      padding: 18px 20px;
+      max-width: 540px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(234,216,208,0.68));
+      border: 1px solid rgba(215, 198, 189, 0.96);
+      box-shadow: var(--shadow);
     }
 
-    .hero p {
+    .hero-lockup .logo-mark {
+      width: 148px;
+      height: 148px;
+      flex: 0 0 148px;
+      padding: 12px;
+      border-radius: 30px;
+    }
+
+    .hero-lockup-copy h3 {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.1;
+      letter-spacing: 0.16em;
+      font-weight: 800;
+    }
+
+    .hero-lockup-copy p {
+      margin: 7px 0 0;
       color: var(--muted);
-      font-size: 1.07rem;
-      line-height: 1.8;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-size: 0.6rem;
+      line-height: 1.5;
+    }
+
+    .brand-detail {
+      margin-top: 10px;
+      color: var(--rose-gold-dark);
+      font-size: 0.69rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .hero h2 {
+      margin: 0 0 18px;
+      max-width: 760px;
+      font-size: clamp(3rem, 5.1vw, 4.9rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      color: #271f1c;
+      text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    }
+
+    .hero-lead {
+      margin: 0;
       max-width: 640px;
+      font-size: 1.06rem;
+      line-height: 1.88;
+      color: var(--muted);
+    }
+
+    .hero-feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .hero-feature-list span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.84);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-size: 0.83rem;
+      font-weight: 700;
+      box-shadow: var(--shadow-soft);
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-top: 28px;
+      margin-top: 24px;
+    }
+
+    .contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
     }
 
     .hero-card,
     .card {
-      background: rgba(255,255,255,0.86);
-      border: 1px solid rgba(231, 216, 209, 0.95);
+      background: var(--surface);
+      border: 1px solid rgba(215, 198, 189, 0.96);
       border-radius: calc(var(--radius) + 6px);
       box-shadow: var(--shadow);
-      backdrop-filter: blur(6px);
+      backdrop-filter: blur(8px);
     }
 
-    .hero-card { padding: 24px; }
+    .hero-card { padding: 22px; }
 
     .hero-photo {
-      min-height: 520px;
+      min-height: 540px;
       background:
-        radial-gradient(circle at top left, rgba(232,197,188,0.65), transparent 38%),
-        radial-gradient(circle at bottom right, rgba(154,167,156,0.38), transparent 34%),
-        linear-gradient(180deg, rgba(255,255,255,0.8), rgba(244,231,225,0.72));
+        radial-gradient(circle at top left, rgba(215,180,171,0.56), transparent 38%),
+        radial-gradient(circle at bottom right, rgba(143,154,146,0.2), transparent 34%),
+        linear-gradient(180deg, rgba(255,250,247,0.96), rgba(234,216,208,0.82));
       border-radius: 28px;
-      padding: 24px;
+      padding: 22px;
       display: flex;
-      align-items: end;
+      align-items: stretch;
     }
 
     .hero-photo-inner {
       width: 100%;
-      background: rgba(255,255,255,0.82);
-      border: 1px solid rgba(255,255,255,0.7);
       border-radius: 24px;
-      padding: 22px;
+      border: 1px solid rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.6);
+      padding: 0;
+      overflow: hidden;
     }
 
-    .logo-display {
+    .studio-visual {
+      position: relative;
+      min-height: 494px;
+      height: 100%;
+      border-radius: 24px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(215,180,171,0.92), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(143,154,146,0.34), transparent 30%),
+        linear-gradient(180deg, rgba(255,255,255,0.98), rgba(240,229,223,0.92));
+      padding: 26px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+
+    .studio-visual::before {
+      content: "";
+      position: absolute;
+      right: -34px;
+      top: 24px;
+      width: 240px;
+      height: 240px;
+      border: 2px solid rgba(185,131,104,0.34);
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      transform: rotate(18deg);
+    }
+
+    .studio-visual::after {
+      content: "";
+      position: absolute;
+      left: 36px;
+      top: 70px;
+      width: 176px;
+      height: 250px;
+      border-radius: 110px 110px 38px 38px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,255,255,0.5)),
+        linear-gradient(135deg, rgba(215,180,171,0.72), rgba(255,255,255,0.2));
+      box-shadow: 0 20px 38px rgba(86, 61, 52, 0.12);
+    }
+
+    .studio-badge {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(215, 198, 189, 0.95);
+      color: var(--rose-gold-dark);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .visual-card {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 370px;
+      padding: 24px;
+      border-radius: 26px;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(215, 198, 189, 0.96);
+      box-shadow: 0 24px 48px rgba(86, 61, 52, 0.13);
+    }
+
+    .visual-card h3 {
+      margin: 12px 0 10px;
+      font-size: 2rem;
+      line-height: 1.02;
+    }
+
+    .visual-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 0.98rem;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .stat {
+      padding: 15px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.98);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .stat small {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .stat strong {
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .quote-card {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(234,216,208,0.7), rgba(255,255,255,0.94));
+      border: 1px solid var(--line);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 0.92rem;
+    }
+
+    .quote-card strong {
+      display: inline-block;
+      margin-bottom: 4px;
+      color: var(--rose-gold-dark);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    section { padding: 34px 0; }
+
+    .section-title {
+      max-width: 760px;
+      margin-bottom: 22px;
+    }
+
+    .section-title h3 {
+      margin: 10px 0 0;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.06;
+    }
+
+    .section-title p {
+      max-width: 640px;
+      margin-top: 10px;
+      line-height: 1.84;
+      color: var(--muted);
+    }
+
+    .grid-3,
+    .brand-grid,
+    .about-grid,
+    .booking-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .brand-grid,
+    .about-grid,
+    .booking-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      padding: 28px;
+    }
+
+    .card h4 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .price {
+      margin: 14px 0 10px;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 2.2rem;
+      color: var(--rose-gold-dark);
+    }
+
+    .mini-logo-row {
       display: flex;
       align-items: center;
       gap: 16px;
-      margin-bottom: 18px;
+      margin-top: 18px;
     }
 
-    .logo-display .logo-mark {
-      width: 84px;
-      height: 84px;
-      flex: 0 0 84px;
+    .mini-logo-row .logo-mark {
+      width: 90px;
+      height: 90px;
+      flex: 0 0 90px;
+      border-radius: 24px;
+      padding: 10px;
     }
 
-    .logo-display h3 {
-      margin: 0;
-      font-size: 1.02rem;
-      line-height: 1.1;
-      letter-spacing: 0.12em;
+    .swatch-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .swatch {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px 8px 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.86rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .swatch-dot {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .list-clean {
+      margin: 16px 0 0;
+      padding-left: 18px;
+    }
+
+    .founder-card {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .founder-portrait {
+      width: 110px;
+      height: 110px;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.5)),
+        linear-gradient(135deg, rgba(215,180,171,0.76), rgba(143,154,146,0.28));
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      place-items: center;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 2rem;
+      color: var(--rose-gold-dark);
+    }
+
+    .founder-name {
+      margin: 0 0 6px;
+      font-size: 2rem;
+      line-height: 1.04;
+    }
+
+    .founder-label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(234,216,208,0.78);
+      color: var(--rose-gold-dark);
+      font-size: 0.74rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
       font-weight: 800;
     }
 
-    .logo-display p {
-      margin: 6px 0 0;
+    .booking-box { padding: 28px; }
+
+    .booking-note {
       color: var(--muted);
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      font-size: 0.68rem;
+      line-height: 1.82;
+      margin-top: 14px;
     }
 
-    .brand-detail {
-      margin-top: 10px;
-      color: var(--rose-gold-dark);
+    .studio-details {
+      margin-top: 22px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .studio-detail {
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.96);
+    }
+
+    .studio-detail strong {
+      display: block;
+      margin-bottom: 4px;
       font-size: 0.82rem;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
+      color: var(--rose-gold-dark);
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 15px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.96);
+      color: var(--text);
+      outline: none;
+      min-height: 50px;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+      grid-column: 1 / -1;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--rose-gold);
+      box-shadow: 0 0 0 4px rgba(185,131,104,0.12);
+    }
+
+    .full { grid-column: 1 / -1; }
+
+    footer {
+      padding: 34px 0 100px;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid rgba(215, 198, 189, 0.92);
+      background: rgba(248, 242, 238, 0.74);
+    }
+
+    .footer-main {
       font-weight: 700;
-      line-height: 1.45;
+      color: var(--text);
+      letter-spacing: 0.04em;
     }
 
-    .hero .logo-display {
-      gap: 24px;
-      padding: 18px 22px;
-      border-radius: 28px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.84), rgba(244,231,225,0.66));
-      border: 1px solid rgba(231, 216, 209, 0.95);
-      box-shadow: var(--shadow);
-      max-width: 520px;
+    .footer-credit {
+      margin-top: 10px;
+      font-size: 0.88rem;
+      color: var(--rose-gold-dark);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    .hero .logo-display .logo-mark {
-        width: 138px;
-        height: 138px;
-        flex: 0 0 138px;
-        padding: 10px;
-      }
+    .mobile-bookbar {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 120;
+      display: none;
+      gap: 12px;
+      padding: 10px;
+      border-radius: 22px;
+      background: rgba(255, 250, 247, 0.94);
+      border: 1px solid rgba(215, 198, 189, 0.96);
+      box-shadow: 0 20px 42px rgba(86, 61, 52, 0.18);
+      backdrop-filter: blur(12px);
+    }
 
-      .hero .logo-display .logo-mark {
-        width: 138px;
-        height: 138px;
-        flex: 0 0 138px;
-        padding: 10px;
-      }
+    .mobile-bookbar .btn {
+      flex: 1 1 auto;
+      min-height: 50px;
+    }
 
-      .hero .logo-display h3 {
-        font-size: 0.88rem;
-      }
-
-      .hero .brand-detail {
-        font-size: 0.66rem;
-      }
-
+    @media (max-width: 1080px) {
       .hero-grid,
-      .grid-3,
-      .about-grid,
-      .booking-grid,
       .brand-grid,
-      form,
-      .founder-card {
+      .about-grid,
+      .booking-grid {
         grid-template-columns: 1fr;
       }
 
-      nav { display: none; }
-      .hero-photo { min-height: 360px; }
-      .logo-display { align-items: flex-start; }
+      .hero-photo {
+        min-height: auto;
+      }
+
+      .studio-visual {
+        min-height: 420px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ambient-bg::before,
+      .ambient-orb,
+      .ambient-ring {
+        animation: none !important;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .ambient-orb.one {
+        width: 280px;
+        height: 280px;
+      }
+
+      .ambient-orb.two {
+        width: 220px;
+        height: 220px;
+        right: -70px;
+      }
+
+      .ambient-orb.three {
+        width: 260px;
+        height: 260px;
+        left: 46%;
+      }
+
+      .ambient-ring.one {
+        width: 240px;
+        height: 240px;
+        right: -40px;
+      }
+
+      .ambient-ring.two {
+        width: 170px;
+        height: 170px;
+        left: -20px;
+      }
+
+      .mobile-bookbar {
+        backdrop-filter: blur(14px);
+      }
+
+      @media (max-width: 820px) {
+      .topbar-inner {
+        min-height: 74px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
+
+      .hero h2 {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+      }
+
+      .hero-lockup {
+        max-width: 100%;
+        gap: 16px;
+        padding: 16px;
+      }
+
+      .hero-lockup .logo-mark {
+        width: 120px;
+        height: 120px;
+        flex: 0 0 120px;
+        padding: 10px;
+      }
+
+      .hero-lockup-copy h3 {
+        font-size: 0.82rem;
+      }
+
+      .hero-lockup-copy p {
+        font-size: 0.56rem;
+      }
+
+      .brand-detail {
+        font-size: 0.62rem;
+      }
+
+      .grid-3,
+      form,
+      .founder-card,
+      .stat-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card,
+      .booking-box {
+        padding: 22px;
+      }
+
+      .mini-logo-row {
+        align-items: flex-start;
+      }
+
+      .mini-logo-row .logo-mark {
+        width: 74px;
+        height: 74px;
+        flex: 0 0 74px;
+      }
+
+      .mobile-bookbar {
+        display: flex;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="ambient-bg" aria-hidden="true">
+    <span class="ambient-orb one"></span>
+    <span class="ambient-orb two"></span>
+    <span class="ambient-orb three"></span>
+    <span class="ambient-ring one"></span>
+    <span class="ambient-ring two"></span>
+  </div>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a class="brand" href="#top">
+      <a class="brand" href="#top" aria-label="Lisa Pearson Skin Studio home">
         <div class="logo-mark"><img class="site-logo" src="logo2.png" alt="Lisa Pearson Skin Studio logo" /></div>
         <div class="brand-text">
           <h1>LISA PEARSON</h1>
@@ -343,33 +1002,38 @@
       <div class="container hero-grid">
         <div>
           <span class="eyebrow">In-Person Skin Care Consultation</span>
-          <div class="logo-display">
+
+          <div class="hero-lockup">
             <div class="logo-mark"><img class="site-logo" src="logo2.png" alt="Lisa Pearson Skin Studio logo" /></div>
-            <div>
+            <div class="hero-lockup-copy">
               <h3>LISA PEARSON</h3>
               <p>Skin Studio</p>
               <div class="brand-detail">Founder-led skin care consultations</div>
             </div>
           </div>
-          <h2>Healthy skin starts with the right care plan.</h2>
-          <p>
-            A refined booking experience for clients seeking in-person skin care guidance, personalized treatment planning, and a studio brand that feels polished, modern, and memorable from the first glance.
+
+          <h2>Healthy skin starts with thoughtful, personalized care.</h2>
+          <p class="hero-lead">
+            A polished booking experience for clients seeking in-person skin care guidance, personalized treatment planning, and a studio presence that feels elevated, calm, and memorable from the first glance.
           </p>
+
           <div class="hero-feature-list">
             <span>Personalized Consultations</span>
             <span>Luxury Studio Feel</span>
             <span>Healthy Skin • Confidence • Glow</span>
           </div>
+
           <div class="hero-actions">
             <a class="btn btn-primary" href="#booking">Book Appointment</a>
-            <a class="btn btn-secondary" href="#packages">View Services</a>
+            <a class="btn btn-secondary" href="#services">Explore Services</a>
           </div>
+
           <div class="contact-strip">
-            <span>📍 Add studio address</span>
+            <span>By appointment only</span>
             <span>•</span>
-            <span>📞 Add phone number</span>
+            <span>Professional skin guidance</span>
             <span>•</span>
-            <span>✉️ Add email address</span>
+            <span>Luxury client experience</span>
           </div>
         </div>
 
@@ -381,7 +1045,7 @@
                 <small class="eyebrow" style="background: var(--soft); border-color: transparent;">Featured Service</small>
                 <h3>Luxury Skin Consultation</h3>
                 <p>
-                  A polished in-studio experience focused on healthy skin, confident care decisions, and a treatment plan tailored to the client.
+                  A refined in-studio experience focused on healthy skin, confident care decisions, and a treatment plan tailored to the client.
                 </p>
                 <div class="stat-grid">
                   <div class="stat">
@@ -402,7 +1066,7 @@
                   </div>
                 </div>
                 <div class="quote-card">
-                  <strong>Brand feel</strong><br />
+                  <strong>Brand feel</strong>
                   Soft, refined, and memorable — designed to make the studio look elevated before a visitor even books.
                 </div>
               </div>
@@ -415,29 +1079,32 @@
     <section id="brand">
       <div class="container brand-grid">
         <article class="card">
-          <span class="eyebrow">Brand Theme</span>
-          <h3 class="about-title" style="margin:14px 0 10px; font-size:2rem;">Logo-inspired color direction</h3>
-          <p>
-            The site now follows the same visual direction as the logo concept: soft blush, rose-gold warmth, clean cream backgrounds, and a touch of muted sage for balance.
-          </p>
-          <div class="color-swatches">
-            <div class="swatch"><span class="swatch-dot" style="background:#e8c5bc;"></span>Blush</div>
-            <div class="swatch"><span class="swatch-dot" style="background:#c89377;"></span>Rose Gold</div>
-            <div class="swatch"><span class="swatch-dot" style="background:#f8f4f1;"></span>Cream</div>
-            <div class="swatch"><span class="swatch-dot" style="background:#9aa79c;"></span>Sage</div>
+          <span class="eyebrow">Brand Direction</span>
+          <div class="section-title" style="margin-bottom: 0;">
+            <h3>Luxury beauty branding with softer contrast and cleaner structure.</h3>
+            <p>
+              The refreshed visual direction uses deeper neutral tones, stronger text contrast, and calmer card surfaces so the site looks more professional on desktop and more appealing on Android screens.
+            </p>
+          </div>
+          <div class="swatch-row">
+            <div class="swatch"><span class="swatch-dot" style="background:#d7b4ab;"></span>Blush</div>
+            <div class="swatch"><span class="swatch-dot" style="background:#b98368;"></span>Rose Gold</div>
+            <div class="swatch"><span class="swatch-dot" style="background:#efe7e2;"></span>Warm Nude</div>
+            <div class="swatch"><span class="swatch-dot" style="background:#8f9a92;"></span>Sage</div>
           </div>
         </article>
+
         <article class="card">
-          <span class="eyebrow">Logo Example</span>
-          <div class="logo-display" style="margin-top:18px; margin-bottom:0;">
+          <span class="eyebrow">Signature Identity</span>
+          <div class="mini-logo-row">
             <div class="logo-mark"><img class="site-logo" src="logo2.png" alt="Lisa Pearson Skin Studio logo" /></div>
             <div>
-              <h3 style="margin:0; font-family:Georgia, 'Times New Roman', serif; letter-spacing:0.12em;">LISA PEARSON</h3>
-              <p style="margin:6px 0 0; color:var(--muted); letter-spacing:0.28em; text-transform:uppercase; font-size:0.78rem;">Skin Studio</p>
+              <h3 class="about-title" style="margin:0; font-size:1.7rem; letter-spacing:0.1em;">Lisa Pearson</h3>
+              <p style="margin:6px 0 0; color:var(--muted); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.22em;">Skin Studio</p>
             </div>
           </div>
           <p style="margin-top:18px;">
-            This section now uses the embedded site logo reference. Keep the image file named <strong>logo2.png</strong> in the same folder as <strong>index.html</strong> when you publish.
+            The hero, cards, buttons, and footer now follow the embedded logo more closely so the overall presentation feels consistent and client-ready.
           </p>
         </article>
       </div>
@@ -448,49 +1115,53 @@
         <div class="section-title">
           <span class="eyebrow">Services</span>
           <h3>Professional support in a real studio setting.</h3>
-          <p>Keep the structure clean and appointment-focused so visitors immediately understand what is offered.</p>
+          <p>
+            Present the studio with clarity and confidence so visitors immediately understand the experience, the service focus, and the next step to book.
+          </p>
         </div>
         <div class="grid-3">
           <article class="card">
             <h4>In-Person Consultation</h4>
-            <p>Face-to-face skin review focused on your concerns, goals, and routine.</p>
+            <p>Face-to-face skin review focused on your concerns, goals, lifestyle, and current routine.</p>
           </article>
           <article class="card">
             <h4>Treatment Planning</h4>
-            <p>Guidance on products, skin maintenance, and recommended next visits.</p>
+            <p>Guidance on products, treatment direction, maintenance visits, and realistic next steps.</p>
           </article>
           <article class="card">
-            <h4>Ongoing Care</h4>
-            <p>Follow-up support to track progress and refine your skin care plan.</p>
+            <h4>Ongoing Skin Support</h4>
+            <p>Follow-up care to track progress, refine recommendations, and support healthier skin over time.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="packages" class="packages">
+    <section id="packages">
       <div class="container">
         <div class="section-title">
           <span class="eyebrow">Packages</span>
-          <h3>Quick pricing for a fast launch.</h3>
-          <p>You can revise these packages later once the final services are confirmed.</p>
+          <h3>Launch-ready service structure with premium presentation.</h3>
+          <p>
+            These example packages give the site a clean professional layout now and can be edited later with final service names, pricing, and booking details.
+          </p>
         </div>
         <div class="grid-3">
           <article class="card">
             <h4>Consultation Visit</h4>
             <div class="price">$75</div>
-            <p>A focused visit for one main skin concern.</p>
+            <p>A focused appointment for one primary skin concern with clear guidance and next steps.</p>
             <a class="btn btn-primary" href="#booking">Book This</a>
           </article>
           <article class="card">
             <h4>Custom Skin Plan</h4>
             <div class="price">$145</div>
-            <p>Consultation plus a personalized care plan and routine guidance.</p>
+            <p>Consultation plus a personalized care plan designed around current needs and long-term goals.</p>
             <a class="btn btn-primary" href="#booking">Book This</a>
           </article>
           <article class="card">
             <h4>Glow Care Package</h4>
             <div class="price">$225</div>
-            <p>Consultation, treatment planning, and follow-up support.</p>
+            <p>Consultation, treatment planning, and follow-up support for a more complete studio experience.</p>
             <a class="btn btn-primary" href="#booking">Book This</a>
           </article>
         </div>
@@ -504,28 +1175,29 @@
           <div class="founder-card" style="margin-top:18px;">
             <div class="founder-portrait">LP</div>
             <div>
-              <h3 class="about-title" style="margin:0 0 6px; font-size:2rem;">Lisa Pearson</h3>
+              <h3 class="founder-name">Lisa Pearson</h3>
               <div class="founder-label">Founder</div>
               <p style="margin-top:14px;">
                 Lisa Pearson is the founder of Lisa Pearson Skin Studio, created to offer thoughtful, in-person skin care guidance in a calm and professional environment.
               </p>
               <p>
-                This section can later be replaced with Lisa's real bio, credentials, studio philosophy, and client care approach.
+                This section can be updated later with Lisa’s full biography, credentials, studio philosophy, and client care approach once the client approves the design direction.
               </p>
             </div>
           </div>
         </article>
+
         <article class="card">
           <span class="eyebrow">Studio Vision</span>
           <h3 class="about-title" style="margin:14px 0 10px; font-size:2rem;">Simple, elegant, and client-focused.</h3>
           <p>
-            Lisa Pearson Skin Studio is designed to feel warm, polished, and personal. The brand voice centers on confidence, healthy skin, trust, and clear guidance.
+            Lisa Pearson Skin Studio is designed to feel warm, polished, and personal. The brand voice centers on confidence, healthy skin, trust, and clear professional guidance.
           </p>
           <ul class="list-clean">
             <li>In-person skin care consultations</li>
             <li>Customized care plans</li>
-            <li>Local beauty and wellness positioning</li>
-            <li>Premium but approachable presentation</li>
+            <li>Luxury but approachable presentation</li>
+            <li>Clear next steps for booking and follow-up care</li>
           </ul>
         </article>
       </div>
@@ -536,13 +1208,22 @@
         <article class="card booking-box">
           <span class="eyebrow">Book Now</span>
           <h3 class="about-title" style="margin:14px 0 10px; font-size:2rem;">Request an appointment.</h3>
-          <p style="color:var(--muted); line-height:1.8;">
-            Replace the placeholders below with the real studio info. The form currently opens the user's email app so the site can launch quickly without a full backend.
+          <p class="booking-note">
+            This booking section is intentionally simple for launch. It looks finished for client review now and can be connected to a full booking workflow later.
           </p>
-          <div class="contact-strip" style="margin-top:24px; display:block;">
-            <div style="margin-bottom:10px;">Studio Address: <strong>Add address here</strong></div>
-            <div style="margin-bottom:10px;">Phone: <strong>Add number here</strong></div>
-            <div>Email: <strong id="displayEmail">booking@example.com</strong></div>
+          <div class="studio-details">
+            <div class="studio-detail">
+              <strong>Studio Address</strong>
+              Private studio details can be added after approval.
+            </div>
+            <div class="studio-detail">
+              <strong>Phone</strong>
+              Business contact number can be added after approval.
+            </div>
+            <div class="studio-detail">
+              <strong>Email</strong>
+              <span id="displayEmail">hello@lisapearsonskin.com</span>
+            </div>
           </div>
         </article>
 
@@ -553,7 +1234,7 @@
             <input type="tel" name="phone" placeholder="Phone number" required />
             <input type="text" name="date" placeholder="Preferred date" required />
             <input class="full" type="text" name="concern" placeholder="Primary skin concern" />
-            <textarea name="message" placeholder="Tell us about your goals, concerns, or preferred time"></textarea>
+            <textarea name="message" placeholder="Tell us about your goals, skin concerns, or ideal appointment time"></textarea>
             <button class="btn btn-primary full" type="submit">Send Booking Request</button>
           </form>
         </article>
@@ -568,9 +1249,15 @@
     </div>
   </footer>
 
+  <div class="mobile-bookbar">
+    <a class="btn btn-secondary" href="#services">Services</a>
+    <a class="btn btn-primary" href="#booking">Book Now</a>
+  </div>
+
   <script>
-    const bookingEmail = 'booking@example.com';
-    document.getElementById('displayEmail').textContent = bookingEmail;
+    const bookingEmail = 'hello@lisapearsonskin.com';
+    const displayEmail = document.getElementById('displayEmail');
+    if (displayEmail) displayEmail.textContent = bookingEmail;
 
     document.getElementById('bookingForm').addEventListener('submit', function (e) {
       e.preventDefault();
