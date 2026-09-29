@@ -55,8 +55,8 @@ nav a.active,nav a:hover{color:var(--gold2);border-color:var(--gold)}
   z-index:2;pointer-events:none
 }
 .hero-art{position:absolute;inset:0;width:100%;height:100%;z-index:1}
-.hero-content{position:relative;z-index:3;display:grid;grid-template-columns:1fr 1.65fr .95fr;gap:30px;align-items:center;min-height:420px;padding:28px 28px 24px}
-.hero-left{align-self:stretch;display:flex;align-items:flex-end}
+.hero-content{position:relative;z-index:3;display:grid;grid-template-columns:1.15fr 1.5fr .85fr;gap:26px;align-items:center;min-height:420px;padding:28px 28px 24px}
+.hero-left{align-self:stretch;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.hero-brand-large{width:min(360px,31vw);filter:drop-shadow(0 10px 24px rgba(0,0,0,.6));margin-left:8px}.hero-brand-caption{margin:4px 0 0 24px;font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:#d8c99e}
 .hero-left .skyline-note{font-size:.72rem;letter-spacing:.15em;color:#d2bf94;text-transform:uppercase;padding:0 0 24px 8px}
 .hero-center{text-align:center}
 .hero-center h1{
@@ -81,7 +81,7 @@ nav a.active,nav a:hover{color:var(--gold2);border-color:var(--gold)}
   background:linear-gradient(180deg,#0a2237,#071827);border:1px solid #31536d;border-radius:8px;overflow:hidden;
   box-shadow:0 16px 36px rgba(0,0,0,.24);display:flex;flex-direction:column
 }
-.project-art{height:245px;position:relative;overflow:hidden;border-bottom:1px solid #34526b}
+.project-art{height:245px;position:relative;overflow:hidden;border-bottom:1px solid #34526b}.card-crown{position:absolute;top:10px;left:12px;width:54px;height:38px;z-index:5;filter:drop-shadow(0 5px 10px rgba(0,0,0,.5))}.card-title-mark{position:absolute;left:18px;bottom:14px;z-index:5;font-family:Georgia,serif;font-size:1.05rem;letter-spacing:.06em;color:#ffe2a0;text-shadow:0 4px 10px rgba(0,0,0,.65)}
 .project-art svg{width:100%;height:100%}
 .svr-wrap{height:100%;position:relative;background:
   radial-gradient(circle at 50% 40%,rgba(255,62,221,.28),transparent 28%),
@@ -135,7 +135,7 @@ footer{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;color:#7f94a6;f
 /* MOBILE */
 @media(max-width:1100px){
   nav{display:none}.vision-btn{margin-left:auto}
-  .hero-content{grid-template-columns:1fr}.hero-left,.hero-quote{display:none}
+  .hero-content{grid-template-columns:1fr}.hero-left{display:flex;align-items:center;text-align:center}.hero-brand-large{width:290px;max-width:78vw;margin:0 auto}.hero-brand-caption{margin:4px auto 0}.hero-quote{display:none}
   .project-grid{grid-template-columns:1fr 1fr}
   .services{grid-template-columns:1fr 1fr}.services .vision-btn{grid-column:1/-1}
   .service-icons{grid-template-columns:repeat(3,1fr)}
@@ -146,7 +146,7 @@ footer{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;color:#7f94a6;f
   .hero{min-height:340px}.hero-content{min-height:340px;padding:30px 12px 18px}
   .hero-center h1{font-size:2.55rem;line-height:.92}.hero-sub{font-size:.7rem;letter-spacing:.08em}
   .focus-row{grid-template-columns:repeat(3,1fr);gap:10px}.focus-item:nth-child(4),.focus-item:nth-child(5){grid-column:auto}
-  .project-grid{grid-template-columns:1fr}.project-art{height:230px}.project p{min-height:auto}
+  .project-grid{grid-template-columns:1fr}.project-art{height:260px}.project p{min-height:auto}.hero-brand-large{width:255px}.hero-brand-caption{font-size:.58rem}.hero-center h1{font-size:2.72rem}.project h2{font-size:1.45rem}
   .services{grid-template-columns:1fr}.services-copy h2{font-size:1.75rem}.service-icons{grid-template-columns:repeat(2,1fr)}
   .services-visual{height:140px}.values{grid-template-columns:1fr 1fr}.value{border-bottom:1px solid rgba(255,255,255,.06)}
   .about{grid-template-columns:1fr}.footer-row{flex-direction:column}
@@ -237,7 +237,7 @@ footer{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;color:#7f94a6;f
     </g>
   </svg>
   <div class="wrap hero-content">
-    <div class="hero-left"><div class="skyline-note">Ideas • Projects • Solutions • A Better Tomorrow</div></div>
+    <div class="hero-left"><svg class="hero-brand-large" viewBox="0 0 760 240" aria-label="LPS Project Studio"><use href="#lpsLogo"/></svg><div class="hero-brand-caption">Ideas • Projects • Solutions • A Better Tomorrow</div></div>
     <div class="hero-center">
       <h1><span class="gold">ONE VISION</span><br>MULTIPLE PROJECTS</h1>
       <div class="hero-sub">Business • Technology • Real Estate • Community • A Stronger Tomorrow</div>
@@ -258,7 +258,7 @@ footer{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;color:#7f94a6;f
   <div class="project-grid">
 
     <article class="project">
-      <div class="project-art">
+      <div class="project-art"><svg class="card-crown" viewBox="0 0 760 240"><use href="#lpsLogo"/></svg><div class="card-title-mark">LPS PROJECT STUDIO</div>
         <svg viewBox="0 0 420 245" preserveAspectRatio="none" aria-label="LPS Project Studio presentation">
           <defs>
             <radialGradient id="lpsGlow" cx=".72" cy=".25"><stop offset="0" stop-color="#d49d45" stop-opacity=".75"/><stop offset=".5" stop-color="#3c3022" stop-opacity=".55"/><stop offset="1" stop-color="#121a21"/></radialGradient>
@@ -282,7 +282,7 @@ footer{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;color:#7f94a6;f
     </article>
 
     <article class="project">
-      <div class="project-art">
+      <div class="project-art"><svg class="card-crown" viewBox="0 0 220 160"><use href="#houseLogo"/></svg><div class="card-title-mark">PROPERTYBRIDGE NETWORK</div>
         <svg viewBox="0 0 420 245" preserveAspectRatio="none" aria-label="PropertyBridge Network">
           <defs><linearGradient id="pbSky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16354d"/><stop offset=".55" stop-color="#11649a"/><stop offset="1" stop-color="#0d2435"/></linearGradient></defs>
           <rect width="420" height="245" fill="url(#pbSky)"/>
@@ -303,7 +303,7 @@ footer{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;color:#7f94a6;f
     </article>
 
     <article class="project">
-      <div class="project-art">
+      <div class="project-art"><svg class="card-crown" viewBox="0 0 240 160"><use href="#crownCross"/></svg><div class="card-title-mark">THY KINGDOM COME</div>
         <svg viewBox="0 0 420 245" preserveAspectRatio="none" aria-label="Thy Kingdom Come">
           <defs><linearGradient id="tkcSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d69742"/><stop offset=".55" stop-color="#f3df9d"/><stop offset="1" stop-color="#34523e"/></linearGradient></defs>
           <rect width="420" height="245" fill="url(#tkcSky)"/>
@@ -326,7 +326,7 @@ footer{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;color:#7f94a6;f
     </article>
 
     <article class="project">
-      <div class="project-art svr-wrap">
+      <div class="project-art svr-wrap"><svg class="card-crown" viewBox="0 0 760 240"><use href="#lpsLogo"/></svg><div class="card-title-mark">SVR POKER</div>
         <img class="svr-main" src="https://svrpoker.com/logo.png" alt="SVR Poker">
         <div class="svr-original"><img src="https://svrpoker.com/logo.png" alt="Original SVR Poker logo"></div>
       </div>
