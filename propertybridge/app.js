@@ -8,7 +8,7 @@ const deals=[
 ];
 const $=s=>document.querySelector(s), money=n=>n==null?"Unknown":new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(n);
 const read=(k)=>{try{return JSON.parse(localStorage.getItem(k))||[]}catch{return[]}},write=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
-let saved=read("pbn_saved"),sellers=read("pbn_sellers"),buyers=read("pbn_buyers"),outreach=read("pbn_outreach");
+let saved=read("pbn_saved"),sellers=read("pbn_sellers"),buyers=read("pbn_buyers"),outreach=read("pbn_outreach"),watch=read("pbn_watch");
 
 function toast(msg){const t=document.createElement("div");t.className="toast";t.textContent=msg;document.body.append(t);setTimeout(()=>t.remove(),2200)}
 function filtered(){const q=$("#q").value.toLowerCase(),s=$("#strategy").value,t=$("#ptype").value;return deals.filter(d=>(!q||JSON.stringify(d).toLowerCase().includes(q))&&(!s||d.strategy===s)&&(!t||d.type===t))}
@@ -32,6 +32,33 @@ function scoreDeal(){
  $("#scoreValue").textContent=score;$("#scoreRing").style.background=`conic-gradient(var(--green) 0deg ${score*3.6}deg,#17304a ${score*3.6}deg)`;$("#scoreSummary").innerHTML=`<b>${path}</b><p>Prototype score only. Verify title, debt, taxes, insurance, condition, rents, zoning and financing before committing funds.</p>`;
 }
 
+
+function leadScore(x){
+  let score=50;
+  const ask=+x.ask||0,value=+x.value||0,loan=+x.loan||0,rent=+x.rent||0,repairs=+x.repairs||0,rate=+x.rate||0;
+  if(value&&ask){const discount=(value-ask)/value;if(discount>.25)score+=18;else if(discount>.12)score+=10;else if(discount<0)score-=15}
+  if(loan&&ask){const gap=ask-loan;if(gap<=10000)score+=12;else if(gap<=20000)score+=6;else if(gap>40000)score-=6}
+  if(rate&&rate<4)score+=10;
+  if(rent&&ask&&rent/ask>.011)score+=8;
+  if(repairs&&value&&repairs/value>.3)score-=10;
+  return Math.max(0,Math.min(100,Math.round(score)));
+}
+function renderWatch(){
+  const el=$("#watchList"); if(!el)return;
+  el.innerHTML=watch.length?watch.slice().reverse().map((x,rev)=>{
+    const idx=watch.length-1-rev,score=leadScore(x),gap=(+x.ask&&+x.loan)?(+x.ask-+x.loan):null;
+    return `<div class="item watch-card"><strong>${x.address}</strong><small>${x.market} • ${x.strategy}</small><div class="scoreline"><span>Score ${score}/100</span><span>Ask ${money(+x.ask||0)}</span><span>${gap==null?"Equity gap unknown":"Gap "+money(gap)}</span></div><div class="next">Next: ${x.next}</div><div class="source">Source: ${x.source||"not entered"}</div><div class="watch-actions"><button class="btn small" onclick="loadWatchLead(${idx})">Load Analyzer</button><button class="btn small" onclick="watchOutreach(${idx})">Draft Outreach</button><button class="btn small ghost" onclick="removeWatchLead(${idx})">Archive</button></div></div>`;
+  }).join(""):"<div class='item'>No property leads yet. Add the first one from a listing or seller conversation.</div>";
+}
+window.loadWatchLead=idx=>{const x=watch[idx];if(!x)return;$("#calcPrice").value=x.ask||"";$("#calcValue").value=x.value||"";$("#calcLoan").value=x.loan||"";$("#calcRent").value=x.rent||"";$("#calcRepairs").value=x.repairs||"";$("#dnaAddress").value=x.address+", "+x.market;scoreDeal();document.querySelector("#score").scrollIntoView({behavior:"smooth"});toast("Lead loaded into analyzer")};
+window.watchOutreach=idx=>{const x=watch[idx];if(!x)return;const draft={id:"OUT-"+Date.now(),deal:x.address,market:x.market,status:"Draft",text:`Hello, I'm reaching out regarding ${x.address}. I'm interested in learning more about the property and the owner's goals. If appropriate, I'm open to discussing a straightforward purchase as well as flexible terms such as seller financing or an assumable loan. No obligation—I'd first like to verify the property details and see whether there may be a fit.`};outreach.push(draft);write("pbn_outreach",outreach);renderOutreach();toast("Outreach draft created — review before sending")};
+window.removeWatchLead=idx=>{watch.splice(idx,1);write("pbn_watch",watch);renderWatch();toast("Lead archived from this device")};
+function exportPropertyBridge(){
+  const payload={exportedAt:new Date().toISOString(),version:"PROPERTYBridge-v2.1",watch,sellers,buyers,saved,outreach};
+  const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});
+  const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="PROPERTYBridge-backup-"+new Date().toISOString().slice(0,10)+".json";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+
 function calcMatches(){let count=0;sellers.forEach(s=>buyers.forEach(b=>{const price=+s.price||Infinity,max=+b.max||0,market=(b.market||"").toLowerCase();if(price<=max&&(!market||(s.market||"").toLowerCase().includes(market)))count++}));return count}
 function updateStats(){$("#savedCount").textContent=saved.length;$("#sellerCount").textContent=sellers.length;$("#buyerCount").textContent=buyers.length;$("#matchCount").textContent=calcMatches();$("#outreachCount").textContent=outreach.length}
 function renderCRM(){$("#sellerList").innerHTML=sellers.length?sellers.slice(-6).reverse().map(s=>`<div class="item"><strong>${s.address}</strong><small>${s.market} • ${s.need} • ${money(+s.price||0)}</small></div>`).join(""):"<div class='item'>No seller leads yet.</div>";$("#buyerList").innerHTML=buyers.length?buyers.slice(-6).reverse().map(b=>`<div class="item"><strong>${b.name}</strong><small>${b.market||"Any market"} • ${b.strategy} • max ${money(+b.max||0)}</small></div>`).join(""):"<div class='item'>No buyer profiles yet.</div>";$("#matchList").innerHTML=calcMatches()?sellers.flatMap(s=>buyers.filter(b=>(+s.price||Infinity)<=(+b.max||0)&&(!(b.market||"")||(s.market||"").toLowerCase().includes((b.market||"").toLowerCase()))).map(b=>`<div class="item match"><strong>${s.address} ↔ ${b.name}</strong><small>${s.market} • within buy box</small></div>`)).slice(0,8).join(""):"<div class='item'>No current matches.</div>"}
@@ -39,6 +66,7 @@ function renderOutreach(){$("#outreachList").innerHTML=outreach.length?outreach.
 function wireForms(){
  $("#sellerForm").onsubmit=e=>{e.preventDefault();const d=Object.fromEntries(new FormData(e.currentTarget));sellers.push(d);write("pbn_sellers",sellers);e.currentTarget.reset();renderCRM();updateStats();toast("Seller lead saved")};
  $("#buyerForm").onsubmit=e=>{e.preventDefault();const d=Object.fromEntries(new FormData(e.currentTarget));buyers.push(d);write("pbn_buyers",buyers);e.currentTarget.reset();renderCRM();updateStats();toast("Buyer profile saved")};
+ const leadForm=$("#leadForm"); if(leadForm)leadForm.onsubmit=e=>{e.preventDefault();const d=Object.fromEntries(new FormData(e.currentTarget));d.createdAt=new Date().toISOString();watch.push(d);write("pbn_watch",watch);e.currentTarget.reset();renderWatch();toast("Property lead added to watch")};
 }
-$("#q").oninput=renderDeals;$("#strategy").onchange=renderDeals;$("#ptype").onchange=renderDeals;$("#dnaAnalyze").onclick=analyzeDNA;$("#scoreBtn").onclick=scoreDeal;$("#clearData").onclick=()=>{if(confirm("Clear browser-only PROPERTYBridge demo data?")){["pbn_saved","pbn_sellers","pbn_buyers","pbn_outreach"].forEach(k=>localStorage.removeItem(k));saved=[];sellers=[];buyers=[];outreach=[];renderCRM();renderOutreach();updateStats();toast("Demo CRM cleared")}};
-wireForms();renderDeals();renderCRM();renderOutreach();updateStats();scoreDeal();
+$("#q").oninput=renderDeals;$("#strategy").onchange=renderDeals;$("#ptype").onchange=renderDeals;const exportBtn=$("#exportBtn");if(exportBtn)exportBtn.onclick=exportPropertyBridge;$("#dnaAnalyze").onclick=analyzeDNA;$("#scoreBtn").onclick=scoreDeal;$("#clearData").onclick=()=>{if(confirm("Clear browser-only PROPERTYBridge demo data?")){["pbn_saved","pbn_sellers","pbn_buyers","pbn_outreach","pbn_watch"].forEach(k=>localStorage.removeItem(k));saved=[];sellers=[];buyers=[];outreach=[];watch=[];renderCRM();renderOutreach();renderWatch();updateStats();toast("Demo CRM cleared")}};
+wireForms();renderDeals();renderCRM();renderOutreach();renderWatch();updateStats();scoreDeal();
