@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" role="img" aria-label="LPS Project Studio">
+<defs>
+  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f6c96f"/>
+    <stop offset=".55" stop-color="#f1b64b"/>
+    <stop offset="1" stop-color="#2aa4ef"/>
+  </linearGradient>
+  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ffffff"/>
+    <stop offset="1" stop-color="#b8cfe0"/>
+  </linearGradient>
+  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="6" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect x="8" y="8" width="704" height="204" rx="44" fill="#071827" stroke="#2b4b66" stroke-width="4"/>
+<g transform="translate(40 35)">
+  <circle cx="76" cy="76" r="67" fill="#0b2238" stroke="url(#g1)" stroke-width="5"/>
+  <path d="M30 112V42h18v52h34v18z" fill="url(#g1)"/>
+  <path d="M92 112V42h31c24 0 38 12 38 34 0 22-14 35-38 35h-13v1zm18-54v36h11c14 0 21-6 21-18 0-12-7-18-21-18z" fill="url(#g1)"/>
+  <circle cx="138" cy="26" r="7" fill="#2aa4ef" filter="url(#glow)"/>
+  <circle cx="20" cy="92" r="5" fill="#f1b64b"/>
+  <path d="M135 25c32 14 37 54 17 80" fill="none" stroke="#2aa4ef" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 8"/>
+</g>
+<g transform="translate(230 62)">
+  <text x="0" y="44" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="900" fill="url(#g2)" letter-spacing="-2">LPS</text>
+  <text x="110" y="44" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="800" fill="url(#g1)" letter-spacing="-2">PROJECT</text>
+  <text x="0" y="92" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#9fb1c1" letter-spacing="9">STUDIO</text>
+  <line x1="0" y1="114" x2="412" y2="114" stroke="#294763" stroke-width="2"/>
+  <text x="0" y="147" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#c5d3de" letter-spacing="2">PROJECTS • BRANDS • PROTOTYPES</text>
+</g>
+</svg>
