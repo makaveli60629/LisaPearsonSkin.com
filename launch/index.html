@@ -1,46 +1,159 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LPS Project Studio — Projects, Brands & Prototypes</title>
-<meta name="description" content="LPS Project Studio is the home for PROPERTYBridge Network, SVR Poker, Thy Kingdom Come, Lisa Pearson Skin and custom web projects.">
-<meta name="theme-color" content="#06172a">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LPS Project Studio — One Vision, Multiple Projects</title>
+<meta name="description" content="LPS Project Studio is the portfolio hub for PROPERTYBridge Network, SVR Poker, Thy Kingdom Come and custom project/profile websites.">
+<meta name="theme-color" content="#06131f">
 <style>
-:root{--bg:#06172a;--panel:#0c2238;--panel2:#102b46;--gold:#f1b64b;--blue:#2aa4ef;--green:#39c98a;--pink:#ef9abb;--text:#f7f9fc;--muted:#9fb1c1;--line:#294763}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:radial-gradient(circle at 12% 0%,rgba(42,164,239,.14),transparent 27%),radial-gradient(circle at 88% 8%,rgba(241,182,75,.12),transparent 26%),var(--bg);color:var(--text)}
-a{text-decoration:none;color:inherit}.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:12px clamp(16px,5vw,72px);background:rgba(6,23,42,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
-.top-logo{width:min(330px,58vw);height:auto}.nav{display:flex;align-items:center;gap:18px;color:#dce6ef;font-size:.84rem}.nav a:hover{color:var(--gold)}
-.hero{max-width:1450px;margin:auto;padding:76px clamp(18px,7vw,110px) 44px;display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center}.eyebrow{color:var(--gold);font-size:.74rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.hero h1{font-size:clamp(3rem,7vw,6.2rem);line-height:.94;letter-spacing:-.065em;margin:14px 0 22px}.hero h1 span{color:var(--gold)}.hero p{color:var(--muted);line-height:1.75;font-size:1.06rem;max-width:830px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-.btn{display:inline-block;border-radius:10px;padding:12px 15px;font-weight:850;border:1px solid var(--line)}.primary{background:linear-gradient(#ffd781,#e7aa3d);border:0;color:#101316}.secondary{background:#0a1c30;color:#fff}.hero-panel{background:linear-gradient(155deg,#102b46,#091827);border:1px solid #31516f;border-radius:22px;padding:22px;box-shadow:0 28px 80px rgba(0,0,0,.28)}
-.hero-panel h3{margin:0 0 13px}.stack{display:grid;gap:9px}.stack div{display:flex;justify-content:space-between;gap:14px;padding:11px;border-radius:10px;background:#08192b;border:1px solid #20384f}.stack span{color:var(--muted);font-size:.8rem}.stack b{font-size:.82rem}
-.projects{max-width:1450px;margin:auto;padding:35px clamp(18px,7vw,110px) 72px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:20px}.section-head h2{font-size:2.2rem;margin:5px 0 0}.section-head p{color:var(--muted);max-width:620px;line-height:1.6;margin:0}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.card{position:relative;overflow:hidden;background:linear-gradient(155deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:22px;min-height:290px;display:flex;flex-direction:column}.card:before{content:"";position:absolute;right:-60px;top:-70px;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.11),transparent 64%)}.card-brand{height:72px;display:flex;align-items:center;gap:13px;position:relative;z-index:1}.card-brand img{max-height:64px;max-width:180px;object-fit:contain}.brand-badge{width:64px;height:64px;border-radius:16px;display:grid;place-items:center;font-weight:950;font-size:1.2rem;border:1px solid #31516c;background:#08192b;color:var(--gold)}.card h3{font-size:1.48rem;margin:13px 0 8px}.card p{margin:0 0 15px;color:var(--muted);line-height:1.6}.meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}.meta span{font-size:.68rem;padding:5px 8px;border-radius:999px;background:#08192b;border:1px solid #20384f}.status{position:absolute;right:16px;top:15px;font-size:.66rem;font-weight:900;padding:5px 8px;border-radius:999px;background:rgba(57,201,138,.09);border:1px solid rgba(57,201,138,.25);color:#82e2ba}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
-.lisa{box-shadow:inset 0 3px 0 var(--pink)}.property{box-shadow:inset 0 3px 0 var(--gold)}.kingdom{box-shadow:inset 0 3px 0 var(--green)}.svr{box-shadow:inset 0 3px 0 var(--blue)}
-.services{max-width:1450px;margin:0 auto 70px;padding:0 clamp(18px,7vw,110px)}.servicebox{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;padding:28px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(135deg,#0d263f,#0a1c2f)}.servicebox h2{font-size:2.1rem;margin:8px 0}.servicebox p{color:var(--muted);line-height:1.65}.service-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}.service-list span{padding:11px;border-radius:9px;background:#08192b;border:1px solid #20384f;font-size:.8rem}
-footer{padding:22px clamp(18px,6vw,85px);border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;gap:18px;color:#7f93a5;font-size:.76rem}
-@media(max-width:900px){.nav{display:none}.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.servicebox{grid-template-columns:1fr}.section-head{display:block}.hero h1{font-size:3.7rem}}
-@media(max-width:520px){.top-logo{width:250px}.hero{padding-left:17px;padding-right:17px}.projects,.services{padding-left:17px;padding-right:17px}.service-list{grid-template-columns:1fr}footer{display:block}}
-</style></head>
+:root{
+  --bg:#06131f;--bg2:#0a1d2c;--panel:#0b2134;--panel2:#0f2a42;--gold:#e9b24d;--gold2:#ffd374;
+  --cyan:#3ab7f2;--green:#3bc48b;--pink:#e99ab9;--text:#f7f8fb;--muted:#a7b3c0;--line:#27425b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:
+radial-gradient(circle at 20% 0%,rgba(233,178,77,.13),transparent 26%),
+radial-gradient(circle at 80% 0%,rgba(58,183,242,.11),transparent 24%),
+linear-gradient(#06131f,#071827 58%,#081621);color:var(--text)}
+a{text-decoration:none;color:inherit}
+img{display:block}
+.top{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:12px clamp(16px,4vw,64px);background:rgba(5,16,27,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.top-logo{width:min(285px,52vw);height:auto}
+.nav{display:flex;align-items:center;gap:24px;font-size:.84rem;color:#e2e8ef}
+.nav a{padding:8px 0;border-bottom:2px solid transparent}
+.nav a:hover,.nav a.active{color:var(--gold2);border-color:var(--gold)}
+.vision-btn{padding:10px 15px;border-radius:9px;background:linear-gradient(180deg,#f8ce72,#c88b21);color:#111;font-weight:900}
+.hero{position:relative;overflow:hidden;min-height:610px;border-bottom:1px solid rgba(255,255,255,.07);background:
+linear-gradient(180deg,rgba(5,18,31,.03),rgba(5,18,31,.86)),
+radial-gradient(circle at 78% 22%,rgba(233,178,77,.17),transparent 25%),
+linear-gradient(115deg,#10243a 0%,#122c3e 40%,#142a31 62%,#0b1e2d 100%)}
+.hero:before{content:"";position:absolute;inset:auto 0 0 0;height:260px;background:
+linear-gradient(180deg,transparent,rgba(4,15,26,.82)),
+repeating-linear-gradient(100deg,transparent 0 60px,rgba(255,255,255,.025) 61px 62px)}
+.hero-inner{position:relative;z-index:2;max-width:1500px;margin:auto;padding:45px clamp(18px,6vw,92px) 36px}
+.hero-head{display:grid;grid-template-columns:1fr auto 1fr;align-items:start;gap:25px}
+.hero-left{padding-top:20px}.cityline{height:135px;margin-top:20px;background:
+linear-gradient(180deg,transparent 0 65%,rgba(233,178,77,.25) 66% 67%,transparent 68%),
+linear-gradient(90deg,transparent 0 6%,#0e2738 6% 8%,transparent 8% 12%,#0d2b3d 12% 15%,transparent 15% 19%,#15354a 19% 22%,transparent 22% 27%,#102c42 27% 30%,transparent 30% 34%,#17374c 34% 38%,transparent 38% 43%,#0c2a3e 43% 46%,transparent 46% 100%);opacity:.88}
+.hero-copy{text-align:center;max-width:900px}
+.hero-copy h1{font-family:Georgia,serif;font-size:clamp(3.1rem,6vw,6.4rem);line-height:.92;letter-spacing:.04em;margin:14px 0 12px;font-weight:500;text-shadow:0 8px 30px rgba(0,0,0,.45)}
+.hero-copy .subline{font-size:.9rem;letter-spacing:.15em;color:#e9edf2;text-transform:uppercase}
+.hero-right{text-align:right;padding-top:20px}.mountain{height:135px;background:linear-gradient(145deg,transparent 0 35%,#173244 36% 58%,transparent 59% 100%);opacity:.82}.tagline{font-family:Georgia,serif;font-style:italic;font-size:1.08rem;line-height:1.35;color:#eef2f4;margin-top:15px}
+.focus{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;max-width:900px;margin:30px auto 0}
+.focus div{text-align:center;color:#eef2f4;font-size:.73rem;line-height:1.25}.focus b{display:block;font-size:1.65rem;color:var(--gold2);margin-bottom:5px}
+.projects{max-width:1500px;margin:-40px auto 0;position:relative;z-index:5;padding:0 clamp(16px,3vw,30px)}
+.project-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card{position:relative;overflow:hidden;background:linear-gradient(180deg,#0c2438,#071827);border:1px solid #30536f;border-radius:12px;min-height:500px;box-shadow:0 16px 40px rgba(0,0,0,.25);display:flex;flex-direction:column}
+.visual{height:245px;position:relative;overflow:hidden;border-bottom:1px solid #2e506c}
+.visual:after{content:"";position:absolute;inset:auto 0 0 0;height:80px;background:linear-gradient(transparent,rgba(4,16,28,.76))}
+.visual-lps{background:radial-gradient(circle at 65% 30%,rgba(233,178,77,.28),transparent 32%),linear-gradient(135deg,#1d2630,#59452c 58%,#151c24)}
+.device-stage{position:absolute;left:8%;right:8%;bottom:18px;height:155px}
+.device{position:absolute;border:2px solid rgba(255,255,255,.3);background:linear-gradient(135deg,#0a1d2e,#132f45);box-shadow:0 10px 20px rgba(0,0,0,.28)}
+.laptop{width:58%;height:78%;left:20%;bottom:0;border-radius:7px}.phone{width:15%;height:55%;right:8%;bottom:5px;border-radius:8px}.tablet{width:22%;height:64%;left:2%;bottom:5px;border-radius:7px}
+.device:before{content:"LPS";position:absolute;inset:0;display:grid;place-items:center;color:var(--gold2);font-weight:950;font-size:1.5rem}
+.visual-property{background:linear-gradient(135deg,#122f46,#153c56 55%,#1b2c37)}
+.house{position:absolute;left:17%;bottom:36px;width:64%;height:112px;background:#d0dbe2;clip-path:polygon(0 35%,50% 0,100% 35%,100% 100%,0 100%);opacity:.93}
+.house:after{content:"";position:absolute;width:25%;height:45%;left:37%;bottom:0;background:#31516b}
+.for-sale{position:absolute;left:10%;bottom:18px;background:#b33939;color:#fff;padding:8px 10px;font-weight:900;border:3px solid #fff}
+.visual-kingdom{background:radial-gradient(circle at 35% 25%,rgba(255,211,116,.32),transparent 25%),linear-gradient(135deg,#243c2d,#9f7d42 60%,#243b2f)}
+.church{position:absolute;left:20%;right:20%;bottom:28px;height:115px;background:#f0e8d2;clip-path:polygon(0 35%,42% 35%,50% 0,58% 35%,100% 35%,100% 100%,0 100%)}
+.cross{position:absolute;right:18%;bottom:70px;font-size:4rem;color:#6e3e25;font-weight:900}
+.visual-svr{background:radial-gradient(circle at 50% 45%,rgba(255,92,235,.33),transparent 30%),radial-gradient(circle at 70% 40%,rgba(105,246,255,.23),transparent 28%),#090916}
+.svr-main-logo{position:absolute;width:62%;max-height:165px;object-fit:contain;left:19%;top:35px;filter:drop-shadow(0 0 16px rgba(255,92,235,.4)) drop-shadow(0 0 12px rgba(105,246,255,.3))}
+.svr-original{position:absolute;right:14px;bottom:12px;width:82px;height:82px;border-radius:50%;background:#071220;border:2px solid #7bdfff;padding:9px;box-shadow:0 0 20px rgba(105,246,255,.25);z-index:3}
+.svr-original img{width:100%;height:100%;object-fit:contain}
+.card-body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.card h2{font-family:Georgia,serif;letter-spacing:.04em;margin:0 0 8px;font-size:1.38rem;font-weight:500}.card p{color:#d3dce5;line-height:1.45;margin:0 0 14px;font-size:.92rem}
+.actions{margin-top:auto;display:flex;gap:8px}.btn{display:inline-block;padding:10px 13px;border-radius:8px;font-weight:850;font-size:.78rem;text-align:center}.primary{background:linear-gradient(180deg,#f7cc6c,#c98c24);color:#111;flex:1}.secondary{border:1px solid #48647c;color:#fff;flex:1}
+.services{max-width:1500px;margin:12px auto;padding:0 clamp(16px,3vw,30px) 30px}
+.servicebar{display:grid;grid-template-columns:1.2fr 1.8fr auto;gap:18px;align-items:center;background:linear-gradient(90deg,#0e2539,#081a2b);border:1px solid #2c4b65;border-radius:12px;padding:18px 20px}
+.servicebar h2{font-family:Georgia,serif;letter-spacing:.05em;font-size:1.8rem;margin:0 0 5px;font-weight:500}.servicebar p{margin:0;color:#d1dbe5}
+.icons{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;text-align:center}.icons div{font-size:.7rem;color:#d9e2ea}.icons b{display:block;font-size:1.25rem;color:#7fcaf0;margin-bottom:4px}
+.values{max-width:1500px;margin:auto;padding:0 clamp(16px,3vw,30px) 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.value{display:flex;gap:11px;align-items:center;padding:14px 16px;border-top:1px solid rgba(255,255,255,.08);color:#dce4eb}.value b{font-size:1.4rem;color:var(--gold2)}.value strong{display:block;font-size:.83rem}.value span{display:block;color:#8295a6;font-size:.72rem;margin-top:3px}
+.about{max-width:1350px;margin:50px auto;padding:0 clamp(18px,5vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:25px}.about-card{background:#0a1e30;border:1px solid var(--line);border-radius:14px;padding:22px}.about-card h3{margin-top:0}.about-card p{color:var(--muted);line-height:1.6}
+footer{padding:24px clamp(18px,5vw,72px);border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;color:#7f93a5;font-size:.76rem}
+@media(max-width:1100px){.project-grid{grid-template-columns:1fr 1fr}.focus{grid-template-columns:repeat(3,1fr)}.servicebar{grid-template-columns:1fr}.icons{grid-template-columns:repeat(3,1fr)}.nav{display:none}.hero-head{grid-template-columns:1fr}.hero-left,.hero-right{display:none}.projects{margin-top:0}}
+@media(max-width:650px){.project-grid{grid-template-columns:1fr}.focus{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.values{grid-template-columns:1fr 1fr}.top-logo{width:240px}.vision-btn{display:none}.hero-copy h1{font-size:3rem}.icons{grid-template-columns:1fr 1fr}}
+</style>
+</head>
 <body>
-<header class="top"><a href="/launch/"><img class="top-logo" src="/assets/lps-project-studio.svg" alt="LPS Project Studio"></a><nav class="nav"><a href="#projects">Projects</a><a href="/projects/manifest/">Manifest</a><a href="/projects/custom/">Custom Pages</a></nav></header>
+<header class="top">
+  <a href="/launch/"><img class="top-logo" src="/assets/lps-project-studio.svg" alt="LPS Project Studio"></a>
+  <nav class="nav"><a class="active" href="#home">Home</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#services">Services</a><a href="/projects/manifest/">Manifest</a></nav>
+  <a class="vision-btn" href="#projects">Our Vision →</a>
+</header>
 
-<section class="hero">
-  <div><span class="eyebrow">Project portfolio + build studio</span><h1>One home for the projects we are <span>building.</span></h1><p>LPS Project Studio is the portfolio and launch hub for our active brands, platforms and community projects. Each project gets its own identity, briefing page, working area and path into its main site.</p><div class="hero-actions"><a class="btn primary" href="#projects">Explore Projects</a><a class="btn secondary" href="/projects/manifest/">Open Project Manifest</a></div></div>
-  <aside class="hero-panel"><h3>Project Studio Structure</h3><div class="stack"><div><span>Portfolio Hub</span><b>LPS Project Studio</b></div><div><span>Real Estate</span><b>PROPERTYBridge Network</b></div><div><span>Gaming / VR</span><b>SVR Poker</b></div><div><span>Community / Ministry</span><b>Thy Kingdom Come</b></div><div><span>Web / Brand</span><b>Lisa Pearson Skin</b></div></div></aside>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-head">
+      <div class="hero-left"><div class="cityline"></div></div>
+      <div class="hero-copy">
+        <span class="eyebrow">LPS Project Studio</span>
+        <h1>ONE VISION<br>MULTIPLE PROJECTS</h1>
+        <div class="subline">Business • Technology • Real Estate • Community • A Stronger Tomorrow</div>
+        <div class="focus">
+          <div><b>⌂</b>Real Estate<br>Opportunities</div>
+          <div><b>▣</b>Technology<br>& Gaming</div>
+          <div><b>♥</b>Community<br>& Outreach</div>
+          <div><b>◒</b>Sustainable<br>Living</div>
+          <div><b>⚙</b>Custom Websites<br>& Solutions</div>
+        </div>
+      </div>
+      <div class="hero-right"><div class="mountain"></div><div class="tagline">“Building real solutions<br>for real people.”</div></div>
+    </div>
+  </div>
 </section>
 
-<section class="projects" id="projects"><div class="section-head"><div><span class="eyebrow">Current portfolio</span><h2>Project directory</h2></div><p>Open a project brief for the executive summary, current stage and next actions. Then move into the main project site or working preview.</p></div>
-<div class="grid">
-  <article class="card lisa"><span class="status">LIVE ARCHIVE</span><div class="card-brand"><img src="/assets/lps-project-studio.svg" alt="LPS Project Studio"></div><h3>Lisa Pearson Skin</h3><p>The original web project and the foundation for our public project portfolio. It now demonstrates brand presentation, page design and custom-site capability.</p><div class="meta"><span>Beauty / Brand</span><span>Portfolio</span><span>Custom Web</span></div><div class="actions"><a class="btn primary" href="/projects/lisa/">Project Brief</a><a class="btn secondary" href="/studio/">Open Main Site</a></div></article>
+<section class="projects" id="projects">
+<div class="project-grid">
+  <article class="card">
+    <div class="visual visual-lps"><div class="device-stage"><div class="device tablet"></div><div class="device laptop"></div><div class="device phone"></div></div></div>
+    <div class="card-body"><h2>LPS PROJECT STUDIO</h2><p>Customized websites, project profiles, branding, marketing pages, dashboards and launch solutions. Professional presentation services for businesses, nonprofits, communities and innovative projects.</p><div class="actions"><a class="btn primary" href="/projects/lisa/">View Project</a><a class="btn secondary" href="/projects/custom/">Services</a></div></div>
+  </article>
 
-  <article class="card property"><span class="status">MVP ACTIVE</span><div class="card-brand"><div class="brand-badge">PB</div><div><b style="font-size:1.2rem">PROPERTY<span style="color:var(--gold)">Bridge</span></b><small style="display:block;color:var(--muted);letter-spacing:.15em;margin-top:4px">NETWORK</small></div></div><h3>PROPERTYBridge Network</h3><p>Deal intelligence for sellers, buyers, investors and creative financing, with Property DNA, CRM, matching and financing-path analysis.</p><div class="meta"><span>Real Estate</span><span>CRM</span><span>Deal Intelligence</span></div><div class="actions"><a class="btn primary" href="/projects/propertybridge/">Project Brief</a><a class="btn secondary" href="/propertybridge/">Open Working MVP</a></div></article>
+  <article class="card">
+    <div class="visual visual-property"><div class="house"></div><div class="for-sale">FOR SALE</div></div>
+    <div class="card-body"><h2>PROPERTYBRIDGE</h2><p>Real-estate opportunities, Property DNA analysis, seller/buyer matching and creative-financing workflows designed to help identify, analyze and move qualified deals.</p><div class="actions"><a class="btn primary" href="/propertybridge/">View Project</a><a class="btn secondary" href="/projects/propertybridge/">Learn More</a></div></div>
+  </article>
 
-  <article class="card kingdom"><span class="status">PLANNING</span><div class="card-brand"><div class="brand-badge" style="color:var(--green)">TKC</div><div><b style="font-size:1.18rem">Thy Kingdom Come</b><small style="display:block;color:var(--muted);letter-spacing:.13em;margin-top:4px">COMMUNITY PROJECT</small></div></div><h3>Thy Kingdom Come</h3><p>A faith-centered initiative focused on ministry, restoration, service, housing support and future community-development programs.</p><div class="meta"><span>Community</span><span>Ministry</span><span>Nonprofit Planning</span></div><div class="actions"><a class="btn primary" href="/projects/kingdom/">Project Brief</a><a class="btn secondary" href="/kingdom/">Open Project Site</a></div></article>
+  <article class="card">
+    <div class="visual visual-kingdom"><div class="church"></div><div class="cross">†</div></div>
+    <div class="card-body"><h2>THY KINGDOM COME</h2><p>A faith-centered community initiative focused on restoration, housing support, service, outreach and future community-development programs.</p><div class="actions"><a class="btn primary" href="/kingdom/">View Project</a><a class="btn secondary" href="/projects/kingdom/">Learn More</a></div></div>
+  </article>
 
-  <article class="card svr"><span class="status">ACTIVE BUILD</span><div class="card-brand"><img src="https://svrpoker.com/logo.png" alt="SVR Poker logo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="brand-badge" style="display:none;color:#8ee8ff">SVR</div></div><h3>SVR Poker</h3><p>A premium social poker and VR platform built for browser, Meta Quest and mobile, with an expanding multiplayer, sponsor and immersive-world roadmap.</p><div class="meta"><span>VR / WebXR</span><span>Quest</span><span>Android</span></div><div class="actions"><a class="btn primary" href="/projects/svr/">Project Brief</a><a class="btn secondary" href="https://svrpoker.com/">Open SVR Poker</a></div></article>
-</div></section>
+  <article class="card">
+    <div class="visual visual-svr">
+      <img class="svr-main-logo" src="https://svrpoker.com/logo.png" alt="SVR Poker logo">
+      <div class="svr-original"><img src="https://svrpoker.com/logo.png" alt="Original SVR Poker branding"></div>
+    </div>
+    <div class="card-body"><h2>SVR POKER</h2><p>Next-generation social poker across VR, browser and mobile, with real gameplay systems, immersive environments and an expanding community platform.</p><div class="actions"><a class="btn primary" href="/projects/svr/">View Project</a><a class="btn secondary" href="https://svrpoker.com/">Play / Visit</a></div></div>
+  </article>
+</div>
+</section>
 
-<section class="services"><div class="servicebox"><div><span class="eyebrow">Custom page capability</span><h2>We can build custom project pages too.</h2><p>LPS Project Studio also serves as a showcase for launch pages, business profiles, prototypes and branded project dashboards. Each project can start lean here and later move into its own domain, database and infrastructure.</p><div class="hero-actions"><a class="btn primary" href="/projects/custom/">View Custom Page Services</a><a class="btn secondary" href="/projects/manifest/">See How Projects Are Managed</a></div></div><div class="service-list"><span>Launch Pages</span><span>Brand Profiles</span><span>Project Dashboards</span><span>Interactive Prototypes</span><span>Mobile-First Sites</span><span>CRM Interfaces</span></div></div></section>
+<section class="services" id="services">
+  <div class="servicebar">
+    <div><span class="eyebrow">LPS project services</span><h2>CUSTOM WEBSITES<br>& PROJECT PAGES</h2><p>Professional launch pages, business profiles, dashboards and custom solutions for your vision.</p></div>
+    <div class="icons"><div><b>▤</b>Launch Pages</div><div><b>♧</b>Business Profiles</div><div><b>▦</b>Dashboards</div><div><b>🛒</b>E-Commerce</div><div><b>▯</b>Mobile Ready</div><div><b>◌</b>Ongoing Support</div></div>
+    <a class="vision-btn" href="/projects/custom/">Our Services →</a>
+  </div>
+</section>
 
-<footer><span>© 2026 LPS Project Studio</span><span>PROPERTYBridge • SVR Poker • Thy Kingdom Come • Lisa Pearson Skin</span></footer>
-</body></html>
+<section class="values">
+  <div class="value"><b>◎</b><div><strong>REAL SOLUTIONS</strong><span>Projects that create real value</span></div></div>
+  <div class="value"><b>◉</b><div><strong>PEOPLE FIRST</strong><span>Helping individuals and communities</span></div></div>
+  <div class="value"><b>▥</b><div><strong>GROWTH</strong><span>Business, technology and opportunity</span></div></div>
+  <div class="value"><b>⊙</b><div><strong>A BETTER TOMORROW</strong><span>Building a brighter future together</span></div></div>
+</section>
+
+<section class="about" id="about">
+  <article class="about-card"><span class="eyebrow">What LPS means now</span><h3>Project profiles, branding and presentation.</h3><p>Lisa Pearson Skin remains preserved as the original demonstration project, but LPS Project Studio is the broader identity: a professional presentation layer for custom project profiles, launch pages, branding systems and working prototypes.</p></article>
+  <article class="about-card"><span class="eyebrow">How the portfolio works</span><h3>One hub, separate project identities.</h3><p>Each project keeps its own mission, files, status and roadmap. LPS Project Studio provides the clean front door, executive briefing pages and links into the main project sites.</p></article>
+</section>
+
+<footer><span>© 2026 LPS Project Studio</span><span>One Vision • Multiple Projects</span></footer>
+</body>
+</html>
