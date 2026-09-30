@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="LPS Template Studio">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#091827"/><stop offset=".58" stop-color="#122d43"/><stop offset="1" stop-color="#181225"/></linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0a2"/><stop offset=".5" stop-color="#daa13a"/><stop offset="1" stop-color="#85510d"/></linearGradient>
+</defs>
+<rect width="1200" height="520" fill="url(#bg)"/>
+<circle cx="1040" cy="95" r="180" fill="#5e2a85" opacity=".16"/>
+<circle cx="170" cy="430" r="210" fill="#d9a23a" opacity=".08"/>
+<g transform="translate(760 120)">
+  <rect x="0" y="0" width="325" height="215" rx="18" fill="#091522" stroke="#6e89a1" stroke-width="6"/>
+  <rect x="18" y="23" width="289" height="164" rx="8" fill="#10283b"/>
+  <rect x="44" y="45" width="95" height="20" rx="10" fill="#d9a13a"/>
+  <rect x="44" y="83" width="210" height="13" rx="6" fill="#6f8798"/>
+  <rect x="44" y="108" width="180" height="13" rx="6" fill="#4e687c"/>
+  <rect x="44" y="144" width="88" height="30" rx="7" fill="#284d69"/>
+  <path d="M105 225h115M150 215v25" stroke="#6e89a1" stroke-width="7" stroke-linecap="round"/>
+  <rect x="272" y="110" width="88" height="165" rx="15" fill="#071522" stroke="#7290a4" stroke-width="5"/>
+  <rect x="285" y="128" width="62" height="112" rx="8" fill="#132c40"/>
+</g>
+<g transform="translate(78 66)">
+  <path d="M60 42 80 17l22 24 24-34 24 34 22-24 20 26-8 30H68z" fill="url(#gold)"/>
+  <text x="0" y="144" font-family="Georgia,Times New Roman,serif" font-size="76" font-weight="700" fill="#fff4d0">LPS TEMPLATE STUDIO</text>
+  <text x="3" y="194" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#e3b85a" letter-spacing="7">CUSTOMIZE • BRAND • LAUNCH</text>
+  <text x="3" y="264" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="600" fill="#d7e0e7">Ready-to-customize website systems for service businesses, creators and community projects.</text>
+  <text x="3" y="304" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="600" fill="#d7e0e7">Change the logo, colors, services, booking, shop and content without rebuilding from zero.</text>
+</g>
+</svg>
