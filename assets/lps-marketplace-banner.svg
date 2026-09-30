@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="LPS Marketplace">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#081827"/><stop offset=".56" stop-color="#152b3e"/><stop offset="1" stop-color="#221528"/></linearGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1a6"/><stop offset=".5" stop-color="#dda339"/><stop offset="1" stop-color="#7d4b0d"/></linearGradient>
+</defs>
+<rect width="1200" height="520" fill="url(#bg)"/>
+<circle cx="965" cy="120" r="210" fill="#a42982" opacity=".12"/>
+<circle cx="1060" cy="390" r="180" fill="#2f7da3" opacity=".13"/>
+<g transform="translate(785 90)">
+  <path d="M35 88h310l-28 275H62z" fill="#0b1b2a" stroke="#7090a4" stroke-width="6"/>
+  <path d="M95 88c0-63 42-88 95-88s95 25 95 88" fill="none" stroke="url(#gold)" stroke-width="14"/>
+  <circle cx="118" cy="182" r="34" fill="#d7a039"/><circle cx="190" cy="182" r="34" fill="#7a49a7"/><circle cx="262" cy="182" r="34" fill="#5d9f8b"/>
+  <rect x="108" y="245" width="164" height="29" rx="14" fill="#d8a33b"/>
+  <rect x="102" y="294" width="176" height="13" rx="6" fill="#59758a"/>
+  <rect x="121" y="321" width="138" height="13" rx="6" fill="#415e73"/>
+</g>
+<g transform="translate(76 62)">
+  <path d="M62 42 82 17l22 25 24-35 24 35 22-25 20 27-8 30H70z" fill="url(#gold)"/>
+  <text x="0" y="144" font-family="Georgia,Times New Roman,serif" font-size="82" font-weight="700" fill="#fff4d0">LPS MARKETPLACE</text>
+  <text x="3" y="196" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#e4b65a" letter-spacing="7">AFFILIATE • CURATED • CUSTOM</text>
+  <text x="3" y="266" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="600" fill="#d7e0e7">Beauty, crystals, candles, tarot, wellness and related products presented in branded collections.</text>
+  <text x="3" y="306" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="600" fill="#d7e0e7">Partner merchants handle checkout and fulfillment while LPS builds the storefront and campaign experience.</text>
+</g>
+</svg>
