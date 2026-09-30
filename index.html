@@ -2,182 +2,78 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes,viewport-fit=cover">
-<title>LPS Project Studio — One Vision Multiple Projects</title>
-<meta name="description" content="LPS Project Studio — One Vision, Multiple Projects.">
-<link rel="canonical" href="https://lisapearsonskin.com/">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>LPS Project Studio — One Vision, Multiple Projects</title>
+<meta name="description" content="LPS Project Studio portfolio: technology, real estate tools, community projects, custom website templates, affiliate commerce and hosting.">
 <style>
-:root{
-  --navy:#071522;--navy2:#0a2032;--line:#2c536e;--gold:#d89e2b;--gold2:#ffd875;
-  --text:#f7f4ed;--muted:#ccd6df;
+:root{--bg:#06121e;--panel:#0a1d2d;--panel2:#0d263a;--line:#294a63;--gold:#e5ad42;--gold2:#ffd978;--text:#f7f4ed;--muted:#aebdca}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}
+.app{height:100dvh;min-height:100dvh;display:grid;grid-template-rows:62px minmax(110px,25vh) 1fr 82px;overflow:hidden;background:radial-gradient(circle at 50% 20%,#14334c 0,#07131f 55%,#050e17 100%)}
+.top{display:flex;align-items:center;gap:16px;padding:8px clamp(12px,3vw,36px);border-bottom:1px solid #28465d;background:rgba(5,15,24,.96);z-index:5}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}.brand img{width:165px;max-width:34vw;height:44px;object-fit:contain;object-position:left center}.tag{font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.topnav{margin-left:auto;display:flex;gap:8px}.pill{border:1px solid #365a74;border-radius:999px;padding:9px 13px;font-size:11px;font-weight:800;letter-spacing:.05em;background:#081827}.pill.gold{border-color:#b88428;background:linear-gradient(#f6d575,#b87818);color:#15100a}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid #2b4d66;background:#071522}.hero img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,9,15,.22),transparent 42%,transparent 70%,rgba(2,9,15,.28))}
+.hero-copy{position:absolute;left:clamp(14px,4vw,64px);bottom:12px;z-index:2;padding:8px 12px;border-left:3px solid var(--gold);background:rgba(5,15,24,.55);backdrop-filter:blur(5px)}.hero-copy b{font-family:Georgia,serif;font-size:clamp(16px,2.1vw,28px);font-weight:500}.hero-copy span{display:block;margin-top:3px;color:#d5e0e8;font-size:10px;letter-spacing:.09em;text-transform:uppercase}
+.portfolio{min-height:0;display:grid;grid-template-rows:auto 1fr;gap:10px;padding:12px clamp(10px,2.2vw,28px);overflow:hidden}.sectionbar{display:flex;align-items:center;gap:14px}.sectionbar h1{margin:0;font-family:Georgia,serif;font-size:clamp(18px,2vw,27px);font-weight:500;letter-spacing:.04em}.sectionbar p{margin:0;color:var(--muted);font-size:11px}.slider-controls{margin-left:auto;display:flex;gap:7px}.round{width:34px;height:34px;border:1px solid #355772;background:#091b2b;color:white;border-radius:50%;cursor:pointer}
+.carousel{position:relative;min-height:0;overflow:hidden}.track{height:100%;display:flex;gap:12px;transition:transform .55s cubic-bezier(.2,.7,.2,1);will-change:transform}.card{height:100%;flex:0 0 calc((100% - 24px)/3);min-width:0;border:1px solid #31516a;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,#102a40,#071724);display:grid;grid-template-rows:44% 1fr;box-shadow:0 14px 28px #0005}.art{position:relative;overflow:hidden;background:#071522}.art img{width:100%;height:100%;object-fit:cover;display:block}.art.contain img{object-fit:contain;padding:10px}.art:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(4,12,19,.64))}
+.faux{height:100%;display:grid;place-items:center;text-align:center;padding:12px;background:radial-gradient(circle at 50% 30%,#244a65,#0a1b2a 65%)}.faux .ico{font-size:35px;color:var(--gold2);line-height:1}.faux b{display:block;margin-top:5px;font-family:Georgia,serif;font-size:20px}.faux small{display:block;margin-top:4px;color:#c5d1da;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+.copy{padding:12px 14px;display:grid;grid-template-rows:auto 1fr auto;gap:5px;min-height:0}.copy h2{margin:0;font-family:Georgia,serif;font-weight:500;font-size:clamp(17px,1.55vw,23px)}.copy p{margin:0;color:#c8d3dc;font-size:11px;line-height:1.45;overflow:hidden}.actions{display:flex;gap:7px}.btn{min-height:34px;display:inline-flex;align-items:center;justify-content:center;padding:7px 10px;border:1px solid #3d617b;border-radius:8px;font-size:10px;font-weight:900;letter-spacing:.04em;background:#081827}.btn.gold{background:linear-gradient(#ffda78,#bb7d1d);border-color:#d8a243;color:#171008}
+.servicebar{display:grid;grid-template-columns:1.25fr repeat(4,1fr);align-items:stretch;border-top:1px solid #2c4a60;background:#071421;padding:7px clamp(10px,2.2vw,28px);gap:8px}.service-lead,.service{border:1px solid #29485f;border-radius:10px;background:#091b2a;min-width:0}.service-lead{display:flex;align-items:center;gap:10px;padding:8px 12px}.service-lead b{font-family:Georgia,serif;font-size:14px}.service-lead span{display:block;font-size:9px;color:var(--muted);margin-top:2px}.service{display:flex;align-items:center;justify-content:center;text-align:center;padding:6px 8px;font-size:9px;font-weight:800;line-height:1.25;color:#dce5eb}.service strong{display:block;color:var(--gold2);font-size:10px;margin-bottom:2px}
+.dots{display:none}
+@media(max-width:1050px){.card{flex-basis:calc((100% - 12px)/2)}.tag{display:none}.servicebar{grid-template-columns:1.2fr repeat(2,1fr)}.service:nth-last-child(-n+2){display:none}}
+@media(max-width:700px){
+ .app{grid-template-rows:56px 112px 1fr 76px}.top{padding:6px 10px}.brand img{width:132px;max-width:48vw;height:40px}.topnav .pill:not(.gold){display:none}.pill{padding:8px 10px;font-size:9px}
+ .hero img{object-fit:cover}.hero-copy{left:10px;right:10px;bottom:7px;padding:6px 9px}.hero-copy b{font-size:15px}.hero-copy span{font-size:7px}
+ .portfolio{padding:8px 9px;gap:7px}.sectionbar h1{font-size:17px}.sectionbar p{display:none}.slider-controls{gap:4px}.round{width:30px;height:30px}
+ .card{flex-basis:100%;grid-template-rows:43% 1fr;border-radius:12px}.copy{padding:10px 12px}.copy h2{font-size:19px}.copy p{font-size:10.5px}.btn{min-height:32px;font-size:9px}
+ .servicebar{grid-template-columns:1.25fr 1fr 1fr;padding:5px 8px;gap:5px}.service-lead{padding:6px 8px}.service-lead b{font-size:11px}.service-lead span{font-size:7px}.service{font-size:7px}.service strong{font-size:8px}.service:nth-last-child(-n+2){display:none}
 }
-*{box-sizing:border-box}
-html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#06121e;color:var(--text);font-family:Arial,Helvetica,sans-serif}
-a{color:inherit;text-decoration:none}
-.viewport{position:fixed;inset:0;overflow:hidden;background:radial-gradient(circle at 50% 40%,#0b2338,#06121e 72%)}
-.design{
-  position:absolute;left:50%;top:50%;width:1536px;height:864px;
-  transform-origin:center center;background:#071522;overflow:hidden;
-  box-shadow:0 0 80px rgba(0,0,0,.68)
-}
-.hero{
-  position:absolute;left:0;top:0;width:1536px;height:280px;
-  background:url('/assets/one-vision-banner-v2.webp') center center/cover no-repeat,#071522;
-  border-bottom:1px solid #3d5f76
-}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.06))}
-.hot{position:absolute;z-index:8;border-radius:8px}
-.hot:focus-visible{outline:4px solid var(--gold2);outline-offset:-4px}
-.h-home{left:486px;top:10px;width:80px;height:50px}
-.h-projects{left:582px;top:10px;width:105px;height:50px}
-.h-about{left:700px;top:10px;width:92px;height:50px}
-.h-services{left:810px;top:10px;width:110px;height:50px}
-.h-contact{left:936px;top:10px;width:105px;height:50px}
-.h-vision{left:1251px;top:10px;width:168px;height:50px}
-
-.cards{
-  position:absolute;left:24px;right:24px;top:278px;height:414px;
-  display:grid;grid-template-columns:repeat(4,1fr);gap:12px
-}
-.card{
-  position:relative;overflow:hidden;border:1px solid #315670;border-radius:10px;
-  background:linear-gradient(180deg,#0c2235,#071522);box-shadow:0 12px 32px rgba(0,0,0,.30)
-}
-.art{position:absolute;left:0;top:0;right:0;height:244px;border-bottom:1px solid #3d6077;overflow:hidden;background:#091927}
-.art:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(3,10,17,.62));z-index:2}
-.lps-art{
-  background-image:
-    linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.25)),
-    url('/assets/one-vision-banner-v2.webp');
-  background-size:430% auto;background-position:0% 54%;background-repeat:no-repeat
-}
-.pb-art{background:url('/assets/propertybridge-banner.svg') center/cover no-repeat}
-.kingdom-art{background:linear-gradient(180deg,#f4d899,#13241a);display:grid;place-items:center}
-.kingdom-art img{width:96%;height:96%;object-fit:contain}
-.svr-art{
-  background:
-    radial-gradient(circle at 55% 42%,rgba(133,48,196,.5),transparent 32%),
-    radial-gradient(circle at 25% 75%,rgba(250,32,142,.30),transparent 24%),
-    #080a1c;
-  display:grid;place-items:center
-}
-.svr-art img{width:78%;height:78%;object-fit:contain;filter:drop-shadow(0 0 18px rgba(255,62,217,.38));position:relative;z-index:1}
-.card-copy{position:absolute;left:0;right:0;top:244px;bottom:0;padding:14px 18px 12px}
-.card-copy h2{font-family:Georgia,'Times New Roman',serif;font-weight:500;font-size:27px;letter-spacing:.04em;margin:0 0 7px;text-transform:uppercase}
-.card-copy p{font-size:14px;line-height:1.35;color:#e1e7ec;margin:0;width:96%}
-.card-actions{position:absolute;left:18px;right:18px;bottom:12px;display:grid;grid-template-columns:1.15fr .85fr;gap:10px}
-.btn{height:38px;border-radius:7px;border:1px solid #526f83;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;letter-spacing:.05em}
-.btn.gold{background:linear-gradient(#ffda71,#b97716);color:#181007;border-color:#e1ac45}
-.btn.dark{background:#081827;color:white}
-.card-link{position:absolute;inset:0;z-index:5}
-.card-actions a{position:relative;z-index:7}
-
-.services{
-  position:absolute;left:24px;right:24px;top:700px;height:96px;border:1px solid #315670;border-radius:10px;
-  background:linear-gradient(90deg,#071827,#0b2236);display:grid;grid-template-columns:300px 1fr 220px;align-items:center;overflow:hidden
-}
-.device-art{height:100%;display:flex;align-items:flex-end;justify-content:center;gap:6px;padding:12px 16px;background:linear-gradient(90deg,rgba(214,158,43,.12),transparent)}
-.device{border:2px solid #70879a;background:#081522;box-shadow:0 7px 16px #0007}
-.device.big{width:155px;height:76px}.device.phone{width:28px;height:57px}.device.tab{width:48px;height:61px}
-.service-main{display:grid;grid-template-columns:360px 1fr;align-items:center}
-.service-copy h3{font-family:Georgia,'Times New Roman',serif;font-size:29px;line-height:.9;letter-spacing:.04em;margin:0 0 6px}
-.service-copy p{font-size:13px;color:#c9d4dc;margin:0}
-.service-icons{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;text-align:center}
-.sicon{font-size:10px;color:#d4dde5}
-.sicon svg{display:block;width:25px;height:25px;margin:0 auto 5px;fill:none;stroke:#8ec4e5;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.service-cta{padding-right:18px}
-.service-cta a{height:44px}
-
-.values{
-  position:absolute;left:24px;right:24px;top:804px;height:52px;
-  display:grid;grid-template-columns:repeat(4,1fr);gap:8px
-}
-.value{border-top:1px solid #38566b;display:grid;grid-template-columns:54px 1fr;align-items:center;padding:5px 12px;background:linear-gradient(90deg,rgba(214,158,43,.05),transparent)}
-.vicon{width:39px;height:39px;border:2px solid #d3a847;border-radius:50%;display:grid;place-items:center;color:#ffd36a;font-size:21px}
-.value b{font-size:14px;letter-spacing:.07em}.value small{display:block;color:#8fa3b2;font-size:10px;margin-top:2px}
-@media(prefers-reduced-motion:no-preference){.design{animation:show .3s ease-out both}@keyframes show{from{opacity:0}to{opacity:1}}}
+@media(max-height:650px){.app{grid-template-rows:50px 92px 1fr 62px}.hero-copy{display:none}.copy p{font-size:9px}.service-lead span{display:none}}
 </style>
 </head>
 <body>
-<div class="viewport">
-  <main class="design" id="design">
-    <section class="hero" aria-label="One Vision Multiple Projects approved banner">
-      <a class="hot h-home" href="/" aria-label="Home"></a>
-      <a class="hot h-projects" href="#projects" aria-label="Projects"></a>
-      <a class="hot h-about" href="/projects/manifest/" aria-label="About"></a>
-      <a class="hot h-services" href="/projects/custom/" aria-label="Services"></a>
-      <a class="hot h-contact" href="/projects/custom/" aria-label="Contact"></a>
-      <a class="hot h-vision" href="#projects" aria-label="Our Vision"></a>
-    </section>
-
-    <section class="cards" id="projects">
-      <article class="card">
-        <div class="art lps-art"></div>
-        <div class="card-copy">
-          <h2>LPS Project Studio</h2>
-          <p>Customized websites, project profiles, branding, marketing pages, dashboards, and launch solutions to bring your vision to life.</p>
-        </div>
-        <div class="card-actions"><a class="btn gold" href="/projects/lisa/">VIEW PROJECT ›</a><a class="btn dark" href="/projects/custom/">LEARN MORE</a></div>
-      </article>
-      <article class="card">
-        <div class="art pb-art"></div>
-        <div class="card-copy">
-          <h2>PropertyBridge</h2>
-          <p>Real estate opportunities, Property DNA analysis, seller/buyer matching, and creative financing solutions.</p>
-        </div>
-        <div class="card-actions"><a class="btn gold" href="/propertybridge/">VIEW PROJECT ›</a><a class="btn dark" href="/projects/propertybridge/">LEARN MORE</a></div>
-      </article>
-      <article class="card">
-        <div class="art kingdom-art"><img src="/assets/thy-kingdom-come-logo.webp" alt="Thy Kingdom Come"></div>
-        <div class="card-copy">
-          <h2>Thy Kingdom Come</h2>
-          <p>A non-denominational church and community initiative focused on restoration, housing, support, and outreach.</p>
-        </div>
-        <div class="card-actions"><a class="btn gold" href="/projects/kingdom/">VIEW PROJECT ›</a><a class="btn dark" href="/projects/kingdom/">LEARN MORE</a></div>
-      </article>
-      <article class="card">
-        <div class="art svr-art"><img src="https://raw.githubusercontent.com/makaveli60629/SVR/main/logo.webp" alt="SVR Poker official logo"></div>
-        <div class="card-copy">
-          <h2>SVR Poker</h2>
-          <p>Next-generation VR poker with real gameplay systems, immersive environments, tournaments, and community.</p>
-        </div>
-        <div class="card-actions"><a class="btn gold" href="/projects/svr/">VIEW PROJECT ›</a><a class="btn dark" href="https://svrpoker.com/">PLAY NOW</a></div>
-      </article>
-    </section>
-
-    <section class="services" aria-label="Custom websites and project pages">
-      <div class="device-art"><div class="device phone"></div><div class="device big"></div><div class="device tab"></div></div>
-      <div class="service-main">
-        <div class="service-copy"><h3>CUSTOM WEBSITES<br>& PROJECT PAGES</h3><p>Professional launch pages, business profiles, dashboards, and custom solutions for your vision.</p></div>
-        <div class="service-icons">
-          <div class="sicon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>Launch Pages</div>
-          <div class="sicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M5 20c.7-4 3.1-6 7-6s6.3 2 7 6"/></svg>Business Profiles</div>
-          <div class="sicon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 16v-4M12 16V8M16 16v-6"/></svg>Dashboards</div>
-          <div class="sicon"><svg viewBox="0 0 24 24"><path d="M3 5h2l2.2 10.5h10.8l2-7.5H7"/><circle cx="9" cy="19" r="1"/><circle cx="17" cy="19" r="1"/></svg>E-Commerce</div>
-          <div class="sicon"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/></svg>Mobile Ready</div>
-          <div class="sicon"><svg viewBox="0 0 24 24"><path d="M5 12a7 7 0 0 1 14 0"/><path d="M5 12v5h3v-5M19 12v5h-3v-5"/></svg>Ongoing Support</div>
-        </div>
-      </div>
-      <div class="service-cta"><a class="btn gold" href="/projects/custom/">OUR SERVICES ›</a></div>
-    </section>
-
-    <section class="values" aria-label="Project values">
-      <div class="value"><div class="vicon">◎</div><div><b>REAL SOLUTIONS</b><small>Projects that create real value</small></div></div>
-      <div class="value"><div class="vicon">●</div><div><b>PEOPLE FIRST</b><small>Helping individuals and communities</small></div></div>
-      <div class="value"><div class="vicon">▥</div><div><b>GROWTH</b><small>Business, technology, and opportunity</small></div></div>
-      <div class="value"><div class="vicon">◎</div><div><b>A BETTER TOMORROW</b><small>Building a brighter future together</small></div></div>
-    </section>
-  </main>
+<div class="app">
+<header class="top">
+  <a class="brand" href="/"><img src="/assets/lps-project-studio.svg" alt="LPS Project Studio"></a>
+  <span class="tag">One Vision • Multiple Projects</span>
+  <nav class="topnav"><a class="pill" href="/projects/manifest/">Project Manifest</a><a class="pill gold" href="/projects/custom/">Build With Us</a></nav>
+</header>
+<section class="hero" aria-label="LPS Project Studio master banner">
+  <img src="/assets/one-vision-banner-v2.webp" alt="One Vision, Multiple Projects — LPS Project Studio">
+  <div class="hero-copy"><b>Projects built to become working businesses.</b><span>Portfolio • tools • templates • commerce • hosting</span></div>
+</section>
+<main class="portfolio">
+ <div class="sectionbar"><div><h1>Project Studio</h1><p>Swipe or use the arrows. The portfolio advances automatically.</p></div><div class="slider-controls"><button class="round" id="prev" aria-label="Previous project">‹</button><button class="round" id="next" aria-label="Next project">›</button></div></div>
+ <div class="carousel" id="carousel"><div class="track" id="track">
+  <article class="card"><div class="art contain"><img src="/assets/lps-project-studio.svg" alt="LPS Project Studio"></div><div class="copy"><h2>LPS Project Studio</h2><p>Custom websites, branded project pages, dashboards, prototypes, template systems and digital business launches.</p><div class="actions"><a class="btn gold" href="/projects/custom/">Services</a><a class="btn" href="/projects/manifest/">Manifest</a></div></div></article>
+  <article class="card"><div class="art"><img src="/assets/propertybridge-banner.svg" alt="PROPERTYBridge Network"></div><div class="copy"><h2>PROPERTYBridge</h2><p>A one-screen real-estate command center for leads, property photos, source ads, analysis, CRM, financing paths and follow-up.</p><div class="actions"><a class="btn gold" href="/propertybridge/">Open Engine</a><a class="btn" href="/projects/propertybridge/">Brief</a></div></div></article>
+  <article class="card"><div class="art contain"><img src="/assets/thy-kingdom-come-logo.webp" alt="Thy Kingdom Come"></div><div class="copy"><h2>Thy Kingdom Come</h2><p>Church and community restoration initiative with housing, outreach, service programs and long-range campus development.</p><div class="actions"><a class="btn gold" href="/projects/kingdom/">Open Project</a><a class="btn" href="/kingdom/">Website</a></div></div></article>
+  <article class="card"><div class="art contain"><img src="https://raw.githubusercontent.com/makaveli60629/SVR/main/logo.webp" alt="SVR Poker"></div><div class="copy"><h2>SVR Poker</h2><p>Immersive multi-platform poker project with Quest, Android and web gameplay development.</p><div class="actions"><a class="btn gold" href="https://svrpoker.com/">Play</a><a class="btn" href="/projects/svr/">Project</a></div></div></article>
+  <article class="card"><div class="art"><div class="faux"><div><span class="ico">✦</span><b>Template Studio</b><small>Tarot • Reiki • Wellness • Beauty</small></div></div></div><div class="copy"><h2>Custom Templates</h2><p>Reusable client-ready website profiles with configurable branding, service menus, booking, shop sections and license-ready delivery.</p><div class="actions"><a class="btn gold" href="/projects/custom/#templates">View Templates</a><a class="btn" href="/projects/custom/#project-brief">Request One</a></div></div></article>
+  <article class="card"><div class="art"><div class="faux"><div><span class="ico">◈</span><b>Affiliate Commerce</b><small>Beauty • candles • tarot • crystals</small></div></div></div><div class="copy"><h2>Affiliate Marketing</h2><p>Campaign-ready storefront sections for skincare, makeup, beauty tools, candles, incense, oils, crystals, beads and related partner products.</p><div class="actions"><a class="btn gold" href="/projects/custom/#commerce">Commerce Plan</a><a class="btn" href="/studio/">Skin Studio</a></div></div></article>
+  <article class="card"><div class="art"><div class="faux"><div><span class="ico">▦</span><b>Web Hosting</b><small>Domains • sites • VPS • reseller</small></div></div></div><div class="copy"><h2>Hosting & Reseller</h2><p>Managed website hosting, project deployment, domains, VPS planning and reseller hosting as the studio infrastructure expands.</p><div class="actions"><a class="btn gold" href="/projects/custom/#hosting">Hosting Plan</a><a class="btn" href="/projects/custom/">Services</a></div></div></article>
+ </div></div>
+</main>
+<footer class="servicebar">
+ <a class="service-lead" href="/projects/custom/"><div><b>Custom Websites & Project Pages</b><span>Templates, affiliate storefronts, hosting and prototypes</span></div></a>
+ <a class="service" href="/projects/custom/#templates"><div><strong>TEMPLATES</strong>Tarot • Reiki • business profiles</div></a>
+ <a class="service" href="/projects/custom/#commerce"><div><strong>AFFILIATE COMMERCE</strong>Direct-to-customer partner sales</div></a>
+ <a class="service" href="/projects/custom/#hosting"><div><strong>HOSTING</strong>Managed sites • VPS • reseller</div></a>
+ <a class="service" href="/account/"><div><strong>CLIENT ACCESS</strong>Login • registration</div></a>
+</footer>
 </div>
 <script>
-(() => {
-  const W=1536,H=864,el=document.getElementById('design');
-  function fit(){
-    const s=Math.min(window.innerWidth/W,window.innerHeight/H);
-    el.style.transform='translate(-50%,-50%) scale('+s+')';
-  }
-  addEventListener('resize',fit,{passive:true}); fit();
+(function(){
+ const track=document.getElementById('track'),cards=[...track.children],carousel=document.getElementById('carousel');
+ let index=0,timer;
+ function perView(){return innerWidth>1050?3:innerWidth>700?2:1}
+ function go(n){const visible=perView(),max=Math.max(0,cards.length-visible);index=Math.max(0,Math.min(max,n));const gap=12;const step=(carousel.clientWidth-gap*(visible-1))/visible+gap;track.style.transform='translateX(-'+(index*step)+'px)'}
+ function next(){const max=Math.max(0,cards.length-perView());go(index>=max?0:index+1)}
+ function reset(){clearInterval(timer);timer=setInterval(next,4300)}
+ document.getElementById('next').onclick=function(){next();reset()};
+ document.getElementById('prev').onclick=function(){const max=Math.max(0,cards.length-perView());go(index<=0?max:index-1);reset()};
+ let sx=0;carousel.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});carousel.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>35){dx<0?next():go(index-1);reset()}},{passive:true});
+ addEventListener('resize',()=>go(index),{passive:true});go(0);reset();
 })();
 </script>
-</body>
-</html>
+</body></html>
