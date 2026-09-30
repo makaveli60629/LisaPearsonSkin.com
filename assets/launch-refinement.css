@@ -197,3 +197,54 @@ section[id]{scroll-margin-top:78px}
   .card,.btn,.vision{transition:none}
   .card:hover{transform:none}
 }
+
+/* Final launch presentation: approved One Vision banner artwork */
+.hero{
+  background:
+    linear-gradient(180deg,rgba(3,10,17,.24),rgba(3,10,17,.36) 48%,rgba(3,10,17,.82)),
+    url('/assets/one-vision-banner-v2.webp') center center/cover no-repeat,
+    #071827;
+}
+.hero:before{
+  background:linear-gradient(90deg,rgba(3,11,18,.38),transparent 30%,transparent 70%,rgba(3,11,18,.38));
+}
+.hero:after{opacity:.48}
+
+/* Finished project banners and logos */
+.project-art{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  isolation:isolate;
+  background:#091725;
+}
+.project-art:after{
+  z-index:1;
+  background:linear-gradient(180deg,rgba(4,11,18,.02),rgba(4,11,18,.10) 55%,rgba(4,11,18,.86));
+}
+.project-banner{
+  position:relative;
+  z-index:0;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.lps-banner{object-fit:contain;padding:22px 20px;background:#071827}
+.pb-banner{object-fit:cover}
+.tkc-banner{object-fit:contain;padding:16px;background:linear-gradient(180deg,#18281f,#0c1712)}
+.art-svr .project-banner{
+  object-fit:contain;
+  width:88%;
+  height:82%;
+  max-width:310px;
+  padding:0;
+  background:transparent;
+}
+.project-art .artTitle{z-index:2}
+@media(max-width:700px){
+  .lps-banner{padding:14px}
+  .tkc-banner{padding:10px}
+  .art-svr .project-banner{width:84%;height:78%}
+}
