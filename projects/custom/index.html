@@ -1,24 +1,185 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LPS Project Studio — Websites, Templates, Commerce & Hosting</title><meta name="description" content="Custom websites, reusable templates, affiliate storefronts, project dashboards and hosting from LPS Project Studio."><style>
-:root{--bg:#06131f;--panel:#0b2032;--panel2:#102b42;--gold:#dca741;--gold2:#ffd77b;--blue:#57b8ea;--muted:#aebdca;--line:#294963;--white:#f8f5ee}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:radial-gradient(circle at 50% 0,#12334d,#06131f 42%);color:var(--white)}a{text-decoration:none;color:inherit}.top{position:sticky;top:0;z-index:20;padding:10px clamp(14px,4vw,62px);display:flex;gap:16px;align-items:center;border-bottom:1px solid rgba(255,255,255,.09);background:rgba(5,16,26,.94);backdrop-filter:blur(12px)}.brand img{width:190px;height:46px;object-fit:contain;object-position:left}.nav{margin-left:auto;display:flex;gap:9px;flex-wrap:wrap}.nav a{font-size:.72rem;font-weight:800;color:#c8d5df;padding:8px 10px;border-radius:8px}.nav a:hover{background:#0f2a40;color:white}.back{border:1px solid var(--line)}
-main{max-width:1220px;margin:auto;padding:58px 20px 80px}.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;align-items:stretch}.hero-copy,.hero-side,.panel{background:linear-gradient(155deg,rgba(14,42,65,.96),rgba(7,24,38,.96));border:1px solid var(--line);border-radius:18px}.hero-copy{padding:clamp(24px,4vw,48px)}.hero-side{padding:24px;display:grid;gap:10px}.eyebrow{color:var(--gold2);font-size:.72rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase}.hero h1{font-family:Georgia,serif;font-size:clamp(2.8rem,6vw,5.7rem);font-weight:500;line-height:.92;letter-spacing:-.05em;margin:14px 0}.hero p,.lead{color:var(--muted);line-height:1.7}.hero-actions,.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 15px;border-radius:9px;border:1px solid var(--line);font-weight:900;font-size:.78rem}.primary{background:linear-gradient(#ffd97c,#bf811c);color:#15100a;border-color:#d5a03b}.secondary{background:#081927}.metric{border:1px solid #2e5069;border-radius:12px;padding:14px;background:#081a29}.metric strong{display:block;color:var(--gold2);font-size:1.05rem}.metric span{display:block;color:#c2ced7;font-size:.79rem;margin-top:3px;line-height:1.45}
-section{scroll-margin-top:82px;margin-top:28px}.section-head{max-width:820px;margin-bottom:16px}.section-head h2{font-family:Georgia,serif;font-weight:500;font-size:clamp(2rem,4vw,3.4rem);margin:8px 0}.section-head p{color:var(--muted);line-height:1.65;margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{background:linear-gradient(155deg,#0e2942,#081927);border:1px solid var(--line);border-radius:15px;padding:20px}.card h3{margin:0 0 8px;font-size:1.12rem;color:#fff}.card p{margin:0;color:#c2ced8;line-height:1.55;font-size:.9rem}.card .tag{display:inline-block;margin-bottom:12px;border:1px solid #49667b;border-radius:999px;padding:5px 8px;font-size:.62rem;font-weight:900;letter-spacing:.08em;color:var(--gold2);text-transform:uppercase}
-.template-feature{display:grid;grid-template-columns:1fr 1fr;gap:14px}.mock{min-height:330px;position:relative;overflow:hidden;padding:26px;background:radial-gradient(circle at 75% 20%,rgba(183,96,196,.28),transparent 30%),radial-gradient(circle at 25% 75%,rgba(230,174,62,.16),transparent 26%),#111529;border:1px solid #4b4567;border-radius:18px}.mock .moon{font-size:58px;color:#f4cf77}.mock h3{font-family:Georgia,serif;font-size:2.3rem;font-weight:500;margin:8px 0}.mock p{max-width:520px;color:#d6d0dc;line-height:1.6}.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}.chips span{border:1px solid #665c7b;border-radius:999px;padding:6px 9px;font-size:.69rem;background:#171b30}.license{display:grid;gap:10px}.license-row{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid #28465d;padding:10px 0;font-size:.84rem}.license-row span{color:var(--muted)}.catalog{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.cat{min-height:130px;border:1px solid #31516a;border-radius:13px;padding:16px;background:linear-gradient(145deg,#0e2940,#071826);display:flex;flex-direction:column;justify-content:flex-end}.cat b{color:var(--gold2)}.cat span{color:#c2ced8;font-size:.77rem;margin-top:5px;line-height:1.35}.note{margin-top:12px;border-left:3px solid var(--gold);padding:10px 12px;background:#0a1c2b;color:#c2ced8;font-size:.82rem;line-height:1.5}.process{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.process div{background:#081927;border:1px solid #203d56;border-radius:11px;padding:14px}.process strong{display:block;color:var(--gold);font-size:.75rem}.process span{display:block;margin-top:5px;color:#d5dee7;font-size:.82rem}form{display:grid;grid-template-columns:1fr 1fr;gap:10px}label{font-size:.72rem;color:#d5dee7;font-weight:800}input,select,textarea{width:100%;margin-top:5px;border:1px solid #31516a;border-radius:9px;background:#061522;color:#fff;padding:11px;font:inherit}textarea,.full{grid-column:1/-1}.portfolio-footer{padding:24px clamp(20px,5vw,70px);border-top:1px solid #273c50;display:flex;gap:18px;flex-wrap:wrap;color:#aab8c5;font-size:.75rem;background:#06111b}
-@media(max-width:900px){.hero,.template-feature{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.catalog{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.nav a:not(.back){display:none}}
-@media(max-width:600px){main{padding:28px 12px 60px}.brand img{width:145px}.grid,.catalog{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.hero h1{font-size:2.65rem}.mock{min-height:280px}.mock h3{font-size:1.8rem}form{grid-template-columns:1fr}.full,textarea{grid-column:auto}}
-</style></head><body>
-<header class="top"><a class="brand" href="/launch/"><img src="/assets/lps-project-studio.svg" alt="LPS Project Studio"></a><nav class="nav"><a href="#templates">Templates</a><a href="#commerce">Affiliate Commerce</a><a href="#hosting">Hosting</a><a href="#services">Services</a><a class="back" href="/launch/">← Project Launch</a></nav></header>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LPS Project Studio — Websites, Templates, Marketplace, Branding & Hosting</title>
+<meta name="description" content="Custom websites, reusable templates, affiliate-ready storefronts, branding, add-ons and managed hosting from LPS Project Studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06131f;--panel:#0b2032;--gold:#dca741;--gold2:#ffd77b;--muted:#aebdca;--line:#294963;--white:#f8f5ee}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Montserrat,Arial,sans-serif;background:radial-gradient(circle at 50% 0,#12334d,#06131f 42%);color:var(--white)}
+a{text-decoration:none;color:inherit}
+.top{position:sticky;top:0;z-index:20;padding:9px clamp(14px,4vw,62px);display:flex;gap:16px;align-items:center;border-bottom:1px solid rgba(255,255,255,.09);background:rgba(5,16,26,.94);backdrop-filter:blur(12px)}
+.brand img{width:205px;height:48px;object-fit:contain;object-position:left}
+.nav{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.nav a{font-size:.68rem;font-weight:800;color:#c8d5df;padding:8px 10px;border:1px solid transparent;border-radius:999px}
+.nav a:hover{background:#0f2a40;color:#fff}.nav .gold{border-color:#a77727;background:linear-gradient(#ffd87a,#b8791b);color:#171008}
+main{max-width:1240px;margin:auto;padding:34px 20px 80px}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:stretch}
+.hero-copy,.hero-side,.panel{background:linear-gradient(155deg,rgba(14,42,65,.96),rgba(7,24,38,.96));border:1px solid var(--line);border-radius:18px}
+.hero-copy{padding:clamp(24px,4vw,48px)}
+.hero-side{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.eyebrow{color:var(--gold2);font-size:.68rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.hero h1{font-family:Cinzel,Georgia,serif;font-size:clamp(2.5rem,5.7vw,5.2rem);font-weight:600;line-height:.96;letter-spacing:-.035em;margin:13px 0}
+.hero p,.lead{color:var(--muted);line-height:1.7}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 15px;border-radius:9px;border:1px solid var(--line);font-weight:900;font-size:.74rem}
+.primary{background:linear-gradient(#ffd97c,#bf811c);color:#15100a;border-color:#d5a03b}.secondary{background:#081927}
+.metric{border:1px solid #2e5069;border-radius:12px;padding:13px;background:#081a29}
+.metric strong{display:block;color:var(--gold2);font-size:.94rem}.metric span{display:block;color:#c2ced7;font-size:.72rem;margin-top:4px;line-height:1.45}
+section{scroll-margin-top:82px;margin-top:30px}
+.section-head{max-width:870px;margin-bottom:16px}
+.section-head h2{font-family:Cinzel,Georgia,serif;font-weight:600;font-size:clamp(1.8rem,4vw,3.2rem);margin:8px 0}
+.section-head p{color:var(--muted);line-height:1.65;margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{background:linear-gradient(155deg,#0e2942,#081927);border:1px solid var(--line);border-radius:15px;padding:19px}
+.card h3{font-family:Cinzel,Georgia,serif;margin:0 0 8px;font-size:1.05rem}
+.card p{margin:0;color:#c2ced8;line-height:1.55;font-size:.84rem}
+.card .tag{display:inline-block;margin-bottom:11px;border:1px solid #49667b;border-radius:999px;padding:5px 8px;font-size:.58rem;font-weight:900;letter-spacing:.09em;color:var(--gold2);text-transform:uppercase}
+.showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.show{overflow:hidden;border:1px solid var(--line);border-radius:16px;background:#081927}
+.show img{display:block;width:100%;aspect-ratio:12/5;object-fit:cover}
+.show .body{padding:16px}.show h3{font-family:Cinzel,serif;margin:0 0 7px}.show p{color:#c2ced8;font-size:.82rem;line-height:1.55}.show a{display:inline-flex;margin-top:10px;color:var(--gold2);font-weight:900;font-size:.72rem}
+.catalog{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cat{min-height:125px;border:1px solid #31516a;border-radius:13px;padding:16px;background:linear-gradient(145deg,#0e2940,#071826);display:flex;flex-direction:column;justify-content:flex-end}
+.cat b{color:var(--gold2)}.cat span{color:#c2ced8;font-size:.74rem;margin-top:5px;line-height:1.35}
+.note{margin-top:12px;border-left:3px solid var(--gold);padding:10px 12px;background:#0a1c2b;color:#c2ced8;font-size:.78rem;line-height:1.5}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.process div{background:#081927;border:1px solid #203d56;border-radius:11px;padding:14px}
+.process strong{display:block;color:var(--gold);font-size:.72rem}.process span{display:block;margin-top:5px;color:#d5dee7;font-size:.78rem}
+form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+label{font-size:.7rem;color:#d5dee7;font-weight:800}
+input,select,textarea{width:100%;margin-top:5px;border:1px solid #31516a;border-radius:9px;background:#061522;color:#fff;padding:11px;font:inherit}
+textarea,.full{grid-column:1/-1}
+.portfolio-footer{padding:24px clamp(20px,5vw,70px);border-top:1px solid #273c50;display:flex;gap:18px;flex-wrap:wrap;color:#aab8c5;font-size:.72rem;background:#06111b}
+@media(max-width:930px){.hero{grid-template-columns:1fr}.hero-side{grid-template-columns:1fr 1fr}.grid,.showcase{grid-template-columns:1fr 1fr}.catalog{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.nav a:not(.gold){display:none}}
+@media(max-width:600px){main{padding:24px 12px 60px}.brand img{width:150px}.hero-side,.grid,.showcase,.catalog{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.hero h1{font-size:2.45rem}form{grid-template-columns:1fr}.full,textarea{grid-column:auto}}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/"><img src="/assets/lps-project-studio.svg" alt="LPS Project Studio"></a>
+  <nav class="nav">
+    <a href="/templates/">Template Studio</a>
+    <a href="/marketplace/">Marketplace</a>
+    <a href="/brand-studio/">Brand & Launch</a>
+    <a href="#customization">Add-ons</a>
+    <a href="#hosting">Hosting</a>
+    <a class="gold" href="#project-brief">Start a Project</a>
+  </nav>
+</header>
+
 <main>
-<section class="hero" style="margin-top:0"><article class="hero-copy"><span class="eyebrow">LPS Project Studio</span><h1>Build it once. Customize it. Launch it professionally.</h1><p>We create project websites, reusable client templates, affiliate-ready storefronts, dashboards and hosted digital business systems. The goal is a polished presentation now with room to add accounts, payments, APIs and automation as the business grows.</p><div class="hero-actions"><a class="btn primary" href="#templates">Explore Templates</a><a class="btn secondary" href="#project-brief">Start a Project Brief</a></div></article><aside class="hero-side"><div class="metric"><strong>Custom Websites</strong><span>Launch pages, service businesses, portfolios and project profiles.</span></div><div class="metric"><strong>Template Licensing</strong><span>One master design can be customized and delivered to multiple clients.</span></div><div class="metric"><strong>Affiliate Commerce</strong><span>Partner products can be promoted while approved merchants handle fulfillment.</span></div><div class="metric"><strong>Hosting & Reseller</strong><span>Managed sites, VPS planning, domains and reseller infrastructure.</span></div></aside></section>
+<section class="hero" style="margin-top:0">
+  <article class="hero-copy">
+    <span class="eyebrow">LPS Project Studio</span>
+    <h1>Build it. Brand it. Customize it. Launch it.</h1>
+    <p>We create custom websites, reusable template systems, affiliate-ready storefronts, branding, dashboards, project pages and hosted digital business systems. The goal is to give a client one place that can grow with the business.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="/templates/">Explore Templates</a>
+      <a class="btn secondary" href="/marketplace/">View Marketplace</a>
+      <a class="btn secondary" href="/brand-studio/">Brand & Launch</a>
+    </div>
+  </article>
+  <aside class="hero-side">
+    <div class="metric"><strong>Custom Websites</strong><span>Launch pages, business profiles, portfolios and full project presentation.</span></div>
+    <div class="metric"><strong>Template Studio</strong><span>Reusable website foundations that can be customized for a new client.</span></div>
+    <div class="metric"><strong>LPS Marketplace</strong><span>Affiliate-ready storefronts for curated beauty, crystals, candles, tarot and more.</span></div>
+    <div class="metric"><strong>Site Customization</strong><span>Add shops, products, booking, galleries, campaigns and new content modules.</span></div>
+    <div class="metric"><strong>Brand & Launch</strong><span>Logos, banners, pitch pages, QR campaigns and coordinated visual identity.</span></div>
+    <div class="metric"><strong>Hosting & Reseller</strong><span>Managed sites, domains, VPS planning and recurring hosting services.</span></div>
+  </aside>
+</section>
 
-<section id="templates"><div class="section-head"><span class="eyebrow">Template marketplace</span><h2>Client-ready website templates with a reusable core.</h2><p>The same engine can support different professions while preserving a consistent, professional build process. Branding, services, photos, booking links, product categories and client details can be changed without rebuilding the entire site.</p></div><div class="template-feature"><article class="mock"><div class="moon">☾</div><span class="eyebrow">Featured profile template</span><h3>Tarot • Reiki • Spiritual Wellness</h3><p>A customizable profile and storefront for tarot readers, Reiki practitioners, spiritual coaches and metaphysical businesses.</p><div class="chips"><span>Profile</span><span>Services</span><span>Booking</span><span>Testimonials</span><span>Affiliate Shop</span><span>Social Links</span></div></article><article class="panel" style="padding:24px"><span class="eyebrow">License-ready delivery</span><h3 style="font-family:Georgia,serif;font-size:2rem;font-weight:500;margin:10px 0">A template can become a sellable product.</h3><p class="lead">Each client version can carry a unique license record, customer configuration and deployment. A secure serial/license check requires a server-side licensing service rather than exposing keys in static page code.</p><div class="license"><div class="license-row"><b>Master template</b><span>Reusable</span></div><div class="license-row"><b>Client configuration</b><span>Name, colors, services, links</span></div><div class="license-row"><b>License ID</b><span>Assigned per sale</span></div><div class="license-row"><b>Validation</b><span>Server-side when commerce backend is connected</span></div></div></article></div><div class="grid" style="margin-top:12px"><article class="card"><span class="tag">Template 01</span><h3>Tarot / Reiki Profile</h3><p>Spiritual services, appointment links, testimonials, ritual-product recommendations and social channels.</p></article><article class="card"><span class="tag">Template 02</span><h3>Beauty / Skincare Studio</h3><p>Consultations, service menu, before/after presentation, newsletter, booking and curated product recommendations.</p></article><article class="card"><span class="tag">Template 03</span><h3>Local Service Business</h3><p>Professional profile, quote request, reviews, service areas, lead form and contact workflow.</p></article></div></section>
+<section>
+  <div class="section-head"><span class="eyebrow">Studio network</span><h2>Multiple sellable services under one LPS umbrella.</h2><p>The homepage shows the big picture. These focused studio pages let a customer immediately understand what we can build and how the pieces can work together.</p></div>
+  <div class="showcase">
+    <article class="show"><img src="/assets/template-studio-banner.svg" alt="LPS Template Studio"><div class="body"><h3>Template Studio</h3><p>Ready-to-customize website systems for spiritual services, beauty, local businesses, real estate, nonprofit projects and creators.</p><a href="/templates/">Open Template Studio →</a></div></article>
+    <article class="show"><img src="/assets/lps-marketplace-banner.svg" alt="LPS Marketplace"><div class="body"><h3>LPS Marketplace</h3><p>Affiliate-ready storefront presentation for crystals, candles, tarot, skincare, wellness and other approved collections.</p><a href="/marketplace/">Open Marketplace →</a></div></article>
+    <article class="show"><img src="/assets/brand-launch-banner.svg" alt="LPS Brand and Launch Studio"><div class="body"><h3>Brand & Launch Studio</h3><p>Logos, banners, launch pages, project graphics, QR campaigns and professional pitch presentation.</p><a href="/brand-studio/">Open Brand Studio →</a></div></article>
+  </div>
+</section>
 
-<section id="commerce"><div class="section-head"><span class="eyebrow">Affiliate storefront engine</span><h2>Sell through approved partner links without stocking the product yourself.</h2><p>The storefront can group approved affiliate products into branded collections. The merchant handles checkout, inventory, shipping and returns; the site earns commission according to the partner program's terms.</p></div><div class="catalog"><article class="cat"><b>Skincare</b><span>Cleansers, moisturizers, masks, serums and beauty tools.</span></article><article class="cat"><b>Makeup</b><span>Cosmetics, brushes, organizers and beauty accessories.</span></article><article class="cat"><b>Candles & Ritual</b><span>Candles, holders, incense, sage-related accessories and oils where allowed by the partner.</span></article><article class="cat"><b>Tarot & Crystals</b><span>Tarot decks, crystals, beads, jewelry, altar accessories and spiritual gifts.</span></article></div><div class="note"><b>Partner connection rule:</b> product cards should use the affiliate network's approved tracking links, images and disclosure language after the business is accepted into that program. The storefront structure is ready for those IDs; no unapproved tracking codes are being invented.</div></section>
+<section id="customization">
+  <div class="section-head"><span class="eyebrow">Website customization & add-ons</span><h2>A template is only the starting point.</h2><p>If a client wants crystals, candles, skincare, booking, new services or a different visual direction, we can add those modules and tailor the website around the actual business.</p></div>
+  <div class="grid">
+    <article class="card"><span class="tag">Commerce</span><h3>Shop & Product Collections</h3><p>Add crystals, candles, skincare, tarot, digital products, affiliate collections or other approved categories.</p></article>
+    <article class="card"><span class="tag">Booking</span><h3>Appointments & Intake</h3><p>Add consultations, scheduling links, service menus, quote forms, intake forms and lead capture.</p></article>
+    <article class="card"><span class="tag">Presentation</span><h3>Brand & Content Upgrades</h3><p>Add logos, banners, galleries, testimonials, social sections, campaign pages and seasonal content.</p></article>
+    <article class="card"><span class="tag">Growth</span><h3>Automation & Integrations</h3><p>Connect approved email, CRM, analytics, payment, scheduling or API workflows as the business grows.</p></article>
+    <article class="card"><span class="tag">Marketing</span><h3>QR & Social Landing Pages</h3><p>Create focused destinations for TikTok, Instagram, flyers, events, business cards and promotions.</p></article>
+    <article class="card"><span class="tag">Creative</span><h3>Logo, Banner & Launch Kit</h3><p>Coordinate the website with branded graphics and launch assets so the entire business looks consistent.</p></article>
+  </div>
+</section>
 
-<section id="hosting"><div class="section-head"><span class="eyebrow">Hosting & reseller plan</span><h2>Turn website creation into an ongoing service business.</h2><p>LPS Project Studio can package design, deployment and hosting together. A reseller account or VPS can later host multiple customer sites with separate domains, backups and support plans.</p></div><div class="grid"><article class="card"><span class="tag">Starter</span><h3>Managed Website Hosting</h3><p>Static or lightweight business sites, SSL, domain connection, deployment and routine maintenance.</p></article><article class="card"><span class="tag">Growth</span><h3>Reseller Hosting</h3><p>Multiple client accounts under one provider with recurring hosting plans and centralized administration.</p></article><article class="card"><span class="tag">Advanced</span><h3>VPS / App Hosting</h3><p>For databases, authentication, licensing, APIs, dashboards and applications that need server-side code.</p></article></div></section>
+<section id="commerce">
+  <div class="section-head"><span class="eyebrow">Affiliate storefront engine</span><h2>Build a shop without pretending we stock everything ourselves.</h2><p>The storefront can organize approved affiliate products into branded collections. Partner merchants handle checkout, inventory, shipping and returns while the website drives qualified traffic.</p></div>
+  <div class="catalog">
+    <article class="cat"><b>Skincare & Beauty</b><span>Cleansers, moisturizers, makeup, brushes, organizers and tools.</span></article>
+    <article class="cat"><b>Crystals & Beads</b><span>Crystals, stones, beads, jewelry components and spiritual gifts.</span></article>
+    <article class="cat"><b>Candles & Ritual</b><span>Candles, holders, incense, oils and related accessories where allowed.</span></article>
+    <article class="cat"><b>Tarot & Wellness</b><span>Tarot decks, journals, card accessories, wellness and creator products.</span></article>
+  </div>
+  <div class="note"><b>Affiliate rule:</b> actual products, prices, tracking links, merchant images and disclosure language are added only after the relevant partner program approves the account.</div>
+</section>
 
-<section id="services"><div class="section-head"><span class="eyebrow">Studio services</span><h2>One studio, multiple revenue paths.</h2></div><div class="grid"><article class="card"><h3>Launch Pages</h3><p>High-impact landing pages for new projects, ads, QR codes, partners and early customers.</p></article><article class="card"><h3>Business Profiles</h3><p>Service pages, brand story, credibility sections, contact paths and mobile-first presentation.</p></article><article class="card"><h3>Dashboards</h3><p>Internal CRM, deal analysis, project tracking, operations and workflow prototypes.</p></article><article class="card"><h3>Interactive Prototypes</h3><p>Clickable proof-of-concept systems that show how a product should work before full infrastructure.</p></article><article class="card"><h3>Affiliate Campaign Pages</h3><p>Focused TikTok/social campaign landing pages built around specific product collections.</p></article><article class="card"><h3>Expansion</h3><p>Authentication, databases, APIs, payment systems, licensing and dedicated hosting when needed.</p></article></div></section>
+<section id="hosting">
+  <div class="section-head"><span class="eyebrow">Hosting & recurring services</span><h2>Turn the website into an ongoing client relationship.</h2><p>LPS can package design, deployment and hosting together instead of treating a website as a one-time handoff.</p></div>
+  <div class="grid">
+    <article class="card"><span class="tag">Starter</span><h3>Managed Website Hosting</h3><p>SSL, domain connection, deployment, backups and routine maintenance for lightweight business sites.</p></article>
+    <article class="card"><span class="tag">Growth</span><h3>Reseller Hosting</h3><p>Multiple client sites under one provider with recurring service plans and centralized administration.</p></article>
+    <article class="card"><span class="tag">Advanced</span><h3>VPS / App Hosting</h3><p>Infrastructure for databases, authentication, licensing, APIs, dashboards and server-side applications.</p></article>
+  </div>
+</section>
 
-<section><div class="section-head"><span class="eyebrow">Build process</span><h2>Simple enough to sell repeatedly.</h2></div><div class="process"><div><strong>01 • DISCOVER</strong><span>Choose the customer niche and goal.</span></div><div><strong>02 • CONFIGURE</strong><span>Brand, services, shop and content.</span></div><div><strong>03 • LAUNCH</strong><span>Domain, hosting and client handoff.</span></div><div><strong>04 • EXPAND</strong><span>Add licensing, payments and automation.</span></div></div></section>
+<section>
+  <div class="section-head"><span class="eyebrow">Repeatable studio workflow</span><h2>Simple enough to sell again and again.</h2></div>
+  <div class="process">
+    <div><strong>01 • DISCOVER</strong><span>Choose the customer, niche and goal.</span></div>
+    <div><strong>02 • CONFIGURE</strong><span>Brand, template, services, shop and content.</span></div>
+    <div><strong>03 • LAUNCH</strong><span>Domain, hosting, forms and final QA.</span></div>
+    <div><strong>04 • EXPAND</strong><span>Add commerce, integrations, campaigns and automation.</span></div>
+  </div>
+</section>
 
-<section class="panel" id="project-brief" style="padding:24px"><span class="eyebrow">Your project</span><h2 style="font-family:Georgia,serif;font-size:2.3rem;font-weight:500;margin:8px 0">Start with a clear brief.</h2><p class="lead">Describe the project and download a copy to share. This form creates a local project brief; it does not automatically place an order or send a message.</p><form id="briefForm"><label>Project name<input id="projectName" required maxlength="120" placeholder="Business, template or project name"></label><label>What would you like to create?<select id="projectType"><option>Custom website</option><option>Tarot / Reiki template</option><option>Beauty / skincare template</option><option>Affiliate storefront</option><option>Property platform</option><option>Dashboard</option><option>Hosting / reseller setup</option></select></label><label class="full">Audience, goals and must-have features<textarea id="projectGoal" required rows="5" maxlength="5000" placeholder="Tell us what the site should do, who it is for, and what needs to be included…"></textarea></label><button class="btn primary full" type="submit">Download My Project Brief</button><p id="briefStatus" class="full" role="status"></p></form></section>
-</main><script src="/assets/project-brief.js"></script><footer class="portfolio-footer"><a href="/launch/">LPS Project Studio</a><a href="/propertybridge/">PROPERTYBridge</a><a href="/projects/kingdom/">Thy Kingdom Come</a><a href="/studio/">Lisa Pearson Skin Studio</a><a href="/account/">Client Access</a></footer></body></html>
+<section class="panel" id="project-brief" style="padding:24px">
+  <span class="eyebrow">Your project</span>
+  <h2 style="font-family:Cinzel,Georgia,serif;font-size:2.2rem;font-weight:600;margin:8px 0">Start with a clear project brief.</h2>
+  <p class="lead">Describe the project and download a copy to share. This creates a local brief; it does not automatically charge the customer or send a message.</p>
+  <form id="briefForm">
+    <label>Project name<input id="projectName" required maxlength="120" placeholder="Business, template or project name"></label>
+    <label>What would you like to create?
+      <select id="projectType">
+        <option>Custom website</option>
+        <option>Template customization</option>
+        <option>Affiliate storefront</option>
+        <option>Brand & launch package</option>
+        <option>Website add-ons</option>
+        <option>Dashboard / prototype</option>
+        <option>Hosting / reseller setup</option>
+      </select>
+    </label>
+    <label class="full">Audience, goals and must-have features<textarea id="projectGoal" required rows="5" maxlength="5000" placeholder="Tell us what the site should do, who it is for, and what needs to be included…"></textarea></label>
+    <button class="btn primary full" type="submit">Download My Project Brief</button>
+    <p id="briefStatus" class="full" role="status"></p>
+  </form>
+</section>
+</main>
+
+<script src="/assets/project-brief.js"></script>
+<footer class="portfolio-footer">
+  <a href="/">LPS Project Studio</a>
+  <a href="/templates/">Template Studio</a>
+  <a href="/marketplace/">LPS Marketplace</a>
+  <a href="/brand-studio/">Brand & Launch</a>
+  <a href="/propertybridge/">PROPERTYBridge</a>
+  <a href="/projects/kingdom/">Thy Kingdom Come</a>
+  <a href="/account/">Client Access</a>
+</footer>
+</body>
+</html>
