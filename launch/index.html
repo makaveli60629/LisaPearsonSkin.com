@@ -4,76 +4,120 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>LPS Project Studio — One Vision, Multiple Projects</title>
-<meta name="description" content="LPS Project Studio portfolio: technology, real estate tools, community projects, custom website templates, affiliate commerce and hosting.">
+<meta name="description" content="LPS Project Studio — projects, brands, platforms and prototypes across real estate, technology, community development and custom digital services.">
+<link rel="canonical" href="https://lisapearsonskin.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#06121e;--panel:#0a1d2d;--panel2:#0d263a;--line:#294a63;--gold:#e5ad42;--gold2:#ffd978;--text:#f7f4ed;--muted:#aebdca}
-*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}
-.app{height:100dvh;min-height:100dvh;display:grid;grid-template-rows:62px minmax(110px,25vh) 1fr 82px;overflow:hidden;background:radial-gradient(circle at 50% 20%,#14334c 0,#07131f 55%,#050e17 100%)}
-.top{display:flex;align-items:center;gap:16px;padding:8px clamp(12px,3vw,36px);border-bottom:1px solid #28465d;background:rgba(5,15,24,.96);z-index:5}
-.brand{display:flex;align-items:center;gap:10px;min-width:0}.brand img{width:165px;max-width:34vw;height:44px;object-fit:contain;object-position:left center}.tag{font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
-.topnav{margin-left:auto;display:flex;gap:8px}.pill{border:1px solid #365a74;border-radius:999px;padding:9px 13px;font-size:11px;font-weight:800;letter-spacing:.05em;background:#081827}.pill.gold{border-color:#b88428;background:linear-gradient(#f6d575,#b87818);color:#15100a}
-.hero{position:relative;overflow:hidden;border-bottom:1px solid #2b4d66;background:#071522}.hero img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,9,15,.22),transparent 42%,transparent 70%,rgba(2,9,15,.28))}
-.hero-copy{position:absolute;left:clamp(14px,4vw,64px);bottom:12px;z-index:2;padding:8px 12px;border-left:3px solid var(--gold);background:rgba(5,15,24,.55);backdrop-filter:blur(5px)}.hero-copy b{font-family:Georgia,serif;font-size:clamp(16px,2.1vw,28px);font-weight:500}.hero-copy span{display:block;margin-top:3px;color:#d5e0e8;font-size:10px;letter-spacing:.09em;text-transform:uppercase}
-.portfolio{min-height:0;display:grid;grid-template-rows:auto 1fr;gap:10px;padding:12px clamp(10px,2.2vw,28px);overflow:hidden}.sectionbar{display:flex;align-items:center;gap:14px}.sectionbar h1{margin:0;font-family:Georgia,serif;font-size:clamp(18px,2vw,27px);font-weight:500;letter-spacing:.04em}.sectionbar p{margin:0;color:var(--muted);font-size:11px}.slider-controls{margin-left:auto;display:flex;gap:7px}.round{width:34px;height:34px;border:1px solid #355772;background:#091b2b;color:white;border-radius:50%;cursor:pointer}
-.carousel{position:relative;min-height:0;overflow:hidden}.track{height:100%;display:flex;gap:12px;transition:transform .55s cubic-bezier(.2,.7,.2,1);will-change:transform}.card{height:100%;flex:0 0 calc((100% - 24px)/3);min-width:0;border:1px solid #31516a;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,#102a40,#071724);display:grid;grid-template-rows:44% 1fr;box-shadow:0 14px 28px #0005}.art{position:relative;overflow:hidden;background:#071522}.art img{width:100%;height:100%;object-fit:cover;display:block}.art.contain img{object-fit:contain;padding:10px}.art:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(4,12,19,.64))}
-.faux{height:100%;display:grid;place-items:center;text-align:center;padding:12px;background:radial-gradient(circle at 50% 30%,#244a65,#0a1b2a 65%)}.faux .ico{font-size:35px;color:var(--gold2);line-height:1}.faux b{display:block;margin-top:5px;font-family:Georgia,serif;font-size:20px}.faux small{display:block;margin-top:4px;color:#c5d1da;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
-.copy{padding:12px 14px;display:grid;grid-template-rows:auto 1fr auto;gap:5px;min-height:0}.copy h2{margin:0;font-family:Georgia,serif;font-weight:500;font-size:clamp(17px,1.55vw,23px)}.copy p{margin:0;color:#c8d3dc;font-size:11px;line-height:1.45;overflow:hidden}.actions{display:flex;gap:7px}.btn{min-height:34px;display:inline-flex;align-items:center;justify-content:center;padding:7px 10px;border:1px solid #3d617b;border-radius:8px;font-size:10px;font-weight:900;letter-spacing:.04em;background:#081827}.btn.gold{background:linear-gradient(#ffda78,#bb7d1d);border-color:#d8a243;color:#171008}
-.servicebar{display:grid;grid-template-columns:1.25fr repeat(4,1fr);align-items:stretch;border-top:1px solid #2c4a60;background:#071421;padding:7px clamp(10px,2.2vw,28px);gap:8px}.service-lead,.service{border:1px solid #29485f;border-radius:10px;background:#091b2a;min-width:0}.service-lead{display:flex;align-items:center;gap:10px;padding:8px 12px}.service-lead b{font-family:Georgia,serif;font-size:14px}.service-lead span{display:block;font-size:9px;color:var(--muted);margin-top:2px}.service{display:flex;align-items:center;justify-content:center;text-align:center;padding:6px 8px;font-size:9px;font-weight:800;line-height:1.25;color:#dce5eb}.service strong{display:block;color:var(--gold2);font-size:10px;margin-bottom:2px}
-.dots{display:none}
-@media(max-width:1050px){.card{flex-basis:calc((100% - 12px)/2)}.tag{display:none}.servicebar{grid-template-columns:1.2fr repeat(2,1fr)}.service:nth-last-child(-n+2){display:none}}
+:root{--bg:#06121d;--panel:#0b1d2c;--panel2:#10283c;--line:#31526b;--gold:#dda43a;--gold2:#ffe08b;--text:#f7f4ec;--muted:#afbfcb}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:Montserrat,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.app{height:100dvh;display:grid;grid-template-rows:64px minmax(118px,22vh) 52px 1fr 100px;overflow:hidden;background:radial-gradient(circle at 50% 16%,#173d5b 0,#081724 48%,#050e17 100%)}
+.top{display:flex;align-items:center;gap:18px;padding:7px clamp(10px,2.7vw,34px);background:rgba(5,14,23,.97);border-bottom:1px solid #28465d;z-index:10}
+.brand{display:flex;align-items:center;min-width:0}.brand img{width:210px;max-width:39vw;height:50px;object-fit:contain;object-position:left center}
+.tag{font-size:9px;color:#bccad4;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
+.topnav{margin-left:auto;display:flex;gap:8px}.pill{display:flex;align-items:center;justify-content:center;border:1px solid #395c73;border-radius:999px;min-height:36px;padding:8px 14px;background:#081827;font-size:10px;font-weight:800;letter-spacing:.06em}.pill.gold{background:linear-gradient(#ffdc7c,#b87918);border-color:#d6a33e;color:#171008}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid #294c65;background:#071522}.hero>img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,10,17,.22),transparent 38%,transparent 72%,rgba(3,10,17,.22));pointer-events:none}
+.hero-badge{position:absolute;right:clamp(12px,3vw,42px);bottom:10px;z-index:2;padding:7px 11px;border:1px solid rgba(255,224,139,.35);border-radius:999px;background:rgba(5,15,24,.55);backdrop-filter:blur(5px);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#f3e4bd}
+.heading{display:flex;align-items:center;gap:16px;padding:6px clamp(10px,2.2vw,28px);border-bottom:1px solid #203d52;background:linear-gradient(90deg,#071522,#0d2639)}
+.eyebrow{font-size:8px;color:var(--gold2);font-weight:800;letter-spacing:.22em;text-transform:uppercase}.heading h1{font-family:Cinzel,Georgia,serif;font-size:clamp(18px,2vw,26px);font-weight:600;letter-spacing:.04em;margin:2px 0 0}.heading p{margin-left:auto;color:#96a9b7;font-size:10px;text-align:right}
+.projects{min-height:0;padding:10px clamp(10px,2.2vw,28px);overflow:hidden}
+.grid{height:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card{min-width:0;overflow:hidden;border:1px solid #31516a;border-radius:14px;background:linear-gradient(155deg,#102a40,#071724);display:grid;grid-template-rows:48% 1fr;box-shadow:0 15px 30px #0006;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-3px);border-color:#977538;box-shadow:0 20px 38px #0008}
+.art{position:relative;overflow:hidden;background:#071522}.art>img{width:100%;height:100%;display:block;object-fit:cover}.art.contain>img{object-fit:contain;padding:10px}.art:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 54%,rgba(3,10,17,.76));pointer-events:none}
+.svr{display:grid;place-items:center;background:radial-gradient(circle at 50% 42%,#482175 0,#11152f 43%,#070b1b 75%)}.svr img{width:78%;height:78%;object-fit:contain!important;padding:0!important;filter:drop-shadow(0 0 15px rgba(255,66,221,.35))}
+.label{position:absolute;left:11px;top:10px;z-index:2;border:1px solid rgba(255,224,139,.35);border-radius:999px;padding:5px 8px;background:rgba(5,15,24,.64);font-size:7px;font-weight:800;letter-spacing:.13em;color:#f7db8d;text-transform:uppercase}
+.copy{min-height:0;padding:11px 13px;display:grid;grid-template-rows:auto 1fr auto;gap:6px}.copy h2{font-family:Cinzel,Georgia,serif;font-size:clamp(16px,1.45vw,21px);font-weight:600;line-height:1.05;margin:0}.copy p{margin:0;color:#c7d2da;font-size:10.5px;line-height:1.42;overflow:hidden}.actions{display:grid;grid-template-columns:1fr .82fr;gap:7px}.btn{min-height:33px;display:flex;align-items:center;justify-content:center;padding:7px 8px;border:1px solid #3d617b;border-radius:8px;background:#081827;font-size:9px;font-weight:800;letter-spacing:.05em}.btn.gold{background:linear-gradient(#ffdb78,#ba7b1a);border-color:#d9a342;color:#171008}
+.studio-banner{margin:0 clamp(10px,2.2vw,28px) 8px;border:1px solid #36546a;border-radius:14px;overflow:hidden;display:grid;grid-template-columns:1.2fr repeat(5,1fr);background:linear-gradient(105deg,#0c2234,#091826 64%,#141b22);box-shadow:0 12px 25px #0005}
+.studio-lead{display:flex;align-items:center;gap:10px;padding:10px 14px;border-right:1px solid #2b4b61;background:linear-gradient(90deg,rgba(216,158,43,.11),transparent)}.studio-lead .crest{font-size:29px;color:var(--gold2);line-height:1}.studio-lead h3{font-family:Cinzel,Georgia,serif;font-size:13px;margin:0 0 3px}.studio-lead p{font-size:8px;color:#aebdca;margin:0;line-height:1.35}
+.svc{display:flex;align-items:center;justify-content:center;gap:7px;text-align:left;padding:8px;border-right:1px solid #223f53;min-width:0}.svc:last-child{border-right:0}.svc svg{width:23px;height:23px;flex:0 0 23px;fill:none;stroke:#8bc5e7;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.svc b{display:block;font-size:8px;color:#f0d17d;letter-spacing:.09em}.svc span{display:block;margin-top:2px;font-size:7px;color:#cad5dc;line-height:1.3}
+@media(max-width:1050px){.app{grid-template-rows:58px 118px 48px 1fr 92px}.tag{display:none}.brand img{width:170px}.grid{grid-template-columns:repeat(2,1fr)}.card:nth-child(n+3){display:none}.studio-banner{grid-template-columns:1.1fr repeat(3,1fr)}.svc:nth-last-child(-n+2){display:none}.heading p{display:none}}
 @media(max-width:700px){
- .app{grid-template-rows:56px 112px 1fr 76px}.top{padding:6px 10px}.brand img{width:132px;max-width:48vw;height:40px}.topnav .pill:not(.gold){display:none}.pill{padding:8px 10px;font-size:9px}
- .hero img{object-fit:cover}.hero-copy{left:10px;right:10px;bottom:7px;padding:6px 9px}.hero-copy b{font-size:15px}.hero-copy span{font-size:7px}
- .portfolio{padding:8px 9px;gap:7px}.sectionbar h1{font-size:17px}.sectionbar p{display:none}.slider-controls{gap:4px}.round{width:30px;height:30px}
- .card{flex-basis:100%;grid-template-rows:43% 1fr;border-radius:12px}.copy{padding:10px 12px}.copy h2{font-size:19px}.copy p{font-size:10.5px}.btn{min-height:32px;font-size:9px}
- .servicebar{grid-template-columns:1.25fr 1fr 1fr;padding:5px 8px;gap:5px}.service-lead{padding:6px 8px}.service-lead b{font-size:11px}.service-lead span{font-size:7px}.service{font-size:7px}.service strong{font-size:8px}.service:nth-last-child(-n+2){display:none}
+ .app{grid-template-rows:54px 100px 44px 1fr 82px}.top{padding:5px 8px}.brand img{width:145px;max-width:48vw;height:42px}.pill{min-height:33px;padding:7px 9px;font-size:8px}.topnav .pill:not(.gold){display:none}
+ .hero-badge{display:none}.heading{padding:5px 9px}.heading h1{font-size:15px}.eyebrow{font-size:6px}
+ .projects{padding:7px 8px}.grid{grid-template-columns:1fr;gap:0}.card{display:grid!important}.card:not(.active){display:none!important}.card{grid-template-rows:45% 1fr}.copy{padding:9px 10px}.copy h2{font-size:18px}.copy p{font-size:10px}.btn{min-height:31px;font-size:8px}
+ .studio-banner{margin:0 8px 6px;grid-template-columns:1.25fr 1fr 1fr}.studio-lead{padding:7px 9px}.studio-lead .crest{font-size:22px}.studio-lead h3{font-size:10px}.studio-lead p{font-size:6px}.svc{padding:5px}.svc svg{width:18px;height:18px;flex-basis:18px}.svc b{font-size:6px}.svc span{font-size:5.6px}.svc:nth-of-type(n+4){display:none}
 }
-@media(max-height:650px){.app{grid-template-rows:50px 92px 1fr 62px}.hero-copy{display:none}.copy p{font-size:9px}.service-lead span{display:none}}
+@media(max-height:650px){.app{grid-template-rows:50px 88px 40px 1fr 72px}.copy p{font-size:9px}.studio-lead p{display:none}}
+@media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
 </style>
 </head>
 <body>
 <div class="app">
 <header class="top">
-  <a class="brand" href="/"><img src="/assets/lps-project-studio.svg" alt="LPS Project Studio"></a>
+  <a class="brand" href="/"><img src="/assets/lps-project-studio.svg" alt="LPS Project Studio crown logo"></a>
   <span class="tag">One Vision • Multiple Projects</span>
   <nav class="topnav"><a class="pill" href="/projects/manifest/">Project Manifest</a><a class="pill gold" href="/projects/custom/">Build With Us</a></nav>
 </header>
-<section class="hero" aria-label="LPS Project Studio master banner">
-  <img src="/assets/one-vision-banner-v2.webp" alt="One Vision, Multiple Projects — LPS Project Studio">
-  <div class="hero-copy"><b>Projects built to become working businesses.</b><span>Portfolio • tools • templates • commerce • hosting</span></div>
+
+<section class="hero" aria-label="One Vision Multiple Projects master banner">
+  <img src="/assets/one-vision-banner-v2.webp" alt="One Vision Multiple Projects — LPS Project Studio">
+  <div class="hero-badge">Ideas • Projects • Solutions • A Better Tomorrow</div>
 </section>
-<main class="portfolio">
- <div class="sectionbar"><div><h1>Project Studio</h1><p>Swipe or use the arrows. The portfolio advances automatically.</p></div><div class="slider-controls"><button class="round" id="prev" aria-label="Previous project">‹</button><button class="round" id="next" aria-label="Next project">›</button></div></div>
- <div class="carousel" id="carousel"><div class="track" id="track">
-  <article class="card"><div class="art contain"><img src="/assets/lps-project-studio.svg" alt="LPS Project Studio"></div><div class="copy"><h2>LPS Project Studio</h2><p>Custom websites, branded project pages, dashboards, prototypes, template systems and digital business launches.</p><div class="actions"><a class="btn gold" href="/projects/custom/">Services</a><a class="btn" href="/projects/manifest/">Manifest</a></div></div></article>
-  <article class="card"><div class="art"><img src="/assets/propertybridge-banner.svg" alt="PROPERTYBridge Network"></div><div class="copy"><h2>PROPERTYBridge</h2><p>A one-screen real-estate command center for leads, property photos, source ads, analysis, CRM, financing paths and follow-up.</p><div class="actions"><a class="btn gold" href="/propertybridge/">Open Engine</a><a class="btn" href="/projects/propertybridge/">Brief</a></div></div></article>
-  <article class="card"><div class="art contain"><img src="/assets/thy-kingdom-come-logo.webp" alt="Thy Kingdom Come"></div><div class="copy"><h2>Thy Kingdom Come</h2><p>Church and community restoration initiative with housing, outreach, service programs and long-range campus development.</p><div class="actions"><a class="btn gold" href="/projects/kingdom/">Open Project</a><a class="btn" href="/kingdom/">Website</a></div></div></article>
-  <article class="card"><div class="art contain"><img src="https://raw.githubusercontent.com/makaveli60629/SVR/main/logo.webp" alt="SVR Poker"></div><div class="copy"><h2>SVR Poker</h2><p>Immersive multi-platform poker project with Quest, Android and web gameplay development.</p><div class="actions"><a class="btn gold" href="https://svrpoker.com/">Play</a><a class="btn" href="/projects/svr/">Project</a></div></div></article>
-  <article class="card"><div class="art"><div class="faux"><div><span class="ico">✦</span><b>Template Studio</b><small>Tarot • Reiki • Wellness • Beauty</small></div></div></div><div class="copy"><h2>Custom Templates</h2><p>Reusable client-ready website profiles with configurable branding, service menus, booking, shop sections and license-ready delivery.</p><div class="actions"><a class="btn gold" href="/projects/custom/#templates">View Templates</a><a class="btn" href="/projects/custom/#project-brief">Request One</a></div></div></article>
-  <article class="card"><div class="art"><div class="faux"><div><span class="ico">◈</span><b>Affiliate Commerce</b><small>Beauty • candles • tarot • crystals</small></div></div></div><div class="copy"><h2>Affiliate Marketing</h2><p>Campaign-ready storefront sections for skincare, makeup, beauty tools, candles, incense, oils, crystals, beads and related partner products.</p><div class="actions"><a class="btn gold" href="/projects/custom/#commerce">Commerce Plan</a><a class="btn" href="/studio/">Skin Studio</a></div></div></article>
-  <article class="card"><div class="art"><div class="faux"><div><span class="ico">▦</span><b>Web Hosting</b><small>Domains • sites • VPS • reseller</small></div></div></div><div class="copy"><h2>Hosting & Reseller</h2><p>Managed website hosting, project deployment, domains, VPS planning and reseller hosting as the studio infrastructure expands.</p><div class="actions"><a class="btn gold" href="/projects/custom/#hosting">Hosting Plan</a><a class="btn" href="/projects/custom/">Services</a></div></div></article>
- </div></div>
+
+<section class="heading">
+  <div><div class="eyebrow">Featured Projects</div><h1>Building Businesses, Platforms & Communities</h1></div>
+  <p>Four active project families — one studio, one presentation standard.</p>
+</section>
+
+<main class="projects">
+ <div class="grid" id="projectGrid">
+  <article class="card active">
+    <div class="art contain"><span class="label">Project Studio</span><img src="/assets/lps-project-studio.svg" alt="LPS Project Studio crown logo"></div>
+    <div class="copy"><h2>LPS Project Studio</h2><p>Custom websites, branded project profiles, dashboards, prototypes, launch systems and digital business presentation — built under one professional studio identity.</p><div class="actions"><a class="btn gold" href="/projects/custom/">View Services</a><a class="btn" href="/projects/manifest/">Manifest</a></div></div>
+  </article>
+
+  <article class="card">
+    <div class="art"><span class="label">Real Estate Technology</span><img src="/assets/propertybridge-banner.svg" alt="PROPERTYBridge Network"></div>
+    <div class="copy"><h2>PROPERTYBridge</h2><p>A real-estate acquisition command center for property leads, source listings, Property DNA, analysis, CRM, financing paths, buyer matching and follow-up.</p><div class="actions"><a class="btn gold" href="/propertybridge/">Open Engine</a><a class="btn" href="/projects/propertybridge/">Project Brief</a></div></div>
+  </article>
+
+  <article class="card">
+    <div class="art"><span class="label">Community & Outreach</span><img src="/assets/thy-kingdom-come-banner.svg" alt="Thy Kingdom Come Community Church"></div>
+    <div class="copy"><h2>Thy Kingdom Come</h2><p>A non-denominational church and community restoration initiative focused on outreach, housing, service programs and long-range community development.</p><div class="actions"><a class="btn gold" href="/projects/kingdom/">View Project</a><a class="btn" href="/kingdom/">Website</a></div></div>
+  </article>
+
+  <article class="card">
+    <div class="art svr"><span class="label">Technology & Gaming</span><img src="https://raw.githubusercontent.com/makaveli60629/SVR/main/logo.webp" alt="SVR Poker official logo"></div>
+    <div class="copy"><h2>SVR Poker</h2><p>Immersive multi-platform poker development for VR, browser and mobile with real gameplay systems, environments and a growing connected platform.</p><div class="actions"><a class="btn gold" href="https://svrpoker.com/">Play / Visit</a><a class="btn" href="/projects/svr/">Project Brief</a></div></div>
+  </article>
+ </div>
 </main>
-<footer class="servicebar">
- <a class="service-lead" href="/projects/custom/"><div><b>Custom Websites & Project Pages</b><span>Templates, affiliate storefronts, hosting and prototypes</span></div></a>
- <a class="service" href="/projects/custom/#templates"><div><strong>TEMPLATES</strong>Tarot • Reiki • business profiles</div></a>
- <a class="service" href="/projects/custom/#commerce"><div><strong>AFFILIATE COMMERCE</strong>Direct-to-customer partner sales</div></a>
- <a class="service" href="/projects/custom/#hosting"><div><strong>HOSTING</strong>Managed sites • VPS • reseller</div></a>
- <a class="service" href="/account/"><div><strong>CLIENT ACCESS</strong>Login • registration</div></a>
+
+<footer class="studio-banner" aria-label="LPS Project Studio services">
+ <a class="studio-lead" href="/projects/custom/"><span class="crest">♛</span><div><h3>LPS PROJECT STUDIO SERVICES</h3><p>One studio for your website, brand, launch page, business profile, hosting and digital project presentation.</p></div></a>
+ <a class="svc" href="/projects/custom/"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h8"/></svg><div><b>CUSTOM WEBSITES</b><span>Launch pages & profiles</span></div></a>
+ <a class="svc" href="/projects/custom/#templates"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg><div><b>TEMPLATE STUDIO</b><span>Reusable client systems</span></div></a>
+ <a class="svc" href="/projects/custom/#commerce"><svg viewBox="0 0 24 24"><path d="M3 5h2l2 10h11l2-7H7"/><circle cx="9" cy="19" r="1"/><circle cx="17" cy="19" r="1"/></svg><div><b>AFFILIATE COMMERCE</b><span>Partner storefronts</span></div></a>
+ <a class="svc" href="/projects/custom/#hosting"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="2"/><rect x="3" y="14" width="18" height="6" rx="2"/><path d="M7 7h.01M7 17h.01"/></svg><div><b>HOSTING & DEPLOY</b><span>Sites • VPS • reseller</span></div></a>
+ <a class="svc" href="/account/"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M5 20c.7-4 3.1-6 7-6s6.3 2 7 6"/></svg><div><b>CLIENT ACCESS</b><span>Login & project delivery</span></div></a>
 </footer>
 </div>
-<script>
-(function(){
- const track=document.getElementById('track'),cards=[...track.children],carousel=document.getElementById('carousel');
- let index=0,timer;
- function perView(){return innerWidth>1050?3:innerWidth>700?2:1}
- function go(n){const visible=perView(),max=Math.max(0,cards.length-visible);index=Math.max(0,Math.min(max,n));const gap=12;const step=(carousel.clientWidth-gap*(visible-1))/visible+gap;track.style.transform='translateX(-'+(index*step)+'px)'}
- function next(){const max=Math.max(0,cards.length-perView());go(index>=max?0:index+1)}
- function reset(){clearInterval(timer);timer=setInterval(next,4300)}
- document.getElementById('next').onclick=function(){next();reset()};
- document.getElementById('prev').onclick=function(){const max=Math.max(0,cards.length-perView());go(index<=0?max:index-1);reset()};
- let sx=0;carousel.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});carousel.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>35){dx<0?next():go(index-1);reset()}},{passive:true});
- addEventListener('resize',()=>go(index),{passive:true});go(0);reset();
-})();
+
+<script type="module">
+const cards=[...document.querySelectorAll('.card')];
+let mobileIndex=0;
+function syncMobile(){
+  if(innerWidth>700){cards.forEach(c=>c.classList.remove('active')); cards[0].classList.add('active'); return;}
+  cards.forEach((c,i)=>c.classList.toggle('active',i===mobileIndex));
+}
+syncMobile();
+setInterval(()=>{if(innerWidth<=700){mobileIndex=(mobileIndex+1)%cards.length;syncMobile()}},4200);
+addEventListener('resize',syncMobile,{passive:true});
+
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  try{
+    const {animate}=await import('https://cdn.jsdelivr.net/npm/motion@13.4.4/+esm');
+    animate('.hero',{opacity:[0,1],scale:[1.01,1]},{duration:.55,easing:[.22,1,.36,1]});
+    document.querySelectorAll('.card').forEach((el,i)=>animate(el,{opacity:[0,1],y:[14,0]},{duration:.45,delay:.10+i*.06,easing:[.22,1,.36,1]}));
+    animate('.studio-banner',{opacity:[0,1],y:[10,0]},{duration:.45,delay:.32,easing:[.22,1,.36,1]});
+  }catch(e){}
+}
 </script>
-</body></html>
+</body>
+</html>
