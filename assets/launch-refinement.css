@@ -145,3 +145,55 @@ section[id]{scroll-margin-top:78px}
   .iconItem span:last-child{font-size:5.2px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+/* Official SVR Poker logo */
+.art-svr{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  isolation:isolate;
+  background:
+    radial-gradient(circle at 50% 42%,rgba(113,45,184,.34),transparent 36%),
+    radial-gradient(circle at 25% 75%,rgba(232,56,134,.18),transparent 24%),
+    #070b1b;
+}
+.art-svr:after{
+  z-index:1;
+  background:linear-gradient(180deg,rgba(3,7,17,.02),rgba(3,7,17,.22) 58%,rgba(3,7,17,.86));
+}
+.svr-logo{
+  position:relative;
+  z-index:0;
+  display:block;
+  width:min(86%,300px);
+  max-height:78%;
+  height:auto;
+  object-fit:contain;
+  object-position:center;
+  filter:drop-shadow(0 0 18px rgba(255,70,220,.28)) drop-shadow(0 0 20px rgba(73,167,255,.20));
+}
+.art-svr .svr-title{
+  z-index:2;
+  color:#fff;
+  text-shadow:0 2px 12px #000;
+}
+@media(max-width:700px){
+  .svr-logo{width:min(84%,270px);max-height:76%}
+}
+
+/* Motion polish */
+.heroCenter > *, .iconItem, .card, .services, .contact-band{
+  transform-origin:center;
+}
+.card,.btn,.vision{
+  transition:transform .22s ease,filter .22s ease,border-color .22s ease,box-shadow .22s ease;
+}
+.card:hover{
+  transform:translateY(-4px);
+  border-color:#6e633f;
+  box-shadow:0 18px 34px rgba(0,0,0,.28);
+}
+@media(prefers-reduced-motion:reduce){
+  .card,.btn,.vision{transition:none}
+  .card:hover{transform:none}
+}
