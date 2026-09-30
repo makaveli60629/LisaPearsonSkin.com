@@ -5,7 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>LPS Project Studio — One Vision, Multiple Projects</title>
 <meta name="theme-color" content="#07131d">
-<meta name="description" content="LPS Project Studio — One Vision, Multiple Projects. Real estate, technology, community, sustainable living and custom web solutions.">\n<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="description" content="LPS Project Studio — One Vision, Multiple Projects. Real estate, technology, community, sustainable living and custom web solutions.">
+<link rel="canonical" href="https://lisapearsonskin.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#06111b;--navy:#081b2a;--navy2:#0d2940;--line:#2a4c66;
@@ -129,7 +133,7 @@ button,a{ -webkit-tap-highlight-color:transparent}
  .services h2{font-size:26px}.serviceIcons{grid-template-columns:1fr 1fr}.footerStrip{grid-template-columns:1fr}
 }
 </style>
-<link rel="stylesheet" href="/assets/launch-refinement.css?v=20260930c"></head>
+<link rel="stylesheet" href="/assets/launch-refinement.css?v=20260930e"></head>
 <body>
 <header class="top">
   <div class="shell topin">
@@ -200,7 +204,7 @@ button,a{ -webkit-tap-highlight-color:transparent}
       </article>
 
       <article class="card">
-        <div class="art art-svr"><div class="ring"></div><div class="ringText">SVR</div><div class="artTitle">SVR POKER<small>NEXT-GENERATION VR POKER</small></div></div>
+        <div class="art art-svr"><img class="svr-logo" src="https://svrpoker.com/logo.webp" alt="SVR Poker official logo" loading="lazy"><div class="artTitle svr-title">SVR POKER<small>NEXT-GENERATION VR POKER</small></div></div>
         <div class="cardBody">
           <h3>SVR POKER</h3>
           <p>Next-generation VR poker, real gameplay systems, immersive environments and an expanding community across VR, Android and iOS.</p>
@@ -226,5 +230,30 @@ button,a{ -webkit-tap-highlight-color:transparent}
     <div class="footItem"><b>◎ A BETTER TOMORROW</b><span>Building a brighter future together</span></div>
   </section>
 <section class="contact-band" id="contact"><div><span class="eyebrow">LET’S BUILD SOMETHING</span><h2>Your next idea starts here.</h2><p>Explore our services and prepare a brief for your project.</p></div><a class="vision" href="/projects/custom/#project-brief">Create a project brief →</a></section><footer class="site-footer"><span>© 2026 LPS Project Studio</span><a href="/projects/manifest/">Project roadmap</a><a href="/account/">Member access</a></footer></main>
+
+<script type="module">
+import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@13.4.4/+esm";
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (!reduceMotion) {
+  const heroItems = document.querySelectorAll(".heroCenter > *");
+  heroItems.forEach((el, i) => {
+    animate(el, { opacity: [0, 1], y: [14, 0] }, { duration: 0.55, delay: i * 0.08, easing: [0.22, 1, 0.36, 1] });
+  });
+
+  document.querySelectorAll(".iconItem").forEach((el, i) => {
+    animate(el, { opacity: [0, 1], y: [10, 0] }, { duration: 0.42, delay: 0.28 + i * 0.05, easing: [0.22, 1, 0.36, 1] });
+  });
+
+  inView(".card", (el) => {
+    animate(el, { opacity: [0, 1], y: [24, 0], scale: [0.985, 1] }, { duration: 0.52, easing: [0.22, 1, 0.36, 1] });
+  }, { amount: 0.18 });
+
+  inView(".services, .contact-band", (el) => {
+    animate(el, { opacity: [0, 1], y: [18, 0] }, { duration: 0.5, easing: [0.22, 1, 0.36, 1] });
+  }, { amount: 0.2 });
+}
+</script>
 </body>
 </html>
