@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="LPS Brand and Launch Studio">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#081827"/><stop offset=".58" stop-color="#132f45"/><stop offset="1" stop-color="#171620"/></linearGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1a6"/><stop offset=".5" stop-color="#dda339"/><stop offset="1" stop-color="#7d4b0d"/></linearGradient>
+</defs>
+<rect width="1200" height="520" fill="url(#bg)"/>
+<circle cx="1030" cy="120" r="180" fill="#346d98" opacity=".15"/>
+<circle cx="925" cy="390" r="150" fill="#d99b33" opacity=".10"/>
+<g transform="translate(790 115)">
+  <rect x="0" y="50" width="270" height="175" rx="16" fill="#0b1c2a" stroke="#708ea4" stroke-width="6"/>
+  <rect x="30" y="82" width="210" height="22" rx="11" fill="#d6a03a"/>
+  <rect x="30" y="124" width="180" height="14" rx="7" fill="#6d8798"/>
+  <rect x="30" y="152" width="145" height="14" rx="7" fill="#49667a"/>
+  <circle cx="220" cy="200" r="45" fill="#151b27" stroke="url(#gold)" stroke-width="7"/>
+  <path d="M204 200h32M220 184v32" stroke="#f4d179" stroke-width="7" stroke-linecap="round"/>
+  <rect x="255" y="0" width="118" height="205" rx="18" fill="#071522" stroke="#7390a4" stroke-width="5"/>
+  <rect x="274" y="27" width="80" height="120" rx="10" fill="#132c40"/>
+  <rect x="286" y="162" width="56" height="16" rx="8" fill="#d6a03a"/>
+</g>
+<g transform="translate(75 62)">
+  <path d="M60 42 80 17l22 25 24-35 24 35 22-25 20 27-8 30H68z" fill="url(#gold)"/>
+  <text x="0" y="144" font-family="Georgia,Times New Roman,serif" font-size="74" font-weight="700" fill="#fff4d0">BRAND &amp; LAUNCH STUDIO</text>
+  <text x="3" y="196" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#e4b65a" letter-spacing="7">IDENTITY • BANNERS • CAMPAIGNS</text>
+  <text x="3" y="266" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="600" fill="#d7e0e7">Logos, banners, launch pages, QR campaigns, pitch visuals and branded digital presentation.</text>
+  <text x="3" y="306" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="600" fill="#d7e0e7">Built to make a new idea look organized, professional and ready to show.</text>
+</g>
+</svg>
