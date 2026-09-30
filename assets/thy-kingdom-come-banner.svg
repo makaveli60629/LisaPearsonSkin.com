@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="Thy Kingdom Come Community Church">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#edd8a3"/><stop offset=".55" stop-color="#c69c4b"/><stop offset="1" stop-color="#223423"/></linearGradient>
+  <linearGradient id="kg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1a6"/><stop offset=".5" stop-color="#d6a034"/><stop offset="1" stop-color="#7c4b0b"/></linearGradient>
+</defs>
+<rect width="1200" height="520" fill="url(#sky)"/>
+<circle cx="925" cy="95" r="125" fill="#fff4c1" opacity=".42"/>
+<g opacity=".9" fill="#1a2c1d">
+  <path d="M0 365 130 245l110 105 155-175 145 190 120-130 130 150 120-115 160 145v105H0z"/>
+  <path d="M0 410h1200v110H0z" fill="#142217"/>
+</g>
+<g transform="translate(785 205)">
+  <rect x="35" y="92" width="230" height="160" fill="#f4ead0"/>
+  <path d="M20 95 150 5l130 90" fill="#f4ead0"/>
+  <rect x="127" y="172" width="48" height="80" fill="#6e4325"/>
+  <rect x="70" y="135" width="36" height="46" fill="#b6c7cd"/><rect x="198" y="135" width="36" height="46" fill="#b6c7cd"/>
+  <path d="M150 -36v65M127 -12h46" stroke="#6e4325" stroke-width="13" stroke-linecap="round"/>
+</g>
+<g transform="translate(80 54)">
+  <path d="M74 42 94 16l22 26 24-34 24 34 22-26 20 27-8 30H82z" fill="url(#kg)"/>
+  <text x="0" y="160" font-family="Georgia,Times New Roman,serif" font-size="74" font-weight="700" fill="#fff7df" letter-spacing="2">THY KINGDOM COME</text>
+  <text x="2" y="207" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" fill="#302717" letter-spacing="8">COMMUNITY CHURCH</text>
+  <text x="2" y="272" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#fff2cf" letter-spacing="4">FAITH • PEOPLE • RESTORATION</text>
+  <text x="2" y="308" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#fff2cf" letter-spacing="4">COMMUNITY • HOUSING • HOPE</text>
+</g>
+</svg>
