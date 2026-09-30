@@ -1,5 +1,5 @@
 # LPS Project Studio — Master Project Manifest
-Updated: 2026-09-29
+Updated: 2026-09-30
 
 ## Purpose
 LPS Project Studio is the umbrella presentation and project-management hub for the active portfolio. Each project keeps its own identity, files, roadmap and eventual infrastructure while remaining discoverable from one professional project profile.
@@ -37,10 +37,20 @@ LPS Project Studio is the umbrella presentation and project-management hub for t
 
 ### Thy Kingdom Come
 - Project site: https://lisapearsonskin.com/kingdom/
-- Brief: https://lisapearsonskin.com/projects/kingdom/
-- Role: ministry/community/restoration/housing-support initiative.
-- Current priority: public mission presentation, governance, funding calendar and program architecture.
-- Rule: do not imply active tax-exempt status, grants, approvals or services before they are formally established.
+- Blueprint: https://lisapearsonskin.com/projects/kingdom/
+- Original logo asset: `/assets/thy-kingdom-come-logo.webp`
+- Dedicated manifest: `/projects/kingdom/MANIFEST.md`
+- Primary ministry: **Thy Kingdom Come Community Church** — planned non-denominational church for worship, prayer, spiritual care, fellowship and volunteer service.
+- Separate service nonprofit: **Kingdom Community Restoration Foundation** — planned charitable organization for grants, community programs, partnerships and measurable service outcomes.
+- Future program identity: **The Keeper's House Chicago** — planned supportive-housing / restart program.
+- Future campus concept: a phased rural community-service campus that may include a chapel, community center, caretaker housing, legally approved RV sites, laundry/showers, gardens/hydroponics, food access and workforce activity.
+- Core population: people rebuilding after homelessness, rehabilitation, illness, family disruption, financial hardship or other major life transitions.
+- Structural rule: church funds, service-nonprofit funds, family/private trust assets and commercial operating revenue remain separately governed, banked, booked and documented.
+- Formation sequence: mission/board/bylaws → state/entity filings → EINs → separate banking/accounting → tax/charitable compliance → public fundraising readiness → pilot programs → property/campus due diligence → phased expansion.
+- Funding architecture: church giving and donors; foundation/community grants; eligible USDA Community Facilities resources; eligible FSA/NRCS agriculture/conservation support; CDFI/community-lender financing; qualifying commercial financing for revenue operations; local government, hospital, workforce, housing and service partnerships.
+- Property rule: no acquisition is treated as approved or a good deal until zoning, RV/multiple-unit rules, title/liens, utilities, septic/water, access, environmental/flood issues, construction cost, financing, cash flow, exit strategy and downside risk are verified.
+- Current priority: governance, formation readiness, grant-ready documentation, public mission presentation, funding calendar and program architecture.
+- Status rule: do not imply active federal tax-exempt recognition, charitable registration, grants, housing licenses, zoning approvals, treatment services, public funding or campus operations before they are formally established and verified.
 
 ## Shared presentation standards
 - Clear logo and project name above the fold.
@@ -64,7 +74,7 @@ LPS Project Studio is the umbrella presentation and project-management hub for t
 - Finish mobile parity and preserve the master artwork as the presentation reference.
 - Move PROPERTYBridge from browser-only MVP to shared secured data and live property sources.
 - Continue SVR Poker VR with non-destructive visual/runtime improvements only.
-- Expand Thy Kingdom Come after the LPS and PROPERTYBridge baselines remain stable.
+- Continue Thy Kingdom Come formation work: governance package, state-selection research, EIN/banking sequence, grant calendar, donor/partner materials and land/campus due diligence framework.
 
 
 ## September 30 refinement — current scope
@@ -74,3 +84,12 @@ LPS Project Studio is the umbrella presentation and project-management hub for t
 - PROPERTYBridge retains demo examples as explicitly fictional. Manual leads support source ad URLs and exact-property photo URLs or local image uploads, with linked photos, fallback display, safe text rendering, saved-example filter and JSON backup restoration. No verified listing feed has been connected, and no real ads/photos have been supplied.
 - /account/ contains login, registration and recovery flows. They remain disabled until an owner-controlled Supabase Auth service is configured; see account/SETUP.md. No production accounts, shared database or private cloud record storage is claimed.
 - Concept banner prompt: premium panoramic blue-hour Midwestern waterfront transitioning to chapel/gardens, navy and antique gold, calm central space, no text or logos. Generated with the built-in image tool; this is branding only, never a property listing image.
+
+
+## September 30 — Thy Kingdom Come expansion
+- Restored the original Thy Kingdom Come Community Church angel-wing/sword/chapel logo as a web asset and used it throughout the project.
+- Expanded /kingdom/ into a full public-facing mission site with ministry, restoration, community, stewardship, organization design, future programs, startup roadmap, funding architecture and status disclosures.
+- Expanded /projects/kingdom/ into a detailed project blueprint covering entity separation, formation, banking, charitable compliance, grant readiness, property due diligence, program families and funding logic.
+- Replaced the generic church icon on the LPS portfolio with the original church logo.
+- Corrected Thy Kingdom Come navigation to return to the public LPS root instead of treating /launch/ as a separate public destination.
+- The church/nonprofit plan remains planning-stage; public pages intentionally avoid claims that filings, exemptions, grants, licenses, housing programs or development approvals are already active.
