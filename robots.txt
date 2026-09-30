@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /propertybridge/
-Disallow: /studio/
 Allow: /
+
+Sitemap: https://lisapearsonskin.com/sitemap.xml
