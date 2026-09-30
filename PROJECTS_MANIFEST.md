@@ -65,3 +65,12 @@ LPS Project Studio is the umbrella presentation and project-management hub for t
 - Move PROPERTYBridge from browser-only MVP to shared secured data and live property sources.
 - Continue SVR Poker VR with non-destructive visual/runtime improvements only.
 - Expand Thy Kingdom Come after the LPS and PROPERTYBridge baselines remain stable.
+
+
+## September 30 refinement — current scope
+- User instruction: SVR Poker is excluded. No SVR repository, game, project page or shared SVR stylesheet is changed.
+- LPS home and /launch/ use matching responsive navy/gold layouts with new conceptual brand artwork at assets/one-vision-banner-v2.webp. The old reference asset is corrupt; the printed reference has not been recovered, so exact visual parity is unverified.
+- Fixed church destination to /kingdom/; project cards link to distinct briefs; custom services offers a downloadable project brief.
+- PROPERTYBridge retains demo examples as explicitly fictional. Manual leads support source ad URLs and exact-property photo URLs or local image uploads, with linked photos, fallback display, safe text rendering, saved-example filter and JSON backup restoration. No verified listing feed has been connected, and no real ads/photos have been supplied.
+- /account/ contains login, registration and recovery flows. They remain disabled until an owner-controlled Supabase Auth service is configured; see account/SETUP.md. No production accounts, shared database or private cloud record storage is claimed.
+- Concept banner prompt: premium panoramic blue-hour Midwestern waterfront transitioning to chapel/gardens, navy and antique gold, calm central space, no text or logos. Generated with the built-in image tool; this is branding only, never a property listing image.
