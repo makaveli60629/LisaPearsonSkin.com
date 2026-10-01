@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17132b"/><stop offset=".55" stop-color="#31225b"/><stop offset="1" stop-color="#0d2032"/></linearGradient><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe29a"/><stop offset="1" stop-color="#b8791b"/></linearGradient></defs>
+<rect width="900" height="520" rx="30" fill="url(#bg)"/>
+<circle cx="780" cy="110" r="180" fill="#b28cff" opacity=".13"/>
+<circle cx="130" cy="440" r="150" fill="#4fd1c5" opacity=".10"/>
+<rect x="70" y="66" width="760" height="382" rx="26" fill="#0a1523" stroke="#53477b" stroke-width="3"/>
+<rect x="70" y="66" width="760" height="55" rx="26" fill="#111d2d"/>
+<rect x="105" y="84" width="178" height="20" rx="10" fill="url(#gold)"/><rect x="603" y="84" width="76" height="20" rx="10" fill="#203249"/><rect x="693" y="84" width="102" height="20" rx="10" fill="#203249"/>
+<g transform="translate(105 153)">
+ <g><rect width="195" height="242" rx="18" fill="#14263a"/><circle cx="97" cy="82" r="54" fill="#6f55a8"/><polygon points="97,35 124,78 98,120 70,78" fill="#cab0ff"/><rect x="32" y="158" width="131" height="14" rx="7" fill="#f3d58b"/><rect x="32" y="187" width="98" height="10" rx="5" fill="#5f7180"/><rect x="32" y="213" width="75" height="22" rx="11" fill="#234d65"/></g>
+ <g transform="translate(213)"><rect width="195" height="242" rx="18" fill="#14263a"/><circle cx="97" cy="82" r="54" fill="#392a50"/><rect x="75" y="37" width="44" height="95" rx="18" fill="#e7b36b"/><path d="M97 36c-8-17 5-30 16-40" stroke="#f6d98a" stroke-width="8" fill="none"/><rect x="32" y="158" width="131" height="14" rx="7" fill="#f3d58b"/><rect x="32" y="187" width="98" height="10" rx="5" fill="#5f7180"/><rect x="32" y="213" width="75" height="22" rx="11" fill="#234d65"/></g>
+ <g transform="translate(426)"><rect width="195" height="242" rx="18" fill="#14263a"/><circle cx="97" cy="82" r="54" fill="#173d44"/><rect x="58" y="52" width="78" height="62" rx="8" fill="#d8c5a4"/><path d="M74 74l23 20 24-28" stroke="#735d91" stroke-width="8" fill="none"/><rect x="32" y="158" width="131" height="14" rx="7" fill="#f3d58b"/><rect x="32" y="187" width="98" height="10" rx="5" fill="#5f7180"/><rect x="32" y="213" width="75" height="22" rx="11" fill="#234d65"/></g>
+</g>
+<text x="70" y="487" font-family="Georgia,serif" font-size="27" fill="#f7e7b7">Affiliate / Curated Storefront</text>
+</svg>
