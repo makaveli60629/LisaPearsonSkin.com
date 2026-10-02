@@ -1,70 +1,250 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LPS Template Studio — Customizable Website Templates</title>
-<meta name="description" content="Ready-to-customize website systems for local businesses, creators, beauty studios, real estate, churches, nonprofits and specialty brands.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#06121d;--panel:#0b1f30;--line:#31526b;--gold:#dda43a;--gold2:#ffe08b;--muted:#afbfcb}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0,#163a56,#06121d 45%);color:#f7f4ec;font-family:Montserrat,Arial,sans-serif}a{color:inherit;text-decoration:none}
-.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:16px;padding:8px clamp(12px,4vw,56px);background:#06111bea;border-bottom:1px solid #29475d;backdrop-filter:blur(12px)}.top img{width:190px;height:48px;object-fit:contain}.nav{margin-left:auto;display:flex;gap:8px}.nav a{padding:8px 11px;border:1px solid #365a74;border-radius:999px;font-size:10px;font-weight:800}.nav .gold{background:linear-gradient(#ffdc7c,#b87918);color:#171008;border-color:#d6a33e}
-main{max-width:1240px;margin:auto;padding:30px 18px 70px}.hero{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#081827}.hero img{width:100%;display:block}.intro{padding:22px 24px;display:flex;gap:20px;align-items:end}.intro h1{font:600 clamp(2rem,5vw,4.7rem)/.98 Cinzel,Georgia,serif;margin:0}.intro p{margin:0 0 8px;color:var(--muted);line-height:1.6;max-width:620px}
-.section{margin-top:26px}.eyebrow{color:var(--gold2);font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.section h2{font:600 clamp(1.7rem,4vw,3rem)/1.1 Cinzel,Georgia,serif;margin:7px 0 8px}.section>p{color:var(--muted);line-height:1.65;max-width:850px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.card{border:1px solid var(--line);border-radius:15px;background:linear-gradient(150deg,#102b43,#081827);overflow:hidden}.preview{height:180px;padding:14px;background:linear-gradient(135deg,#0d2336,#171426);display:grid;grid-template-rows:24px 1fr 34px;gap:10px}.browser{height:24px;border:1px solid #506a7e;border-radius:8px;background:#08131e;display:flex;align-items:center;padding:0 8px;gap:5px}.dot{width:5px;height:5px;border-radius:50%;background:#d7a33c}.mock{border:1px solid #36556c;border-radius:10px;background:radial-gradient(circle at 75% 20%,#8d4ca22e,transparent 30%),#0b1d2b;padding:16px}.mock b{font-family:Cinzel,serif;font-size:18px}.mock span{display:block;color:#9fb0bc;font-size:9px;margin-top:6px}.bar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}.bar i{display:block;background:#17344b;border-radius:5px}
-.copy{padding:16px}.copy h3{font-family:Cinzel,serif;margin:0 0 7px;font-size:17px}.copy p{margin:0;color:#c6d1da;font-size:12px;line-height:1.55}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.chips span{border:1px solid #405f75;border-radius:999px;padding:5px 7px;font-size:8px;color:#d8e0e6}
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.step{border:1px solid var(--line);border-radius:13px;background:#081827;padding:16px}.step b{color:var(--gold2);font-size:11px}.step p{margin:7px 0 0;color:#c5d0d9;font-size:11px;line-height:1.45}
-.cta{margin-top:28px;border:1px solid #6a5630;border-radius:16px;background:linear-gradient(120deg,#0e2538,#15181f);padding:24px;display:flex;align-items:center;gap:20px}.cta h3{font:600 24px Cinzel,serif;margin:0}.cta p{color:#b9c6d0;margin:5px 0 0}.cta a{margin-left:auto;padding:11px 16px;border-radius:9px;background:linear-gradient(#ffdc7a,#ba7c1a);color:#171008;font-weight:900;font-size:11px}
-@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.intro,.cta{display:block}.cta a{display:inline-flex;margin:16px 0 0}.nav a:not(.gold){display:none}}
-@media(max-width:560px){.grid{grid-template-columns:1fr}.top img{width:145px}.preview{height:160px}}
-</style><link rel="canonical" href="https://lisapearsonskin.com/templates/">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>LPS Template Studio — Customizable Website Systems</title>
+<meta name="description" content="Browse customizable website systems for beauty, wellness, local business, real estate, churches, nonprofits and creator brands from LPS Project Studio.">
+<meta name="theme-color" content="#06121d">
+<link rel="canonical" href="https://lisapearsonskin.com/templates/">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LPS Project Studio">
-<meta property="og:title" content="LPS Template Studio — Customizable Website Templates">
-<meta property="og:description" content="Ready-to-customize website systems for local businesses, creators, beauty studios, real estate, churches, nonprofits and specialty brands.">
+<meta property="og:title" content="LPS Template Studio — Customizable Website Systems">
+<meta property="og:description" content="Browse reusable, professionally presented website foundations that can be customized around a real business.">
 <meta property="og:url" content="https://lisapearsonskin.com/templates/">
-<meta property="og:image" content="https://lisapearsonskin.com/assets/one-vision-banner-v2.webp">
+<meta property="og:image" content="https://lisapearsonskin.com/assets/template-studio-banner.svg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="LPS Template Studio — Customizable Website Templates">
-<meta name="twitter:description" content="Ready-to-customize website systems for local businesses, creators, beauty studios, real estate, churches, nonprofits and specialty brands.">
-<meta name="twitter:image" content="https://lisapearsonskin.com/assets/one-vision-banner-v2.webp">
+<meta name="twitter:title" content="LPS Template Studio — Customizable Website Systems">
+<meta name="twitter:description" content="Browse reusable, professionally presented website foundations that can be customized around a real business.">
+<meta name="twitter:image" content="https://lisapearsonskin.com/assets/template-studio-banner.svg">
 <link rel="icon" href="/assets/lps-project-studio.svg" type="image/svg+xml">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "LPS Template Studio — Customizable Website Templates",
-  "description": "Ready-to-customize website systems for local businesses, creators, beauty studios, real estate, churches, nonprofits and specialty brands.",
-  "url": "https://lisapearsonskin.com/templates/",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "LPS Project Studio",
-    "url": "https://lisapearsonskin.com/"
-  }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"LPS Template Studio","description":"Customizable website systems for service businesses, creators, real estate, ministries, beauty and specialty brands.","url":"https://lisapearsonskin.com/templates/","isPartOf":{"@type":"WebSite","name":"LPS Project Studio","url":"https://lisapearsonskin.com/"}}</script>
+<style>
+:root{
+ --bg:#040b12;--bg2:#061522;--panel:#0a1c2b;--panel2:#102a3f;--line:#2d4d63;--line2:#3b6179;
+ --gold:#d9a23b;--gold2:#f6da89;--blue:#66bfe8;--text:#f7f5ef;--muted:#aabac6;--soft:#ced8df;
+ --shadow:0 20px 55px rgba(0,0,0,.32);--max:1240px
 }
-</script>
-</head><body>
-<header class="top"><a href="/"><img src="/assets/lps-project-studio.svg" alt="LPS Project Studio"></a><nav class="nav"><a href="/marketplace/">Marketplace</a><a href="/projects/custom/">Custom Sites</a><a class="gold" href="/projects/custom/#project-brief">Start a Project</a></nav></header>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;color:var(--text);font-family:Montserrat,Arial,sans-serif;background:
+ radial-gradient(circle at 50% -8%,rgba(49,104,142,.34),transparent 31%),
+ radial-gradient(circle at 100% 36%,rgba(217,162,59,.07),transparent 22%),
+ linear-gradient(180deg,#06131f,#050f18 48%,#040a10);min-height:100vh}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button,input{font:inherit}
+.shell{width:min(var(--max),calc(100% - 34px));margin:auto}
+.top{position:sticky;top:0;z-index:30;background:rgba(4,12,19,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(105,151,179,.2)}
+.topin{min-height:70px;display:flex;align-items:center;gap:15px}.brand img{width:218px;height:54px;object-fit:contain;object-position:left}
+.nav{margin-left:auto;display:flex;gap:7px;align-items:center}.nav a{padding:9px 11px;border-radius:999px;font-size:9px;font-weight:900;color:#c8d4dd}.nav a:hover{background:#0d2638}.nav .gold{background:linear-gradient(#ffe18a,#bd7e1b);border:1px solid #d7a13c;color:#171008;padding-inline:14px}
+.hero{padding:22px 0 12px}.heroCard{overflow:hidden;border:1px solid #315269;border-radius:24px;background:linear-gradient(145deg,#0d283d,#071724);box-shadow:var(--shadow)}
+.heroVisual{position:relative;aspect-ratio:21/6;min-height:220px;background:#081724;overflow:hidden}.heroVisual img{width:100%;height:100%;object-fit:cover}
+.heroVisual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,13,21,.42),transparent 35%,transparent 75%,rgba(4,13,21,.25))}
+.heroCopy{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:27px 30px}
+.eyebrow{color:var(--gold2);font-size:10px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+.hero h1{font:600 clamp(34px,5vw,58px)/1 Cinzel,Georgia,serif;margin:7px 0 10px;letter-spacing:-.03em}
+.hero p{margin:0;color:#becbd4;font-size:13px;line-height:1.65;max-width:720px}.heroActions{display:flex;justify-content:flex-end;gap:9px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 15px;border:1px solid #3b5f77;border-radius:10px;background:#081826;font-size:9px;font-weight:900;letter-spacing:.045em}.btn.gold{background:linear-gradient(#ffe087,#bb7b19);border-color:#d6a13b;color:#161008}
+.trust{padding:10px 0 4px}.trustGrid{display:grid;grid-template-columns:repeat(5,1fr);overflow:hidden;border:1px solid #2b495e;border-radius:14px;background:#081724}
+.trustGrid div{padding:13px 11px;border-right:1px solid #243f52}.trustGrid div:last-child{border-right:0}.trustGrid b{display:block;color:#f0d17a;font-size:8px;letter-spacing:.07em}.trustGrid span{display:block;margin-top:3px;color:#a9bac6;font-size:7.5px;line-height:1.35}
+.section{padding:34px 0}.sectionHead{display:flex;gap:25px;align-items:end;margin-bottom:15px}.sectionHead h2{font:600 clamp(27px,4vw,44px)/1.04 Cinzel,Georgia,serif;margin:6px 0 0}.sectionHead p{max-width:530px;margin:0 0 4px auto;text-align:right;color:var(--muted);font-size:11px;line-height:1.55}
+.controls{display:grid;grid-template-columns:minmax(220px,.75fr) 1.25fr auto;gap:10px;align-items:center;margin-bottom:16px}
+.search{position:relative}.search input{width:100%;min-height:44px;padding:0 13px 0 38px;border:1px solid #35556b;border-radius:11px;background:#071725;color:#fff;outline:none}.search:before{content:"⌕";position:absolute;left:13px;top:11px;color:#7da9c2;font-size:18px}.search input:focus{border-color:#d9a23b;box-shadow:0 0 0 3px rgba(217,162,59,.08)}
+.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid #35556b;border-radius:999px;padding:8px 10px;background:#081826;color:#c8d3db;font-size:8px;font-weight:900;cursor:pointer}.filter.active{background:rgba(217,162,59,.14);border-color:#c39132;color:#f6dc92}.resultCount{font-size:9px;color:#91a7b6;white-space:nowrap}
+.catalog{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.template{overflow:hidden;border:1px solid #315269;border-radius:18px;background:linear-gradient(155deg,#10293f,#071724);box-shadow:0 15px 35px rgba(0,0,0,.22);transition:.2s ease}.template:hover{transform:translateY(-3px);border-color:#8b7139}.template.hidden{display:none}
+.preview{position:relative;aspect-ratio:16/9;background:#0b1a27;overflow:hidden}.preview img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}.template:hover .preview img{transform:scale(1.025)}
+.status{position:absolute;left:10px;top:10px;padding:5px 8px;border-radius:999px;border:1px solid rgba(246,218,137,.38);background:rgba(4,13,21,.83);color:#f2d582;font-size:7px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.body{padding:15px}.body h3{font:600 18px Cinzel,Georgia,serif;margin:0 0 7px}.body p{margin:0;color:#bbc8d1;font-size:10px;line-height:1.52;min-height:48px}.chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:11px}.chips span{padding:5px 7px;border:1px solid #38596f;border-radius:999px;color:#cdd7de;font-size:7px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:13px}.actions button,.actions a{display:flex;align-items:center;justify-content:center;min-height:35px;border:1px solid #35556b;border-radius:8px;background:#071826;color:#fff;font-size:8px;font-weight:900;cursor:pointer}.actions .primary{background:linear-gradient(#ffdd7d,#b87918);border-color:#d4a03a;color:#171008}
+.empty{display:none;padding:28px;border:1px dashed #3a5c73;border-radius:14px;text-align:center;color:#9fb1bd}.empty.show{display:block}
+.compare{border:1px solid #315269;border-radius:20px;overflow:hidden;background:linear-gradient(145deg,#0d2639,#071724);box-shadow:var(--shadow)}
+.compareHead{padding:22px 24px;border-bottom:1px solid #29475b}.compareHead h3{font:600 clamp(22px,3vw,32px) Cinzel,Georgia,serif;margin:5px 0}.compareHead p{margin:0;color:#aebdca;font-size:10px}
+.compareGrid{display:grid;grid-template-columns:repeat(4,1fr)}.compareCell{padding:16px;border-right:1px solid #29475b}.compareCell:last-child{border-right:0}.compareCell b{display:block;color:#efd17b;font-size:9px}.compareCell span{display:block;margin-top:6px;color:#bdcad2;font-size:8px;line-height:1.45}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.step{padding:16px;border:1px solid #29495f;border-radius:14px;background:#081724}.step em{font-style:normal;color:#d9a23b;font-size:8px;font-weight:900}.step b{display:block;margin-top:8px;font:600 14px Cinzel,Georgia,serif}.step span{display:block;margin-top:5px;color:#aebdca;font-size:8px;line-height:1.45}
+.cta{display:flex;align-items:center;gap:22px;margin:0 0 32px;padding:24px;border:1px solid #69542d;border-radius:18px;background:radial-gradient(circle at 90% 0,rgba(217,162,59,.14),transparent 25%),linear-gradient(130deg,#102b40,#111820)}
+.cta h3{font:600 24px Cinzel,Georgia,serif;margin:0}.cta p{margin:5px 0 0;color:#b7c5ce;font-size:10px}.cta .btn{margin-left:auto;white-space:nowrap}
+.modal{position:fixed;inset:0;z-index:60;display:none;place-items:center;padding:20px;background:rgba(2,7,12,.78);backdrop-filter:blur(10px)}.modal.open{display:grid}.dialog{width:min(880px,100%);max-height:88vh;overflow:auto;border:1px solid #41677f;border-radius:20px;background:#071724;box-shadow:0 35px 90px rgba(0,0,0,.58)}.dialogVisual{position:relative}.dialogVisual img{width:100%;aspect-ratio:16/7;object-fit:cover}.close{position:absolute;right:12px;top:12px;width:36px;height:36px;border-radius:50%;border:1px solid #577086;background:rgba(4,13,21,.84);color:white;font-size:18px;cursor:pointer}.dialogBody{padding:20px}.dialogBody h3{font:600 28px Cinzel,Georgia,serif;margin:4px 0 8px}.dialogBody p{color:#bcc9d2;font-size:11px;line-height:1.6}.dialogFeatures{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:13px}.dialogFeatures span{border:1px solid #35556b;border-radius:9px;padding:10px;color:#d2dce2;font-size:8px;background:#081826}
+.footer{border-top:1px solid #20394b;background:#040b12;padding:22px 0 28px;color:#899aa6;font-size:9px}.foot{display:flex;align-items:center;gap:14px}.foot strong{font-family:Cinzel,Georgia,serif;color:#d8e1e6}.footlinks{margin-left:auto;display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:950px){.catalog{grid-template-columns:1fr 1fr}.trustGrid{grid-template-columns:repeat(3,1fr)}.trustGrid div:nth-child(3){border-right:0}.trustGrid div:nth-child(-n+3){border-bottom:1px solid #243f52}.compareGrid{grid-template-columns:1fr 1fr}.compareCell{border-bottom:1px solid #29475b}.compareCell:nth-child(even){border-right:0}.process{grid-template-columns:1fr 1fr}.controls{grid-template-columns:1fr}.resultCount{justify-self:start}}
+@media(max-width:700px){.shell{width:min(100% - 20px,var(--max))}.topin{min-height:62px}.brand img{width:153px;height:46px}.nav a{display:none}.nav .gold{display:inline-flex;font-size:7px;padding:8px 10px}.hero{padding:10px 0}.heroCard{border-radius:16px}.heroVisual{aspect-ratio:16/7;min-height:0}.heroCopy{grid-template-columns:1fr;padding:18px 15px;gap:14px}.hero h1{font-size:30px}.hero p{font-size:10px}.heroActions{justify-content:flex-start}.trustGrid{grid-template-columns:1fr 1fr}.trustGrid div{border-bottom:1px solid #243f52}.trustGrid div:nth-child(odd){border-right:1px solid #243f52}.trustGrid div:nth-child(even){border-right:0}.trustGrid div:last-child{grid-column:1/-1;border-bottom:0}.section{padding:24px 0}.sectionHead{display:block}.sectionHead h2{font-size:24px}.sectionHead p{margin:7px 0 0;text-align:left;font-size:9px}.catalog{grid-template-columns:1fr}.body p{min-height:0}.compareGrid{grid-template-columns:1fr}.compareCell{border-right:0}.process{grid-template-columns:1fr 1fr}.cta{display:block;padding:17px 14px}.cta .btn{margin-top:12px}.dialogFeatures{grid-template-columns:1fr 1fr}.foot{display:block;text-align:center}.footlinks{margin:9px 0 0;justify-content:center}}
+@media(max-width:390px){.process{grid-template-columns:1fr}.dialogFeatures{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="shell topin">
+  <a class="brand" href="/" aria-label="LPS Project Studio home"><img src="/assets/lps-project-studio.svg" alt="LPS Project Studio"></a>
+  <nav class="nav"><a href="/marketplace/">Marketplace</a><a href="/brand-studio/">Brand & Launch</a><a href="/projects/custom/">Custom Sites</a><a class="gold" href="/projects/custom/#brief">Start a Project</a></nav>
+ </div>
+</header>
+
 <main>
-<section class="hero"><img src="/assets/template-studio-banner.svg" alt="LPS Template Studio"><div class="intro"><h1>Template Studio</h1><p>Professional website systems we can customize for a new client instead of rebuilding every project from zero. Logos, colors, services, booking, product sections, photos and copy can all be changed.</p></div></section>
+<section class="hero">
+ <div class="shell heroCard">
+  <div class="heroVisual"><img src="/assets/template-studio-banner.svg" alt="LPS Template Studio"></div>
+  <div class="heroCopy">
+   <div><span class="eyebrow">LPS Template Studio</span><h1>Choose a strong starting point.</h1><p>Browse professional website foundations, compare what each system is designed to do, then customize the brand, services, photos, content and features around the real business.</p></div>
+   <div class="heroActions"><a class="btn gold" href="#catalog">Browse Systems</a><a class="btn" href="/projects/custom/#builder">Use Build Planner</a></div>
+  </div>
+ </div>
+</section>
 
-<section class="section"><span class="eyebrow">Ready-to-customize systems</span><h2>Start with a strong structure. Make it theirs.</h2><p>These are not one-size-fits-all pages. They are reusable foundations that can be customized into a distinct website for each business.</p><div class="grid">
-<article class="card"><div class="preview"><div class="browser"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="mock"><b>Spiritual & Wellness</b><span>Tarot • Reiki • crystals • candles • booking</span></div><div class="bar"><i></i><i></i><i></i></div></div><div class="copy"><h3>Tarot / Reiki / Metaphysical</h3><p>Profiles, readings, service menus, booking, testimonials and curated spiritual-product collections.</p><div class="chips"><span>Booking</span><span>Affiliate shop</span><span>Social</span></div></div></article>
-<article class="card"><div class="preview"><div class="browser"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="mock"><b>Beauty & Skincare</b><span>Services • results • consultations • shop</span></div><div class="bar"><i></i><i></i><i></i></div></div><div class="copy"><h3>Beauty / Skincare Studio</h3><p>Service menus, consultations, before-and-after presentation, booking and curated product recommendations.</p><div class="chips"><span>Gallery</span><span>Booking</span><span>Products</span></div></div></article>
-<article class="card"><div class="preview"><div class="browser"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="mock"><b>Local Business</b><span>Lead form • reviews • service area • quote</span></div><div class="bar"><i></i><i></i><i></i></div></div><div class="copy"><h3>Local Service Business</h3><p>Professional business profile, service areas, quote requests, reviews and contact workflows.</p><div class="chips"><span>Lead forms</span><span>Reviews</span><span>Maps</span></div></div></article>
-<article class="card"><div class="preview"><div class="browser"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="mock"><b>Real Estate</b><span>Listings • leads • analysis • seller intake</span></div><div class="bar"><i></i><i></i><i></i></div></div><div class="copy"><h3>Real Estate / Investor</h3><p>Lead capture, featured properties, seller forms, deal-analysis links and branded acquisition pages.</p><div class="chips"><span>Listings</span><span>CRM path</span><span>Lead capture</span></div></div></article>
-<article class="card"><div class="preview"><div class="browser"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="mock"><b>Church & Nonprofit</b><span>Mission • programs • donations • events</span></div><div class="bar"><i></i><i></i><i></i></div></div><div class="copy"><h3>Community / Nonprofit</h3><p>Mission, programs, events, volunteer paths, community resources and donation-ready presentation.</p><div class="chips"><span>Programs</span><span>Events</span><span>Donations</span></div></div></article>
-<article class="card"><div class="preview"><div class="browser"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="mock"><b>Creator & Brand</b><span>Portfolio • media • links • offers</span></div><div class="bar"><i></i><i></i><i></i></div></div><div class="copy"><h3>Creator / Portfolio</h3><p>Professional identity, project showcase, social links, offers, media and contact presentation.</p><div class="chips"><span>Portfolio</span><span>Media</span><span>Contact</span></div></div></article>
-</div></section>
+<section class="trust">
+ <div class="shell trustGrid">
+  <div><b>MOBILE-READY</b><span>Layouts designed to adapt across screens.</span></div>
+  <div><b>BRANDABLE</b><span>Colors, logos, type and imagery can change.</span></div>
+  <div><b>EXPANDABLE</b><span>Add commerce, booking, forms and campaigns.</span></div>
+  <div><b>SEO FOUNDATION</b><span>Public pages include essential metadata structure.</span></div>
+  <div><b>HOSTING PATH</b><span>Deployment and managed updates can be added.</span></div>
+ </div>
+</section>
 
-<section class="section"><span class="eyebrow">Customization</span><h2>We can add the pieces a client actually needs.</h2><div class="grid">
-<article class="card"><div class="copy"><h3>Shop & Product Sections</h3><p>Add crystals, candles, skincare, accessories, digital products or other approved product categories.</p></div></article>
-<article class="card"><div class="copy"><h3>Booking & Service Menus</h3><p>Add consultations, readings, appointments, service packages, intake forms and scheduling links.</p></div></article>
-<article class="card"><div class="copy"><h3>Brand & Content Upgrade</h3><p>New colors, typography, logos, banners, copy, galleries, testimonials and social content blocks.</p></div></article>
-</div></section>
+<section class="section" id="catalog">
+ <div class="shell">
+  <div class="sectionHead"><div><span class="eyebrow">Starter catalog</span><h2>Six systems. Different business goals.</h2></div><p>Search or filter the catalog, open a visual preview, and send the closest foundation into the LPS customization workflow.</p></div>
 
-<section class="section"><span class="eyebrow">Repeatable business model</span><h2>Four steps from template to client website.</h2><div class="process"><div class="step"><b>01 • PICK</b><p>Choose the closest template foundation.</p></div><div class="step"><b>02 • CUSTOMIZE</b><p>Brand, services, shop categories and content.</p></div><div class="step"><b>03 • LAUNCH</b><p>Domain, hosting, forms and final QA.</p></div><div class="step"><b>04 • EXPAND</b><p>Add commerce, automation, dashboards or integrations.</p></div></div></section>
+  <div class="controls">
+   <label class="search"><input id="templateSearch" type="search" placeholder="Search beauty, booking, real estate, nonprofit..."></label>
+   <div class="filters" role="group" aria-label="Template categories">
+    <button class="filter active" type="button" data-filter="all">All</button>
+    <button class="filter" type="button" data-filter="service">Service</button>
+    <button class="filter" type="button" data-filter="commerce">Commerce</button>
+    <button class="filter" type="button" data-filter="property">Real Estate</button>
+    <button class="filter" type="button" data-filter="community">Community</button>
+    <button class="filter" type="button" data-filter="creator">Creator</button>
+   </div>
+   <span class="resultCount" id="resultCount">6 systems</span>
+  </div>
 
-<section class="cta"><div><h3>Need something different?</h3><p>The template is only the starting point. LPS can customize the site around the client's actual business.</p></div><a href="/projects/custom/#project-brief">Start a Project Brief</a></section>
-</main></body></html>
+  <div class="catalog" id="templateGrid">
+   <article class="template" data-cat="service commerce" data-name="beauty skincare studio consultation booking shop products">
+    <div class="preview"><img src="/assets/template-preview-beauty.svg" alt="Beauty and skincare website system preview"><span class="status">Beauty / Wellness</span></div>
+    <div class="body"><h3>Beauty & Skin Studio</h3><p>Consultations, service menus, results, booking, galleries and curated product recommendations.</p><div class="chips"><span>Booking</span><span>Services</span><span>Gallery</span><span>Products</span></div><div class="actions"><button class="primary previewBtn" type="button" data-template="beauty">Preview</button><a href="/projects/custom/#brief">Customize This</a></div></div>
+   </article>
+
+   <article class="template" data-cat="service commerce" data-name="tarot reiki spiritual wellness crystals candles booking affiliate">
+    <div class="preview"><img src="/assets/template-preview-commerce.svg" alt="Spiritual and wellness storefront preview"><span class="status">Spiritual / Wellness</span></div>
+    <div class="body"><h3>Tarot / Reiki / Metaphysical</h3><p>Readings, service menus, booking, testimonials and curated spiritual or wellness collections.</p><div class="chips"><span>Booking</span><span>Affiliate</span><span>Services</span><span>Social</span></div><div class="actions"><button class="primary previewBtn" type="button" data-template="spiritual">Preview</button><a href="/projects/custom/#brief">Customize This</a></div></div>
+   </article>
+
+   <article class="template" data-cat="service" data-name="local business professional service quotes reviews leads contact">
+    <div class="preview"><img src="/assets/template-preview-business.svg" alt="Professional local business website preview"><span class="status">Local Business</span></div>
+    <div class="body"><h3>Local Service Business</h3><p>Professional service presentation, reviews, service areas, quote requests and strong lead capture.</p><div class="chips"><span>Lead forms</span><span>Reviews</span><span>Quotes</span><span>Services</span></div><div class="actions"><button class="primary previewBtn" type="button" data-template="local">Preview</button><a href="/projects/custom/#brief">Customize This</a></div></div>
+   </article>
+
+   <article class="template" data-cat="property service" data-name="real estate investor property leads seller acquisition listings crm">
+    <div class="preview"><img src="/assets/propertybridge-banner.svg" alt="Real estate website and acquisition system preview"><span class="status">Real Estate</span></div>
+    <div class="body"><h3>Real Estate / Investor</h3><p>Seller intake, featured properties, lead capture, acquisition pages and paths into deeper deal tools.</p><div class="chips"><span>Seller leads</span><span>Listings</span><span>CRM path</span><span>Analysis</span></div><div class="actions"><button class="primary previewBtn" type="button" data-template="realestate">Preview</button><a href="/projects/custom/#brief">Customize This</a></div></div>
+   </article>
+
+   <article class="template" data-cat="community service" data-name="church ministry nonprofit community mission events volunteer donations programs">
+    <div class="preview"><img src="/assets/thy-kingdom-come-banner.svg" alt="Church and community organization website preview"><span class="status">Community / Ministry</span></div>
+    <div class="body"><h3>Church / Nonprofit</h3><p>Mission, programs, events, volunteer paths, community resources and donation-ready presentation.</p><div class="chips"><span>Programs</span><span>Events</span><span>Volunteer</span><span>Giving path</span></div><div class="actions"><button class="primary previewBtn" type="button" data-template="community">Preview</button><a href="/projects/custom/#brief">Customize This</a></div></div>
+   </article>
+
+   <article class="template" data-cat="creator commerce" data-name="creator brand portfolio media social offers launch">
+    <div class="preview"><img src="/assets/brand-launch-banner.svg" alt="Creator portfolio and brand launch website preview"><span class="status">Creator / Brand</span></div>
+    <div class="body"><h3>Creator / Portfolio</h3><p>Professional identity, project showcase, media, social links, offers and a clear contact or campaign path.</p><div class="chips"><span>Portfolio</span><span>Media</span><span>Social</span><span>Offers</span></div><div class="actions"><button class="primary previewBtn" type="button" data-template="creator">Preview</button><a href="/projects/custom/#brief">Customize This</a></div></div>
+   </article>
+  </div>
+  <div class="empty" id="emptyState">No starter system matches that search yet. Try a broader term or use the custom-site path.</div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="shell compare">
+  <div class="compareHead"><span class="eyebrow">What every starter system gives you</span><h3>A repeatable foundation without making every client look the same.</h3><p>The structure is reusable; the brand, content and business logic are customized around the client.</p></div>
+  <div class="compareGrid">
+   <div class="compareCell"><b>01 · STRUCTURE</b><span>Responsive sections, navigation, calls to action and content hierarchy.</span></div>
+   <div class="compareCell"><b>02 · BRAND</b><span>Client-specific colors, logo, typography, imagery and tone.</span></div>
+   <div class="compareCell"><b>03 · FEATURES</b><span>Booking, forms, storefronts, galleries, campaigns or integrations as needed.</span></div>
+   <div class="compareCell"><b>04 · LAUNCH</b><span>Domain connection, deployment, QA and a path for future updates.</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="shell">
+  <div class="sectionHead"><div><span class="eyebrow">Template-to-launch workflow</span><h2>Clear enough to sell. Flexible enough to grow.</h2></div><p>A customer can understand exactly how a starter system becomes their own website.</p></div>
+  <div class="process">
+   <div class="step"><em>01 • PICK</em><b>Choose the closest system</b><span>Start from the business type and customer journey.</span></div>
+   <div class="step"><em>02 • CUSTOMIZE</em><b>Build the identity</b><span>Brand, services, imagery, copy and feature choices.</span></div>
+   <div class="step"><em>03 • LAUNCH</em><b>Connect the business</b><span>Domain, forms, booking, storefront and final QA.</span></div>
+   <div class="step"><em>04 • EXPAND</em><b>Add what comes next</b><span>Campaigns, integrations, commerce and ongoing updates.</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="shell cta">
+ <div><h3>Don’t see the exact business?</h3><p>Use the closest foundation or start from a custom build. The template is a launch point, not a restriction.</p></div>
+ <a class="btn gold" href="/projects/custom/#brief">Start a Project Brief</a>
+</section>
+</main>
+
+<div class="modal" id="previewModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+ <div class="dialog">
+  <div class="dialogVisual"><img id="modalImage" src="" alt=""><button class="close" id="closeModal" aria-label="Close preview">×</button></div>
+  <div class="dialogBody"><span class="eyebrow" id="modalEyebrow">Starter System</span><h3 id="modalTitle"></h3><p id="modalText"></p><div class="dialogFeatures" id="modalFeatures"></div><div class="heroActions" style="justify-content:flex-start;margin-top:16px"><a class="btn gold" href="/projects/custom/#brief">Customize This System</a><a class="btn" href="/projects/custom/#builder">Open Build Planner</a></div></div>
+ </div>
+</div>
+
+<footer class="footer">
+ <div class="shell foot"><strong>LPS TEMPLATE STUDIO</strong><span>Professional foundations • Custom client builds</span><div class="footlinks"><a href="/">Home</a><a href="/projects/custom/">Custom Sites</a><a href="/marketplace/">Marketplace</a><a href="/brand-studio/">Brand Studio</a></div></div>
+</footer>
+
+<script>
+const cards=[...document.querySelectorAll('.template')];
+const filters=[...document.querySelectorAll('.filter')];
+const search=document.getElementById('templateSearch');
+const count=document.getElementById('resultCount');
+const empty=document.getElementById('emptyState');
+let active='all';
+
+function apply(){
+ const q=search.value.trim().toLowerCase();
+ let visible=0;
+ cards.forEach(card=>{
+  const cat=card.dataset.cat.split(' ');
+  const okCat=active==='all'||cat.includes(active);
+  const okQ=!q||card.dataset.name.includes(q)||card.textContent.toLowerCase().includes(q);
+  const show=okCat&&okQ;
+  card.classList.toggle('hidden',!show);
+  if(show) visible++;
+ });
+ count.textContent=visible+' system'+(visible===1?'':'s');
+ empty.classList.toggle('show',visible===0);
+}
+filters.forEach(btn=>btn.addEventListener('click',()=>{
+ filters.forEach(x=>x.classList.remove('active'));btn.classList.add('active');active=btn.dataset.filter;apply();
+}));
+search.addEventListener('input',apply);
+
+const data={
+ beauty:{title:'Beauty & Skin Studio',eye:'Beauty / Wellness',image:'/assets/template-preview-beauty.svg',text:'A polished service-first foundation for studios, estheticians, beauty professionals and wellness providers.',features:['Service menu','Consultation / booking path','Gallery / results','Testimonials','Product recommendations','Mobile-first contact flow']},
+ spiritual:{title:'Tarot / Reiki / Metaphysical',eye:'Spiritual / Wellness',image:'/assets/template-preview-commerce.svg',text:'A flexible foundation for readings, spiritual services, wellness offerings and curated product collections.',features:['Service offerings','Booking path','Testimonials','Affiliate-ready collections','Social campaign sections','Brand storytelling']},
+ local:{title:'Local Service Business',eye:'Professional Services',image:'/assets/template-preview-business.svg',text:'A credibility-focused foundation for businesses that need leads, quotes and a professional public presence.',features:['Services','Service areas','Reviews','Quote request','Lead capture','Strong contact CTA']},
+ realestate:{title:'Real Estate / Investor',eye:'Property / Acquisition',image:'/assets/propertybridge-banner.svg',text:'A lead-focused presentation system for agents, investors or acquisition brands that need seller and property pathways.',features:['Seller intake','Featured properties','Lead capture','Strategy pages','Property analysis links','CRM handoff path']},
+ community:{title:'Church / Nonprofit',eye:'Community / Mission',image:'/assets/thy-kingdom-come-banner.svg',text:'A mission-centered foundation for ministries, nonprofits and community organizations with programs and participation paths.',features:['Mission story','Programs','Events','Volunteer path','Giving / donation-ready area','Community resources']},
+ creator:{title:'Creator / Portfolio',eye:'Creator / Brand',image:'/assets/brand-launch-banner.svg',text:'A visual brand and portfolio foundation for creators, consultants and project-driven personal brands.',features:['Portfolio','Offers','Media','Social links','Campaign pages','Contact / inquiry path']}
+};
+const modal=document.getElementById('previewModal');
+document.querySelectorAll('.previewBtn').forEach(btn=>btn.addEventListener('click',()=>{
+ const d=data[btn.dataset.template];if(!d)return;
+ document.getElementById('modalTitle').textContent=d.title;
+ document.getElementById('modalEyebrow').textContent=d.eye;
+ document.getElementById('modalText').textContent=d.text;
+ const img=document.getElementById('modalImage');img.src=d.image;img.alt=d.title+' preview';
+ document.getElementById('modalFeatures').innerHTML=d.features.map(x=>'<span>'+x+'</span>').join('');
+ modal.classList.add('open');document.body.style.overflow='hidden';
+}));
+function close(){modal.classList.remove('open');document.body.style.overflow='';}
+document.getElementById('closeModal').addEventListener('click',close);
+modal.addEventListener('click',e=>{if(e.target===modal)close()});
+addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+</script>
+</body>
+</html>
