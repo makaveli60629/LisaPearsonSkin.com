@@ -1,23 +1,41 @@
-name: Deploy PROPERTYBridge to GitHub Pages
+name: Validate & Deploy LPS Project Studio
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
-  group: "pages"
+  group: "lps-pages-production"
   cancel-in-progress: true
+
 jobs:
+  validate:
+    name: Validate public site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate site structure, links and SEO
+        run: python scripts/validate_site.py
+
   deploy:
+    name: Deploy production site
+    needs: validate
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout validated commit
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
