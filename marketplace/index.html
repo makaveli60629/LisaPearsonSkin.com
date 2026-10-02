@@ -1,65 +1,178 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LPS Marketplace — Affiliate & Curated Storefront Concepts</title>
-<meta name="description" content="Affiliate-ready storefront concepts for curated beauty, crystals, candles, spiritual, wellness, lifestyle and creator collections.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#06121d;--panel:#0b1f30;--line:#31526b;--gold:#dda43a;--gold2:#ffe08b;--muted:#afbfcb}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0,#17384e,#06121d 45%);color:#f7f4ec;font-family:Montserrat,Arial,sans-serif}a{color:inherit;text-decoration:none}
-.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:16px;padding:8px clamp(12px,4vw,56px);background:#06111bea;border-bottom:1px solid #29475d;backdrop-filter:blur(12px)}.top img{width:190px;height:48px;object-fit:contain}.nav{margin-left:auto;display:flex;gap:8px}.nav a{padding:8px 11px;border:1px solid #365a74;border-radius:999px;font-size:10px;font-weight:800}.nav .gold{background:linear-gradient(#ffdc7c,#b87918);color:#171008;border-color:#d6a33e}
-main{max-width:1240px;margin:auto;padding:30px 18px 70px}.hero{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#081827}.hero img{width:100%;display:block}.intro{padding:22px 24px;display:grid;grid-template-columns:1fr .85fr;gap:22px;align-items:end}.intro h1{font:600 clamp(2rem,5vw,4.8rem)/.98 Cinzel,Georgia,serif;margin:0}.intro p{margin:0 0 8px;color:var(--muted);line-height:1.6}
-.notice{border:1px solid #5f5131;background:#121d25;border-radius:12px;padding:13px 15px;color:#c9d4dc;font-size:11px;line-height:1.5}
-.section{margin-top:26px}.eyebrow{color:var(--gold2);font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.section h2{font:600 clamp(1.7rem,4vw,3rem)/1.1 Cinzel,Georgia,serif;margin:7px 0 8px}.section>p{color:var(--muted);line-height:1.65;max-width:850px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.collection{min-height:245px;border:1px solid var(--line);border-radius:15px;overflow:hidden;background:linear-gradient(145deg,#102a40,#081827);display:grid;grid-template-rows:1fr auto}.visual{display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 30%,rgba(217,163,60,.20),transparent 35%),#0a1a28}.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(4,11,18,.56))}
-.icon{font-size:66px;position:relative;z-index:1;filter:drop-shadow(0 6px 16px #0008)}.copy{padding:15px}.copy h3{font-family:Cinzel,serif;margin:0 0 6px;font-size:17px}.copy p{margin:0;color:#c6d1da;font-size:11px;line-height:1.5}.copy small{display:block;margin-top:9px;color:#e7be63;font-size:8px;letter-spacing:.12em;text-transform:uppercase}
-.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.step{border:1px solid var(--line);border-radius:13px;background:#081827;padding:16px}.step b{color:var(--gold2);font-size:11px}.step p{margin:7px 0 0;color:#c5d0d9;font-size:11px;line-height:1.45}
-.feature{margin-top:28px;border:1px solid #5b4b2d;border-radius:16px;background:linear-gradient(120deg,#0d2437,#181621);padding:24px;display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.feature h3{font:600 27px Cinzel,serif;margin:0}.feature p{color:#b9c6d0;line-height:1.6}.features{display:grid;grid-template-columns:1fr 1fr;gap:8px}.features span{border:1px solid #3f5e73;border-radius:10px;padding:10px;font-size:10px;color:#d7e0e6;background:#091827}
-@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.intro,.feature{grid-template-columns:1fr}.nav a:not(.gold){display:none}}
-@media(max-width:560px){.grid{grid-template-columns:1fr}.top img{width:145px}.features{grid-template-columns:1fr}}
-</style><link rel="canonical" href="https://lisapearsonskin.com/marketplace/">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>LPS Marketplace — Curated Storefront & Affiliate Collection Concepts</title>
+<meta name="description" content="Explore LPS Marketplace storefront concepts for beauty, crystals, candles, tarot, wellness, lifestyle and creator collections, ready for approved affiliate partnerships.">
+<meta name="theme-color" content="#06121d">
+<link rel="canonical" href="https://lisapearsonskin.com/marketplace/">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LPS Project Studio">
-<meta property="og:title" content="LPS Marketplace — Affiliate &amp; Curated Storefront Concepts">
-<meta property="og:description" content="Affiliate-ready storefront concepts for curated beauty, crystals, candles, spiritual, wellness, lifestyle and creator collections.">
+<meta property="og:title" content="LPS Marketplace — Curated Storefront Concepts">
+<meta property="og:description" content="A polished storefront concept for curated collections, campaign pages and approved affiliate partnerships.">
 <meta property="og:url" content="https://lisapearsonskin.com/marketplace/">
-<meta property="og:image" content="https://lisapearsonskin.com/assets/one-vision-banner-v2.webp">
+<meta property="og:image" content="https://lisapearsonskin.com/assets/lps-marketplace-banner.svg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="LPS Marketplace — Affiliate &amp; Curated Storefront Concepts">
-<meta name="twitter:description" content="Affiliate-ready storefront concepts for curated beauty, crystals, candles, spiritual, wellness, lifestyle and creator collections.">
-<meta name="twitter:image" content="https://lisapearsonskin.com/assets/one-vision-banner-v2.webp">
+<meta name="twitter:title" content="LPS Marketplace — Curated Storefront Concepts">
+<meta name="twitter:description" content="A polished storefront concept for curated collections, campaign pages and approved affiliate partnerships.">
+<meta name="twitter:image" content="https://lisapearsonskin.com/assets/lps-marketplace-banner.svg">
 <link rel="icon" href="/assets/lps-project-studio.svg" type="image/svg+xml">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "LPS Marketplace — Affiliate & Curated Storefront Concepts",
-  "description": "Affiliate-ready storefront concepts for curated beauty, crystals, candles, spiritual, wellness, lifestyle and creator collections.",
-  "url": "https://lisapearsonskin.com/marketplace/",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "LPS Project Studio",
-    "url": "https://lisapearsonskin.com/"
-  }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"LPS Marketplace","description":"Curated storefront and affiliate collection concepts from LPS Project Studio.","url":"https://lisapearsonskin.com/marketplace/","isPartOf":{"@type":"WebSite","name":"LPS Project Studio","url":"https://lisapearsonskin.com/"}}</script>
+<style>
+:root{
+ --bg:#040b12;--panel:#091c2a;--panel2:#10293d;--line:#2e4e64;--gold:#d9a23b;--gold2:#f6da89;--blue:#66bfe8;
+ --text:#f7f5ef;--muted:#aabac6;--shadow:0 20px 55px rgba(0,0,0,.32);--max:1240px
 }
-</script>
-</head><body>
-<header class="top"><a href="/"><img src="/assets/lps-project-studio.svg" alt="LPS Project Studio"></a><nav class="nav"><a href="/templates/">Template Studio</a><a href="/projects/custom/">Custom Sites</a><a class="gold" href="/projects/custom/#project-brief">Build a Storefront</a></nav></header>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;color:var(--text);font-family:Montserrat,Arial,sans-serif;background:
+ radial-gradient(circle at 50% -8%,rgba(53,106,142,.32),transparent 31%),
+ radial-gradient(circle at 84% 28%,rgba(143,87,196,.08),transparent 20%),
+ linear-gradient(180deg,#06131f,#050f18 48%,#040a10);min-height:100vh}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button,input{font:inherit}
+.shell{width:min(var(--max),calc(100% - 34px));margin:auto}
+.top{position:sticky;top:0;z-index:30;background:rgba(4,12,19,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(105,151,179,.2)}
+.topin{min-height:70px;display:flex;align-items:center;gap:15px}.brand img{width:218px;height:54px;object-fit:contain;object-position:left}
+.nav{margin-left:auto;display:flex;gap:7px;align-items:center}.nav a{padding:9px 11px;border-radius:999px;font-size:9px;font-weight:900;color:#c8d4dd}.nav a:hover{background:#0d2638}.nav .gold{background:linear-gradient(#ffe18a,#bd7e1b);border:1px solid #d7a13c;color:#171008;padding-inline:14px}
+.hero{padding:22px 0 12px}.heroCard{overflow:hidden;border:1px solid #315269;border-radius:24px;background:linear-gradient(145deg,#0d283d,#071724);box-shadow:var(--shadow)}
+.heroVisual{position:relative;aspect-ratio:21/6;min-height:220px;overflow:hidden;background:#081724}.heroVisual img{width:100%;height:100%;object-fit:cover}.heroVisual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,13,21,.42),transparent 35%,transparent 75%,rgba(4,13,21,.25))}
+.heroCopy{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;padding:27px 30px}
+.eyebrow{color:var(--gold2);font-size:10px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+.hero h1{font:600 clamp(34px,5vw,58px)/1 Cinzel,Georgia,serif;margin:7px 0 10px;letter-spacing:-.03em}.hero p{margin:0;color:#becbd4;font-size:13px;line-height:1.65}
+.heroActions{display:flex;justify-content:flex-end;gap:9px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 15px;border:1px solid #3b5f77;border-radius:10px;background:#081826;font-size:9px;font-weight:900;letter-spacing:.045em}.btn.gold{background:linear-gradient(#ffe087,#bb7b19);border-color:#d6a13b;color:#161008}
+.statusBand{padding:10px 0 4px}.statusCard{display:flex;align-items:center;gap:14px;padding:13px 15px;border:1px solid #66552f;border-radius:14px;background:linear-gradient(110deg,rgba(217,162,59,.09),rgba(8,24,38,.92))}.statusDot{width:10px;height:10px;border-radius:50%;background:#d9a23b;box-shadow:0 0 18px rgba(217,162,59,.55)}.statusCard b{font-size:9px;color:#f2d47d;letter-spacing:.07em}.statusCard span{font-size:9px;color:#b6c4cd;line-height:1.45}.statusCard .push{margin-left:auto;color:#879eae;text-align:right}
+.section{padding:34px 0}.sectionHead{display:flex;gap:25px;align-items:end;margin-bottom:15px}.sectionHead h2{font:600 clamp(27px,4vw,44px)/1.04 Cinzel,Georgia,serif;margin:6px 0 0}.sectionHead p{max-width:530px;margin:0 0 4px auto;text-align:right;color:var(--muted);font-size:11px;line-height:1.55}
+.featured{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
+.featureHero{position:relative;min-height:430px;overflow:hidden;border:1px solid #315269;border-radius:20px;background:#091826;box-shadow:var(--shadow)}.featureHero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.featureHero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,15,24,.92),rgba(5,15,24,.52) 55%,rgba(5,15,24,.18))}
+.featureCopy{position:relative;z-index:2;max-width:520px;padding:30px;display:flex;flex-direction:column;justify-content:flex-end;height:100%;min-height:430px}.featureCopy h3{font:600 clamp(30px,4vw,48px)/1 Cinzel,Georgia,serif;margin:7px 0 10px}.featureCopy p{margin:0;color:#d0dae0;font-size:11px;line-height:1.6}.featureTags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}.featureTags span{padding:5px 7px;border:1px solid #52677a;border-radius:999px;background:rgba(4,13,21,.58);font-size:7px;color:#e0e7eb}
+.adStack{display:grid;gap:14px}.ad{position:relative;overflow:hidden;min-height:208px;border:1px solid #315269;border-radius:18px;background:linear-gradient(145deg,#0f2a40,#071724);padding:20px}.ad:before{content:"";position:absolute;right:-35px;top:-35px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(217,162,59,.18),transparent 67%)}.ad.purple:before{background:radial-gradient(circle,rgba(160,102,217,.18),transparent 67%)}.ad h3{position:relative;font:600 22px Cinzel,Georgia,serif;margin:8px 0}.ad p{position:relative;margin:0;color:#b9c7d0;font-size:10px;line-height:1.55;max-width:360px}.ad .promo{display:inline-flex;position:relative;margin-top:13px;padding:6px 8px;border:1px solid #52677a;border-radius:999px;color:#f0d27c;font-size:7px;font-weight:900;letter-spacing:.08em}
+.controls{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:15px}.filter{border:1px solid #35556b;border-radius:999px;padding:8px 10px;background:#081826;color:#c8d3db;font-size:8px;font-weight:900;cursor:pointer}.filter.active{background:rgba(217,162,59,.14);border-color:#c39132;color:#f6dc92}.resultCount{margin-left:auto;font-size:9px;color:#91a7b6}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.collection{overflow:hidden;border:1px solid #315269;border-radius:17px;background:linear-gradient(150deg,#10293f,#071724);box-shadow:0 14px 34px rgba(0,0,0,.22);transition:.2s}.collection:hover{transform:translateY(-3px);border-color:#8d733a}.collection.hidden{display:none}
+.collectionVisual{position:relative;min-height:205px;padding:20px;display:flex;align-items:flex-end;background:#0a1b2a;overflow:hidden}.collectionVisual:before,.collectionVisual:after{content:"";position:absolute;border-radius:50%}.collectionVisual:before{width:160px;height:160px;right:-35px;top:-35px;background:radial-gradient(circle,rgba(101,191,232,.18),transparent 66%)}.collectionVisual:after{width:120px;height:120px;left:-30px;bottom:-35px;background:radial-gradient(circle,rgba(217,162,59,.14),transparent 67%)}.collectionVisual.purple:before{background:radial-gradient(circle,rgba(161,110,221,.21),transparent 66%)}.collectionVisual.rose:before{background:radial-gradient(circle,rgba(220,139,148,.21),transparent 66%)}.collectionVisual.green:before{background:radial-gradient(circle,rgba(104,188,147,.20),transparent 66%)}
+.symbol{position:relative;z-index:2;width:82px;height:82px;border-radius:22px;display:grid;place-items:center;border:1px solid #48677b;background:rgba(6,20,31,.74);font:600 38px Cinzel,Georgia,serif;color:#f0d17b;box-shadow:0 16px 30px rgba(0,0,0,.28)}
+.collectionBody{padding:15px}.collectionBody h3{font:600 18px Cinzel,Georgia,serif;margin:0 0 7px}.collectionBody p{margin:0;color:#bbc8d1;font-size:10px;line-height:1.52;min-height:48px}.meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:11px}.meta span{padding:5px 7px;border:1px solid #38596f;border-radius:999px;color:#cdd7de;font-size:7px}.collectionAction{display:flex;margin-top:12px}.collectionAction a{display:flex;align-items:center;justify-content:center;min-height:34px;padding:0 10px;border:1px solid #d0a13f;border-radius:8px;background:linear-gradient(#ffdd7d,#b87918);color:#171008;font-size:8px;font-weight:900}
+.partner{display:grid;grid-template-columns:1fr 1fr;gap:14px}.partnerCard{border:1px solid #315269;border-radius:18px;background:linear-gradient(145deg,#0e273a,#071724);padding:20px}.partnerCard h3{font:600 23px Cinzel,Georgia,serif;margin:6px 0 8px}.partnerCard p{margin:0;color:#b8c6cf;font-size:10px;line-height:1.6}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:15px}.checklist span{padding:10px;border:1px solid #33546b;border-radius:9px;background:#081826;color:#d0d9df;font-size:8px}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.step{padding:16px;border:1px solid #29495f;border-radius:14px;background:#081724}.step em{font-style:normal;color:#d9a23b;font-size:8px;font-weight:900}.step b{display:block;margin-top:8px;font:600 14px Cinzel,Georgia,serif}.step span{display:block;margin-top:5px;color:#aebdca;font-size:8px;line-height:1.45}
+.cta{display:flex;align-items:center;gap:22px;margin:0 0 32px;padding:24px;border:1px solid #69542d;border-radius:18px;background:radial-gradient(circle at 90% 0,rgba(217,162,59,.14),transparent 25%),linear-gradient(130deg,#102b40,#111820)}.cta h3{font:600 24px Cinzel,Georgia,serif;margin:0}.cta p{margin:5px 0 0;color:#b7c5ce;font-size:10px}.cta .btn{margin-left:auto;white-space:nowrap}
+.footer{border-top:1px solid #20394b;background:#040b12;padding:22px 0 28px;color:#899aa6;font-size:9px}.foot{display:flex;align-items:center;gap:14px}.foot strong{font-family:Cinzel,Georgia,serif;color:#d8e1e6}.footlinks{margin-left:auto;display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:950px){.featured,.partner{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.shell{width:min(100% - 20px,var(--max))}.topin{min-height:62px}.brand img{width:153px;height:46px}.nav a{display:none}.nav .gold{display:inline-flex;font-size:7px;padding:8px 10px}.hero{padding:10px 0}.heroCard{border-radius:16px}.heroVisual{aspect-ratio:16/7;min-height:0}.heroCopy{grid-template-columns:1fr;padding:18px 15px;gap:14px}.hero h1{font-size:30px}.hero p{font-size:10px}.heroActions{justify-content:flex-start}.statusCard{align-items:flex-start}.statusCard .push{display:none}.section{padding:24px 0}.sectionHead{display:block}.sectionHead h2{font-size:24px}.sectionHead p{margin:7px 0 0;text-align:left;font-size:9px}.featureCopy{padding:20px;min-height:360px}.ad{min-height:180px}.grid{grid-template-columns:1fr}.collectionBody p{min-height:0}.partner{grid-template-columns:1fr}.checklist{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.cta{display:block;padding:17px 14px}.cta .btn{margin-top:12px}.foot{display:block;text-align:center}.footlinks{margin:9px 0 0;justify-content:center}}
+@media(max-width:390px){.checklist,.flow{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="shell topin">
+  <a class="brand" href="/" aria-label="LPS Project Studio home"><img src="/assets/lps-project-studio.svg" alt="LPS Project Studio"></a>
+  <nav class="nav"><a href="/templates/">Template Studio</a><a href="/brand-studio/">Brand & Launch</a><a href="/projects/custom/">Custom Sites</a><a class="gold" href="/projects/custom/#brief">Build a Storefront</a></nav>
+ </div>
+</header>
+
 <main>
-<section class="hero"><img src="/assets/lps-marketplace-banner.svg" alt="LPS Marketplace"><div class="intro"><h1>Marketplace</h1><div><p>A branded affiliate-ready storefront concept for curated product collections. It can live under LPS or be customized into a client's own shop experience.</p><div class="notice"><b>Current status:</b> storefront structure and categories are presentation-ready. Actual affiliate products, prices, tracking links and merchant imagery should only be added after approval by the relevant partner program.</div></div></div></section>
+<section class="hero">
+ <div class="shell heroCard">
+  <div class="heroVisual"><img src="/assets/lps-marketplace-banner.svg" alt="LPS Marketplace"></div>
+  <div class="heroCopy">
+   <div><span class="eyebrow">LPS Marketplace</span><h1>Curated storefronts without pretending to stock everything.</h1><p>Build branded collection pages around approved affiliate relationships, campaign traffic and niche audiences while the partner merchant handles inventory, checkout, shipping and returns.</p></div>
+   <div class="heroActions"><a class="btn gold" href="#collections">Browse Collections</a><a class="btn" href="/projects/custom/#brief">Build a Storefront</a></div>
+  </div>
+ </div>
+</section>
 
-<section class="section"><span class="eyebrow">Curated collections</span><h2>One storefront. Multiple niches.</h2><p>Collections can be swapped, removed or expanded to fit the client. The point is to show that LPS can build commerce presentation without requiring the customer to stock every product themselves.</p><div class="grid">
-<article class="collection"><div class="visual"><div class="icon">✦</div></div><div class="copy"><h3>Crystals & Beads</h3><p>Crystals, stones, beads, jewelry components, display pieces and gift-ready accessories.</p><small>Affiliate-ready collection</small></div></article>
-<article class="collection"><div class="visual"><div class="icon">🕯</div></div><div class="copy"><h3>Candles & Ritual</h3><p>Candles, holders, incense, oils, altar accessories and related wellness items where allowed.</p><small>Affiliate-ready collection</small></div></article>
-<article class="collection"><div class="visual"><div class="icon">☾</div></div><div class="copy"><h3>Tarot & Spiritual</h3><p>Tarot decks, journals, card accessories, spiritual gifts and learning materials.</p><small>Affiliate-ready collection</small></div></article>
-<article class="collection"><div class="visual"><div class="icon">✧</div></div><div class="copy"><h3>Beauty & Skincare</h3><p>Skincare, makeup, brushes, organizers, tools and beauty accessories.</p><small>Affiliate-ready collection</small></div></article>
-<article class="collection"><div class="visual"><div class="icon">♨</div></div><div class="copy"><h3>Home & Wellness</h3><p>Relaxation, self-care, aromatherapy, organization and lifestyle collections.</p><small>Affiliate-ready collection</small></div></article>
-<article class="collection"><div class="visual"><div class="icon">⌁</div></div><div class="copy"><h3>Tech & Creator Gear</h3><p>Creator accessories, mobile gear, lighting, stands and digital-workspace products.</p><small>Affiliate-ready collection</small></div></article>
-</div></section>
+<section class="statusBand">
+ <div class="shell statusCard"><span class="statusDot"></span><div><b>PARTNER-READY STOREFRONT STRUCTURE</b><span>Collection design and campaign structure are ready for real partner data.</span></div><span class="push">Actual products, prices, merchant images and tracking links are added only after approval by the relevant partner program.</span></div>
+</section>
 
-<section class="section"><span class="eyebrow">How it becomes a revenue channel</span><h2>Designed around approved affiliate relationships.</h2><div class="flow"><div class="step"><b>01 • APPLY</b><p>Join an affiliate or partner program that fits the products.</p></div><div class="step"><b>02 • CONNECT</b><p>Add approved links, product data, imagery and required disclosure language.</p></div><div class="step"><b>03 • CAMPAIGN</b><p>Build focused pages for TikTok, social, QR codes or niche audiences.</p></div><div class="step"><b>04 • OPTIMIZE</b><p>Track clicks and conversions using the partner's permitted tools.</p></div></div></section>
+<section class="section">
+ <div class="shell">
+  <div class="sectionHead"><div><span class="eyebrow">Featured storefront ads</span><h2>Make the marketplace feel active before checkout is connected.</h2></div><p>These are promotional collection concepts—not fake merchant listings. They show how the storefront can merchandise a niche once approved product feeds or links are available.</p></div>
+  <div class="featured">
+   <article class="featureHero">
+    <img src="/assets/template-preview-commerce.svg" alt="Curated affiliate storefront concept">
+    <div class="featureCopy"><span class="eyebrow">Featured Collection</span><h3>Ritual & Wellness Edit</h3><p>A campaign-ready collection direction for crystals, candles, journals, spiritual accessories and wellness content.</p><div class="featureTags"><span>Collection landing page</span><span>Social campaign ready</span><span>Affiliate-ready</span><span>Customizable</span></div><div class="heroActions" style="justify-content:flex-start;margin-top:15px"><a class="btn gold" href="/projects/custom/#brief">Build This Collection</a></div></div>
+   </article>
+   <div class="adStack">
+    <article class="ad"><span class="eyebrow">Campaign Ad</span><h3>Beauty & Self-Care Picks</h3><p>A polished destination for skincare tools, beauty accessories, organizers and approved product recommendations.</p><span class="promo">Beauty / Lifestyle</span></article>
+    <article class="ad purple"><span class="eyebrow">Campaign Ad</span><h3>Creator Gear Essentials</h3><p>A niche landing page for lighting, stands, mobile accessories, workspace tools and creator-focused recommendations.</p><span class="promo">Creator / Tech</span></article>
+   </div>
+  </div>
+ </div>
+</section>
 
-<section class="feature"><div><span class="eyebrow">Custom storefronts</span><h3>This can also be built for someone else's business.</h3><p>If a client wants crystals, candles, skincare, booking, services or another collection added to her site, LPS can customize the template and storefront around her exact brand.</p></div><div class="features"><span>Custom categories</span><span>Brand colors & banners</span><span>Booking + services</span><span>Affiliate links</span><span>Product collections</span><span>Social campaign pages</span></div></section>
-</main></body></html>
+<section class="section" id="collections">
+ <div class="shell">
+  <div class="sectionHead"><div><span class="eyebrow">Collection library</span><h2>One storefront. Multiple niches.</h2></div><p>Use the filters to see how a single storefront system can be tailored around different audiences and campaigns.</p></div>
+  <div class="controls">
+   <button class="filter active" type="button" data-filter="all">All Collections</button>
+   <button class="filter" type="button" data-filter="spiritual">Spiritual</button>
+   <button class="filter" type="button" data-filter="beauty">Beauty</button>
+   <button class="filter" type="button" data-filter="wellness">Wellness</button>
+   <button class="filter" type="button" data-filter="creator">Creator</button>
+   <span class="resultCount" id="resultCount">6 collections</span>
+  </div>
+
+  <div class="grid">
+   <article class="collection" data-cat="spiritual"><div class="collectionVisual purple"><span class="symbol">◇</span></div><div class="collectionBody"><h3>Crystals & Beads</h3><p>Crystals, stones, beads, jewelry components, display pieces and gift-ready accessories.</p><div class="meta"><span>Affiliate-ready</span><span>Giftable</span><span>Social-friendly</span></div><div class="collectionAction"><a href="/projects/custom/#brief">Build This Collection</a></div></div></article>
+   <article class="collection" data-cat="spiritual wellness"><div class="collectionVisual"><span class="symbol">☼</span></div><div class="collectionBody"><h3>Candles & Ritual</h3><p>Candles, holders, incense, oils, atmosphere products and related wellness accessories where allowed.</p><div class="meta"><span>Seasonal</span><span>Campaign-ready</span><span>Curated</span></div><div class="collectionAction"><a href="/projects/custom/#brief">Build This Collection</a></div></div></article>
+   <article class="collection" data-cat="spiritual"><div class="collectionVisual purple"><span class="symbol">☾</span></div><div class="collectionBody"><h3>Tarot & Spiritual</h3><p>Tarot decks, journals, card accessories, educational materials and spiritual gift collections.</p><div class="meta"><span>Content-friendly</span><span>Giftable</span><span>Niche</span></div><div class="collectionAction"><a href="/projects/custom/#brief">Build This Collection</a></div></div></article>
+   <article class="collection" data-cat="beauty wellness"><div class="collectionVisual rose"><span class="symbol">✧</span></div><div class="collectionBody"><h3>Beauty & Skincare</h3><p>Skincare tools, makeup accessories, organizers, brushes and approved beauty recommendations.</p><div class="meta"><span>Beauty</span><span>Consultation tie-in</span><span>Campaign-ready</span></div><div class="collectionAction"><a href="/projects/custom/#brief">Build This Collection</a></div></div></article>
+   <article class="collection" data-cat="wellness"><div class="collectionVisual green"><span class="symbol">○</span></div><div class="collectionBody"><h3>Home & Wellness</h3><p>Relaxation, self-care, aromatherapy, organization and lifestyle collection concepts.</p><div class="meta"><span>Wellness</span><span>Lifestyle</span><span>Seasonal</span></div><div class="collectionAction"><a href="/projects/custom/#brief">Build This Collection</a></div></div></article>
+   <article class="collection" data-cat="creator"><div class="collectionVisual"><span class="symbol">⌁</span></div><div class="collectionBody"><h3>Tech & Creator Gear</h3><p>Lighting, stands, mobile accessories, desk tools and creator-focused digital-workspace products.</p><div class="meta"><span>Creator</span><span>Tech</span><span>Utility</span></div><div class="collectionAction"><a href="/projects/custom/#brief">Build This Collection</a></div></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="shell">
+  <div class="sectionHead"><div><span class="eyebrow">Partner-ready architecture</span><h2>Designed to become real without misleading the customer.</h2></div><p>The storefront separates presentation from actual merchant data so we can connect approved products cleanly later.</p></div>
+  <div class="partner">
+   <article class="partnerCard"><span class="eyebrow">What is ready now</span><h3>Storefront presentation layer</h3><p>Collection categories, campaign positioning, responsive layout, calls to action and affiliate disclosure areas can be built before product approval.</p><div class="checklist"><span>Collection pages</span><span>Campaign landing pages</span><span>Disclosure placement</span><span>Tracking-ready links</span><span>Mobile browsing</span><span>Brand customization</span></div></article>
+   <article class="partnerCard"><span class="eyebrow">What waits for approval</span><h3>Real merchant product data</h3><p>Product names, merchant imagery, prices, availability, affiliate URLs and program-specific disclosures should come from the approved partner relationship or permitted feed.</p><div class="checklist"><span>Product feed / links</span><span>Merchant images</span><span>Current pricing</span><span>Availability</span><span>Affiliate tracking</span><span>Program terms</span></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="shell">
+  <div class="sectionHead"><div><span class="eyebrow">Revenue workflow</span><h2>From partner approval to campaign-ready storefront.</h2></div><p>Keep the process clear, compliant and repeatable.</p></div>
+  <div class="flow">
+   <div class="step"><em>01 • APPLY</em><b>Join the right program</b><span>Choose affiliate partners that fit the audience and product category.</span></div>
+   <div class="step"><em>02 • CONNECT</em><b>Add approved data</b><span>Use permitted links, imagery, prices and required disclosure language.</span></div>
+   <div class="step"><em>03 • CAMPAIGN</em><b>Build focused traffic paths</b><span>Create TikTok, social, QR and niche landing pages around collections.</span></div>
+   <div class="step"><em>04 • OPTIMIZE</em><b>Use real performance data</b><span>Track clicks and conversions using the partner’s allowed reporting tools.</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="shell cta">
+ <div><h3>Want this built around a specific brand?</h3><p>LPS can combine the storefront with services, booking, custom branding, content and hosting.</p></div>
+ <a class="btn gold" href="/projects/custom/#brief">Start a Storefront Brief</a>
+</section>
+</main>
+
+<footer class="footer">
+ <div class="shell foot"><strong>LPS MARKETPLACE</strong><span>Curated collections • Partner-ready storefronts</span><div class="footlinks"><a href="/">Home</a><a href="/templates/">Templates</a><a href="/brand-studio/">Brand Studio</a><a href="/projects/custom/">Custom Sites</a></div></div>
+</footer>
+
+<script>
+const filters=[...document.querySelectorAll('.filter')];
+const cards=[...document.querySelectorAll('.collection')];
+const count=document.getElementById('resultCount');
+filters.forEach(btn=>btn.addEventListener('click',()=>{
+ filters.forEach(x=>x.classList.remove('active'));btn.classList.add('active');
+ const f=btn.dataset.filter;let visible=0;
+ cards.forEach(card=>{
+  const cats=card.dataset.cat.split(' ');
+  const show=f==='all'||cats.includes(f);
+  card.classList.toggle('hidden',!show);if(show)visible++;
+ });
+ count.textContent=visible+' collection'+(visible===1?'':'s');
+}));
+</script>
+</body>
+</html>
