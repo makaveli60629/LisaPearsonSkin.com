@@ -4,7 +4,7 @@
 <div class="app-shell">
 <header class="topbar">
   <a class="brand" href="/launch/" aria-label="Back to LPS Project Studio"><span class="brand-mark">PB</span><span class="brand-copy"><b>PROPERTY<span>Bridge</span></b><small>DEAL COMMAND CENTER</small></span></a>
-  <div class="top-status"><span><i></i>Workspace Ready</span><span>Local Demo Data</span></div>
+  <div class="top-status"><span><i></i>Workspace Ready</span><span>Auto Public Feed + Local CRM</span></div>
   <div class="top-actions"><a class="btn ghost compact" href="/projects/propertybridge/">Project Brief</a><a class="btn compact" href="/account/">Log in</a><a class="btn gold compact" href="/account/?mode=register">Register</a></div>
 </header>
 
@@ -39,6 +39,12 @@
  <div class="screen-inner">
   <div class="screen-head"><div><span class="eyebrow">DEAL DISCOVERY</span><h1>Property Board</h1><p>Filter the sample deal set, save candidates, send a property into DNA analysis, or create a manual lead from the exact source ad.</p></div><button class="btn gold" data-go="watch">+ Add Exact Listing</button></div>
   <div class="toolbar"><input id="q" placeholder="Search city, state, strategy..."><select id="strategy"><option value="">All strategies</option><option>Assumable FHA</option><option>Seller Financing</option><option>Distressed</option><option>Land + Modular</option></select><select id="ptype"><option value="">All property types</option><option>Single Family</option><option>2-Flat</option><option>Duplex</option><option>Land</option></select><label class="check"><input type="checkbox" id="savedOnly"> Saved only</label><span id="resultCount" class="result-count"></span></div>
+  <section class="panel auto-feed-panel">
+   <div class="panel-head auto-feed-head"><div><span class="eyebrow">AUTOMATED PUBLIC-DATA ENGINE</span><h2>Nationwide Government REO Feed</h2><p>Daily HUD FHA REO discovery with verified-source labels. Price, mortgage terms, APR, title, condition and profitability remain unknown until separately verified.</p></div><span class="mini-note" id="autoFeedStatus"><b>Engine:</b> loading…</span></div>
+   <div class="engine-controls"><input id="autoFeedSearch" placeholder="Filter address, city or ZIP..."><select id="autoFeedState"><option value="">All states</option></select><span id="autoFeedCount" class="result-count">Loading feed…</span></div>
+   <div class="engine-sources" id="autoSourceStatus"></div>
+   <div class="auto-feed-grid" id="autoFeedGrid"><div class="engine-empty">Loading public-data feed…</div></div>
+  </section>
   <div class="deals" id="dealGrid"></div>
  </div>
 </section>
@@ -83,6 +89,11 @@
   <div class="screen-head"><div><span class="eyebrow">CHICAGO ACQUISITION WATCH</span><h1>Wholesale Lead Book</h1><p>Ten distressed/stale Chicago leads rechecked October 2, 2026. Built for one-by-one review with a buyer, mentor or contractor.</p></div><a class="btn gold" href="#chicago">Live Board</a></div>
   <div class="chi-warning"><b>Research status:</b> asking price/status and advertised property facts were cross-checked against recent listing snapshots. Title, liens, judgments, taxes due, Chicago violations, occupancy, legal unit count, permits, repair scope and ARV are <b>not yet independently cleared</b>. Verify those items before contracting or marketing an equitable interest.</div>
   <div class="chi-legend"><span><b>Snapshot:</b> Oct. 2, 2026</span><span><b>Purpose:</b> wholesale lead screening</span><span><b>Rule:</b> source facts ≠ completed due diligence</span></div>
+  <section class="panel chicago-public-panel">
+   <div class="panel-head"><div><span class="eyebrow">AUTOMATED PUBLIC RECORD CHECK</span><h2>Chicago Permit & Violation Search</h2></div><span class="mini-note">Daily public-data enrichment</span></div>
+   <p class="sub">These are address-search matches from historical public datasets. They are research signals only—not proof of current outstanding violations, clear title, legal use or permit compliance.</p>
+   <div class="public-record-grid" id="chicagoPublicData"><div class="engine-empty">Loading public-record enrichment…</div></div>
+  </section>
   <div class="chi-grid">
 <article class="chi-lead-card">
   <a class="chi-photo" href="https://www.homes.com/property/5802-s-may-st-chicago-il/r7j8sfbz3kbqe/" target="_blank" rel="noopener noreferrer">
@@ -261,7 +272,7 @@
  <div class="screen-inner">
   <div class="screen-head"><div><span class="eyebrow">CAPITAL & DUE DILIGENCE</span><h1>Financing Paths</h1><p>Use the financing board to identify plausible routes, then verify lender, title, legal, property and cash-flow facts before relying on the strategy.</p></div></div>
   <div class="fin-grid"><article class="fin"><b>Assumption</b><p>Existing FHA/VA/USDA financing, lender/servicer approval and buyer qualification.</p></article><article class="fin"><b>Seller Finance</b><p>Owner carries some or all of the price under negotiated documented terms.</p></article><article class="fin"><b>Wholesale / Assignment</b><p>Contract-control strategy only where the contract and applicable law permit it.</p></article><article class="fin"><b>Rental / DSCR</b><p>Property cash flow supports investor financing after lender underwriting.</p></article><article class="fin"><b>Partner Capital</b><p>Equity or acquisition partner fills a gap under clear written economics.</p></article><article class="fin"><b>Land + Modular</b><p>Verify zoning, utility access, septic/well, road access, permits, site work and total installed cost.</p></article></div>
-  <section class="panel source-panel"><div class="panel-head"><div><span class="eyebrow">DATA SOURCE ROADMAP</span><h2>Intelligence Layers</h2></div></div><div class="source-grid"><article><b>Manual Lead Intake</b><small class="live">ACTIVE</small><span>Exact source ads, seller calls, referrals and uploaded property photos.</span></article><article><b>Property / Listing Feed</b><small>NEXT</small><span>Licensed listing and property data for discovery and status changes.</span></article><article><b>Public Records</b><small>NEXT</small><span>Assessor, recorder, taxes, deeds, permits and foreclosure indicators.</span></article><article><b>Comps + Rent</b><small>PLANNED</small><span>Comparable sales, rent estimates and cash-flow validation.</span></article></div></section>
+  <section class="panel source-panel"><div class="panel-head"><div><span class="eyebrow">DATA SOURCE ROADMAP</span><h2>Intelligence Layers</h2></div></div><div class="source-grid"><article><b>Manual Lead Intake</b><small class="live">ACTIVE</small><span>Exact source ads, seller calls, referrals and uploaded property photos.</span></article><article><b>Government REO Feed</b><small class="live">ACTIVE</small><span>Daily nationwide HUD FHA REO discovery with source-status tracking.</span></article><article><b>Chicago Public Records</b><small class="live">ACTIVE</small><span>Daily building-permit and historical violation-search enrichment for the Chicago lead board.</span></article><article><b>Licensed Listings + Comps</b><small>NEXT</small><span>Authorized listing/property feeds, comparable sales, rents and status-change monitoring.</span></article></div></section>
  </div>
 </section>
 </main>
@@ -269,5 +280,5 @@
 
 <nav class="mobile-tabs" aria-label="PropertyBridge screens"><button class="active" data-screen="dashboard">Home</button><button data-screen="properties">Deals</button><button data-screen="chicago">CHI Leads</button><button data-screen="watch">My Properties</button><button data-screen="analyzer">Analyzer</button><button data-screen="crm">CRM</button></nav>
 </div>
-<script src="./app.js?v=20260930b"></script>
+<script src="./app.js?v=20261003a"></script>\n<script src="./engine.js?v=20261003a"></script>
 </body></html>
