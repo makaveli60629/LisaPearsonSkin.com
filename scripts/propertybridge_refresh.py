@@ -14,6 +14,7 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "propertybridge" / "data" / "auto-feed.json"
@@ -104,10 +105,11 @@ def hud_reo(previous_records):
         return kept, {"id": "hud-reo", "name": "HUD FHA REO", "status": "error", "records": len(kept), "checkedAt": now_iso(), "error": clean_text(exc)[:240]}
 
 def socrata_search(dataset: str, address: str):
+    search_term = re.sub(r"\s+CHICAGO\s+IL$", "", address, flags=re.I).strip()
     return fetch_json(
         f"{CHI_BASE}/{dataset}.json",
-        {"$limit": "200", "$q": address},
-        timeout=25,
+        {"$limit": "200", "$q": search_term},
+        timeout=12,
     )
 
 def record_matches_address(record: dict, address: str) -> bool:
@@ -117,28 +119,40 @@ def record_matches_address(record: dict, address: str) -> bool:
     return sum(t in hay for t in key[:4]) >= min(3, len(key[:4]))
 
 def chicago_enrichment(previous):
-    rows = []
-    errors = []
-    for address in CHICAGO_TARGETS:
-        item = {
+    datasets = {
+        "violationsHistoricalMatches": "22u3-xenr",
+        "permitsMatches": "ydr8-5enu",
+    }
+    result_map = {
+        address: {
             "address": address,
             "checkedAt": now_iso(),
             "violationsHistoricalMatches": None,
             "permitsMatches": None,
             "note": "Counts are search matches in public historical datasets, not a title opinion or a count of currently outstanding violations.",
         }
-        try:
-            raw = socrata_search("22u3-xenr", address)
-            item["violationsHistoricalMatches"] = sum(1 for r in raw if record_matches_address(r, address))
-        except Exception as exc:
-            errors.append(f"violations {address}: {clean_text(exc)[:120]}")
-        try:
-            raw = socrata_search("ydr8-5enu", address)
-            item["permitsMatches"] = sum(1 for r in raw if record_matches_address(r, address))
-        except Exception as exc:
-            errors.append(f"permits {address}: {clean_text(exc)[:120]}")
-        rows.append(item)
+        for address in CHICAGO_TARGETS
+    }
+    errors = []
 
+    def run_one(address, field, dataset):
+        rows = socrata_search(dataset, address)
+        return address, field, len(rows)
+
+    with ThreadPoolExecutor(max_workers=12) as pool:
+        futures = [
+            pool.submit(run_one, address, field, dataset)
+            for address in CHICAGO_TARGETS
+            for field, dataset in datasets.items()
+        ]
+        for future in as_completed(futures):
+            try:
+                address, field, count = future.result()
+                result_map[address][field] = count
+            except Exception as exc:
+                errors.append(clean_text(exc)[:180])
+
+    rows = [result_map[a] for a in CHICAGO_TARGETS]
     if errors and all(r["violationsHistoricalMatches"] is None and r["permitsMatches"] is None for r in rows):
         rows = previous or rows
 
