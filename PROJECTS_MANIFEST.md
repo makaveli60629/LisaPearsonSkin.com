@@ -138,3 +138,13 @@ LPS Project Studio is the umbrella presentation and project-management hub for t
 4. Cross-site accessibility/mobile regression QA and final schema/metadata review.
 5. Search Console / analytics connection and post-launch indexing monitoring.
 
+
+
+## October 3, 2026 — PROPERTYBridge automation engine
+- Added `scripts/propertybridge_refresh.py`, `propertybridge/engine.js`, `propertybridge/data/auto-feed.json`, `propertybridge/ENGINE.md` and the scheduled `.github/workflows/propertybridge-refresh.yml`.
+- Initial successful production refresh: October 3, 2026.
+- HUD FHA REO discovery: 2,846 source records across 52 states/territories in the initial nationwide sample, capped at up to 80 HUD records per state/territory per refresh.
+- Chicago lead enrichment: exact-address search counts from the City of Chicago Building Violations and Building Permits public datasets. Counts are research signals; violations are historical/informational and permit/violation hits are not title, zoning, legal-use or closing clearance.
+- Refresh cadence: daily GitHub Actions run plus manual workflow dispatch capability. The refresh validates the public site before deployment.
+- Listing portals that restrict automated access remain manual/source-link inputs until an authorized or licensed listing/property feed is connected.
+- No automated record may be presented as proving asking price, APR, loan balance, mortgage assumability, clear title, legal units, repair scope, ARV or profitability unless that field is independently verified.
