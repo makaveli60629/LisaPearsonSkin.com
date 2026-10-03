@@ -1,0 +1,65 @@
+name: Refresh PROPERTYBridge Public Data
+
+on:
+  schedule:
+    - cron: "17 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "propertybridge-public-data"
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh public government data
+        run: python scripts/propertybridge_refresh.py
+
+      - name: Validate public site
+        run: python scripts/validate_site.py
+
+      - name: Commit refreshed feed
+        shell: bash
+        run: |
+          if git diff --quiet -- propertybridge/data/auto-feed.json; then
+            echo "No feed changes."
+            exit 0
+          fi
+          git config user.name "propertybridge-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add propertybridge/data/auto-feed.json
+          git commit -m "data: refresh PROPERTYBridge public feed"
+          git push
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload refreshed site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: refresh
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy refreshed PROPERTYBridge data
+        id: deployment
+        uses: actions/deploy-pages@v4
