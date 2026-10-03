@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": null,
+  "engine": "PROPERTYBridge Public Data Engine",
+  "status": "pending",
+  "sources": [
+    {
+      "id": "hud-reo",
+      "name": "HUD FHA REO",
+      "status": "pending",
+      "records": 0
+    },
+    {
+      "id": "chicago-violations",
+      "name": "Chicago Building Violations",
+      "status": "pending",
+      "records": 0
+    },
+    {
+      "id": "chicago-permits",
+      "name": "Chicago Building Permits",
+      "status": "pending",
+      "records": 0
+    }
+  ],
+  "records": [],
+  "chicago": [],
+  "errors": [],
+  "rules": [
+    "Automated records are discovery and research signals, not completed due diligence.",
+    "Listing portals that restrict automated access remain link/manual-review sources unless a licensed feed is connected."
+  ]
+}
