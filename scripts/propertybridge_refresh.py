@@ -23,6 +23,10 @@ UA = "PROPERTYBridge-PublicData/1.0 (+https://lisapearsonskin.com/propertybridge
 HUD_URL = "https://egis.hud.gov/arcgis/rest/services/gotit/REOProperties/MapServer/0/query"
 CHI_BASE = "https://data.cityofchicago.org/resource"
 
+HUD_STATES = [
+    "AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","PR"
+]
+
 CHICAGO_TARGETS = [
     "5802 S May St Chicago IL",
     "7048 S Perry Ave Chicago IL",
@@ -55,19 +59,21 @@ def load_previous():
         return {}
 
 def hud_reo(previous_records):
-    params = {
-        "where": "1=1",
-        "outFields": "OBJECTID,CASE_STEP_NUMBER,STREET_NUM,DIRECTION_PREFIX,STREET_NAME,CITY,STATE_CODE,DISPLAY_ZIP_CODE,REVITE_NAME",
-        "returnGeometry": "false",
-        "f": "json",
-        "resultRecordCount": "1000",
-        "orderByFields": "STATE_CODE,CITY,STREET_NAME",
-    }
-    try:
-        payload = fetch_json(HUD_URL, params)
+    fields = "OBJECTID,CASE_STEP_NUMBER,STREET_NUM,DIRECTION_PREFIX,STREET_NAME,CITY,STATE_CODE,DISPLAY_ZIP_CODE,REVITE_NAME"
+
+    def fetch_state(state):
+        params = {
+            "where": f"STATE_CODE='{state}'",
+            "outFields": fields,
+            "returnGeometry": "false",
+            "f": "json",
+            "resultRecordCount": "80",
+            "orderByFields": "OBJECTID",
+        }
+        payload = fetch_json(HUD_URL, params, timeout=20)
         if payload.get("error"):
-            raise RuntimeError(payload["error"].get("message", "HUD ArcGIS error"))
-        rows = []
+            raise RuntimeError(payload["error"].get("message", f"HUD ArcGIS error for {state}"))
+        state_rows = []
         for feature in payload.get("features", []):
             a = feature.get("attributes") or {}
             street = " ".join(filter(None, [
@@ -76,21 +82,21 @@ def hud_reo(previous_records):
                 clean_text(a.get("STREET_NAME")),
             ]))
             city = clean_text(a.get("CITY"))
-            state = clean_text(a.get("STATE_CODE"))
+            st = clean_text(a.get("STATE_CODE"))
             z = clean_text(a.get("DISPLAY_ZIP_CODE"))
             if z.isdigit():
                 z = z.zfill(5)
             oid = clean_text(a.get("OBJECTID"))
-            rows.append({
+            state_rows.append({
                 "id": "HUD-" + oid,
                 "source": "HUD FHA REO",
                 "sourceType": "government",
                 "verification": "VERIFIED_SOURCE",
                 "address": street,
                 "city": city,
-                "state": state,
+                "state": st,
                 "zip": z,
-                "market": ", ".join(x for x in [city, state] if x),
+                "market": ", ".join(x for x in [city, st] if x),
                 "caseStep": a.get("CASE_STEP_NUMBER"),
                 "revitalizationArea": clean_text(a.get("REVITE_NAME")),
                 "price": None,
@@ -99,24 +105,74 @@ def hud_reo(previous_records):
                 "nextAction": "Open the official HUD source and verify sale status, price, condition, title and financing.",
                 "sourceUrl": "https://egis.hud.gov/arcgis/rest/services/gotit/REOProperties/MapServer/0",
             })
-        return rows, {"id": "hud-reo", "name": "HUD FHA REO", "status": "ok", "records": len(rows), "checkedAt": now_iso()}
-    except Exception as exc:
-        kept = [r for r in previous_records if r.get("source") == "HUD FHA REO"]
-        return kept, {"id": "hud-reo", "name": "HUD FHA REO", "status": "error", "records": len(kept), "checkedAt": now_iso(), "error": clean_text(exc)[:240]}
+        return state, state_rows
 
-def socrata_search(dataset: str, address: str):
-    search_term = re.sub(r"\s+CHICAGO\s+IL$", "", address, flags=re.I).strip()
-    return fetch_json(
+    rows = []
+    errors = []
+    with ThreadPoolExecutor(max_workers=12) as pool:
+        futures = [pool.submit(fetch_state, state) for state in HUD_STATES]
+        for future in as_completed(futures):
+            try:
+                _, state_rows = future.result()
+                rows.extend(state_rows)
+            except Exception as exc:
+                errors.append(clean_text(exc)[:180])
+
+    rows.sort(key=lambda r: (r.get("state") or "", r.get("city") or "", r.get("address") or ""))
+    if not rows:
+        kept = [r for r in previous_records if r.get("source") == "HUD FHA REO"]
+        return kept, {
+            "id": "hud-reo",
+            "name": "HUD FHA REO",
+            "status": "error",
+            "records": len(kept),
+            "statesCovered": len({r.get("state") for r in kept if r.get("state")}),
+            "checkedAt": now_iso(),
+            "error": "; ".join(errors[:5]) or "HUD feed returned no records",
+        }
+
+    states_covered = len({r.get("state") for r in rows if r.get("state")})
+    return rows, {
+        "id": "hud-reo",
+        "name": "HUD FHA REO",
+        "status": "ok" if not errors else "partial",
+        "records": len(rows),
+        "statesCovered": states_covered,
+        "sampleLimitPerState": 80,
+        "checkedAt": now_iso(),
+        "note": "Nationwide discovery sample; up to 80 current records per state/territory returned by the HUD layer.",
+    }
+
+def sql_quote(value: str) -> str:
+    return value.replace("'", "''")
+
+def chicago_street(address: str):
+    normalized = re.sub(r"\s+CHICAGO\s+IL$", "", address, flags=re.I).strip().upper()
+    m = re.match(r"^(\d+)\s+([NSEW])\s+(.+)$", normalized)
+    if not m:
+        raise ValueError(f"Could not parse Chicago address: {address}")
+    return int(m.group(1)), m.group(2), m.group(3)
+
+def socrata_count(dataset: str, address: str) -> int:
+    number, direction, street_name = chicago_street(address)
+    plain = f"{number} {direction} {street_name}"
+    if dataset == "22u3-xenr":
+        where = f"upper(address)='{sql_quote(plain)}'"
+    elif dataset == "ydr8-5enu":
+        where = (
+            f"street_number={number} AND street_direction='{direction}' "
+            f"AND upper(street_name)='{sql_quote(street_name)}'"
+        )
+    else:
+        raise ValueError("Unsupported Chicago dataset")
+    payload = fetch_json(
         f"{CHI_BASE}/{dataset}.json",
-        {"$limit": "200", "$q": search_term},
+        {"$select": "count(*) as count", "$where": where},
         timeout=12,
     )
-
-def record_matches_address(record: dict, address: str) -> bool:
-    hay = " ".join(clean_text(v).upper() for v in record.values())
-    tokens = [t for t in re.sub(r"[^A-Z0-9 ]", " ", address.upper()).split() if len(t) > 1]
-    key = [t for t in tokens if t not in {"CHICAGO", "IL"}]
-    return sum(t in hay for t in key[:4]) >= min(3, len(key[:4]))
+    if not payload:
+        return 0
+    return int(payload[0].get("count", 0))
 
 def chicago_enrichment(previous):
     datasets = {
@@ -129,15 +185,14 @@ def chicago_enrichment(previous):
             "checkedAt": now_iso(),
             "violationsHistoricalMatches": None,
             "permitsMatches": None,
-            "note": "Counts are search matches in public historical datasets, not a title opinion or a count of currently outstanding violations.",
+            "note": "Counts are exact-address matches in public historical datasets, not a title opinion or a count of currently outstanding violations.",
         }
         for address in CHICAGO_TARGETS
     }
     errors = []
 
     def run_one(address, field, dataset):
-        rows = socrata_search(dataset, address)
-        return address, field, len(rows)
+        return address, field, socrata_count(dataset, address)
 
     with ThreadPoolExecutor(max_workers=12) as pool:
         futures = [
