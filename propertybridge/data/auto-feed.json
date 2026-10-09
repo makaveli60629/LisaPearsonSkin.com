@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-08T18:53:14Z",
+  "generatedAt": "2026-10-09T18:23:37Z",
   "engine": "PROPERTYBridge Public Data Engine",
   "status": "ok",
   "sources": [
@@ -11,7 +11,7 @@
       "records": 2846,
       "statesCovered": 52,
       "sampleLimitPerState": 80,
-      "checkedAt": "2026-10-08T18:53:02Z",
+      "checkedAt": "2026-10-09T18:23:25Z",
       "note": "Nationwide discovery sample; up to 80 current records per state/territory returned by the HUD layer."
     },
     {
@@ -19,14 +19,14 @@
       "name": "Chicago Building Violations",
       "status": "partial",
       "records": 10,
-      "checkedAt": "2026-10-08T18:53:14Z"
+      "checkedAt": "2026-10-09T18:23:37Z"
     },
     {
       "id": "chicago-permits",
       "name": "Chicago Building Permits",
       "status": "partial",
       "records": 10,
-      "checkedAt": "2026-10-08T18:53:14Z"
+      "checkedAt": "2026-10-09T18:23:37Z"
     }
   ],
   "records": [
@@ -51262,77 +51262,77 @@
   "chicago": [
     {
       "address": "5802 S May St Chicago IL",
-      "checkedAt": "2026-10-08T18:53:02Z",
-      "violationsHistoricalMatches": 27,
-      "permitsMatches": null,
+      "checkedAt": "2026-10-09T18:23:25Z",
+      "violationsHistoricalMatches": null,
+      "permitsMatches": 0,
       "note": "Counts are exact-address matches in public historical datasets, not a title opinion or a count of currently outstanding violations."
     },
     {
       "address": "7048 S Perry Ave Chicago IL",
-      "checkedAt": "2026-10-08T18:53:02Z",
+      "checkedAt": "2026-10-09T18:23:25Z",
       "violationsHistoricalMatches": 0,
       "permitsMatches": 2,
       "note": "Counts are exact-address matches in public historical datasets, not a title opinion or a count of currently outstanding violations."
     },
     {
       "address": "912 W 87th St Chicago IL",
-      "checkedAt": "2026-10-08T18:53:02Z",
+      "checkedAt": "2026-10-09T18:23:25Z",
       "violationsHistoricalMatches": 0,
       "permitsMatches": 0,
       "note": "Counts are exact-address matches in public historical datasets, not a title opinion or a count of currently outstanding violations."
     },
     {
       "address": "7357 S Green St Chicago IL",
-      "checkedAt": "2026-10-08T18:53:02Z",
+      "checkedAt": "2026-10-09T18:23:25Z",
       "violationsHistoricalMatches": 0,
       "permitsMatches": 0,
       "note": "Counts are exact-address matches in public historical datasets, not a title opinion or a count of currently outstanding violations."
     },
     {
       "address": "6421 S Wolcott Ave Chicago IL",
-      "checkedAt": "2026-10-08T18:53:02Z",
+      "checkedAt": "2026-10-09T18:23:25Z",
       "violationsHistoricalMatches": 13,
       "permitsMatches": 0,
       "note": "Counts are exact-address matches in public historical datasets, not a title opinion or a count of currently outstanding violations."
     },
     {
       "address": "7133 S Eggleston Ave Chicago IL",
-      "checkedAt": "2026-10-08T18:53:02Z",
+      "checkedAt": "2026-10-09T18:23:25Z",
       "violationsHistoricalMatches": 0,
       "permitsMatches": 2,
       "note": "Counts are exact-address matches in public historical datasets, not a title opinion or a count of currently outstanding violations."
     },
     {
       "address": "9217 S Perry Ave Chicago IL",
-      "checkedAt": "2026-10-08T18:53:02Z",
+      "checkedAt": "2026-10-09T18:23:25Z",
       "violationsHistoricalMatches": 0,
       "permitsMatches": 0,
       "note": "Counts are exact-address matches in public historical datasets, not a title opinion or a count of currently outstanding violations."
     },
     {
       "address": "1541 W Marquette Rd Chicago IL",
-      "checkedAt": "2026-10-08T18:53:02Z",
+      "checkedAt": "2026-10-09T18:23:25Z",
       "violationsHistoricalMatches": 44,
       "permitsMatches": 0,
       "note": "Counts are exact-address matches in public historical datasets, not a title opinion or a count of currently outstanding violations."
     },
     {
       "address": "11931 S Wallace St Chicago IL",
-      "checkedAt": "2026-10-08T18:53:02Z",
+      "checkedAt": "2026-10-09T18:23:25Z",
       "violationsHistoricalMatches": 0,
       "permitsMatches": 0,
       "note": "Counts are exact-address matches in public historical datasets, not a title opinion or a count of currently outstanding violations."
     },
     {
       "address": "12108 S Parnell Ave Chicago IL",
-      "checkedAt": "2026-10-08T18:53:02Z",
+      "checkedAt": "2026-10-09T18:23:25Z",
       "violationsHistoricalMatches": 6,
       "permitsMatches": 1,
       "note": "Counts are exact-address matches in public historical datasets, not a title opinion or a count of currently outstanding violations."
     }
   ],
   "errors": [
-    "The read operation timed out"
+    "<urlopen error _ssl.c:993: The handshake operation timed out>"
   ],
   "rules": [
     "Automated records are discovery and research signals, not completed due diligence.",
